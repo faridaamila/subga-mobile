@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="@dimen/_150sdp"
         android:layout_centerHorizontal="true"
         android:background="#d4cbcb"
         android:id="@+id/relativeLayout7"
@@ -15,7 +15,7 @@
         <ViewFlipper
 
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="@dimen/_150sdp"
             android:layout_centerHorizontal="true"
             android:inAnimation="@anim/slide_in_right"
             android:outAnimation="@anim/slide_out_left"
@@ -84,12 +84,12 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="@dimen/_150sdp"
         android:layout_alignParentLeft="false"
         android:layout_alignParentStart="false"
         android:layout_alignParentTop="false"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="@dimen/_150sdp"
         android:background="#add1dd">
 
         <TextView
@@ -101,18 +101,18 @@
             android:layout_alignParentTop="true"
             android:layout_alignLeft="@+id/relativeLayout4"
             android:layout_alignStart="@+id/relativeLayout4"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="@dimen/_6sdp"
             android:textColor="#115c8c"
             android:textSize="16dp"
             android:textStyle="bold" />
 
         <RelativeLayout
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="6dp"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_6sdp"
             android:id="@+id/relativeLayout4"
-            android:layout_marginStart="6dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
             android:layout_above="@+id/relativeLayout6"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true">
