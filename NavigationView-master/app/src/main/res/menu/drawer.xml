@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:checked="false"
+            android:icon="@drawable/ic_inbox_black"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/add_on_yq"
+            android:checked="false"
+            android:icon="@drawable/ic_star_black"
+            android:title="@string/add_on_yq" />
+
+        <item
+            android:id="@+id/cargo"
+            android:checked="false"
+            android:icon="@drawable/ic_send_black"
+            android:title="@string/cargo" />
+
+        <item
+            android:id="@+id/codeshare_and_spa"
+            android:checked="false"
+            android:icon="@drawable/ic_drafts_black"
+            android:title="@string/codeshare_and_spa" />
+
+
+        <item
+            android:id="@+id/domestic"
+            android:checked="false"
+            android:icon="@drawable/ic_email_black"
+            android:title="@string/domestic" />
+        <item
+            android:id="@+id/flight_schedule"
+            android:checked="false"
+            android:icon="@drawable/ic_delete_black"
+            android:title="@string/fligh_schedule" />
+        <item
+            android:id="@+id/internal_news"
+            android:checked="false"
+            android:icon="@drawable/ic_error_black"
+            android:title="@string/internal_news" />
+
+        <item
+            android:id="@+id/international"
+            android:checked="false"
+            android:icon="@drawable/ic_error_black"
+            android:title="@string/international" />
+
+        <item
+            android:id="@+id/midle_east"
+            android:checked="false"
+            android:icon="@drawable/ic_error_black"
+            android:title="@string/midle_east" />
+
+        <item
+            android:id="@+id/other"
+            android:checked="false"
+            android:icon="@drawable/ic_error_black"
+            android:title="@string/other" />
+
+        <item
+            android:id="@+id/pin_hin"
+            android:checked="false"
+            android:icon="@drawable/ic_error_black"
+            android:title="@string/pin_hin" />
+
+        <item
+            android:id="@+id/rsp_yearly"
+            android:checked="false"
+            android:icon="@drawable/ic_error_black"
+            android:title="@string/rsp_yearly" />
+
+        <item
+            android:id="@+id/rules_and_procedure"
+            android:checked="false"
+            android:icon="@drawable/ic_error_black"
+            android:title="@string/rules_and_procedure" />
+
+    </group>
+</menu>

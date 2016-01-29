@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Call Center"
+            android:id="@+id/textView28"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="19dp"
+            android:textStyle="bold"
+            android:textColor="#115c8c" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0315321640"
+            android:id="@+id/textView29"
+            android:layout_marginTop="18dp"
+            android:layout_below="@+id/textView28"
+            android:layout_alignLeft="@+id/textView28"
+            android:layout_alignStart="@+id/textView28"
+            android:layout_marginLeft="37dp"
+            android:layout_marginStart="37dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageView7"
+            android:src="@mipmap/duaempat"
+            android:layout_below="@+id/textView28"
+            android:layout_alignLeft="@+id/textView28"
+            android:layout_alignStart="@+id/textView28"
+            android:layout_marginTop="12dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageView8"
+            android:layout_marginTop="7dp"
+            android:src="@mipmap/office"
+            android:layout_below="@+id/imageView7"
+            android:layout_alignLeft="@+id/imageView7"
+            android:layout_alignStart="@+id/imageView7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PT. Garuda Indonesia"
+            android:id="@+id/textView30"
+            android:layout_alignTop="@+id/imageView8"
+            android:layout_alignLeft="@+id/textView29"
+            android:layout_alignStart="@+id/textView29"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Branch Office Surabaya"
+            android:id="@+id/textView31"
+            android:layout_below="@+id/textView30"
+            android:layout_alignLeft="@+id/textView30"
+            android:layout_alignStart="@+id/textView30" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Graha Bumi Surabaya 4th Floor "
+            android:id="@+id/textView32"
+            android:layout_below="@+id/textView31"
+            android:layout_alignLeft="@+id/textView31"
+            android:layout_alignStart="@+id/textView31" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jl. Basuki Rahmat 106-128"
+            android:id="@+id/textView33"
+            android:layout_below="@+id/textView32"
+            android:layout_alignLeft="@+id/textView32"
+            android:layout_alignStart="@+id/textView32" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Surabaya, 60271, Indonesia"
+            android:id="@+id/textView34"
+            android:layout_below="@+id/textView33"
+            android:layout_alignLeft="@+id/textView33"
+            android:layout_alignStart="@+id/textView33" />
+
+    </RelativeLayout>
+
+</LinearLayout>

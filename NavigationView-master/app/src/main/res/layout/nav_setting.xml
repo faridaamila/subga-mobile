@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/relativeLayout7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Settings"
+            android:id="@+id/textView26"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="19dp"
+            android:textColor="#115c8c"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/edit_profile"
+            android:layout_centerVertical="true"
+            android:layout_alignRight="@+id/textView26"
+            android:layout_alignEnd="@+id/textView26"
+            android:layout_marginRight="0dp"
+            android:background="@mipmap/edit_profile" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/notifications"
+            android:layout_below="@+id/edit_profile"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@mipmap/notifications" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Support"
+            android:id="@+id/textView27"
+            android:layout_marginTop="21dp"
+            android:textStyle="bold"
+            android:textColor="#115c8c"/>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/help_center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@mipmap/help_center" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/about"
+            android:layout_below="@+id/help_center"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@mipmap/about" />
+    </RelativeLayout>
+
+</LinearLayout>
