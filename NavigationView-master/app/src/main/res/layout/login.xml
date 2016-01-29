@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="#59abe3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Login"
+            android:id="@+id/textView4"
+            android:layout_marginTop="34dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:id="@+id/editTextUsername"
+            android:background="#dadfe1"
+            android:text="Username"
+            android:paddingLeft="20dp"
+            android:layout_below="@+id/textView4"
+            android:layout_alignLeft="@+id/editTextPassword"
+            android:layout_alignStart="@+id/editTextPassword"
+            android:layout_marginTop="31dp" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/editTextPassword"
+            android:background="#dadfe1"
+            android:text="Password"
+            android:paddingLeft="20dp"
+            android:layout_below="@+id/editTextUsername"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="26dp" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="Masuk"
+            android:id="@+id/buttonLogin"
+            android:background="#1F3A93"
+            android:layout_below="@+id/editTextPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp" />
+    </RelativeLayout>
+
+</RelativeLayout>
