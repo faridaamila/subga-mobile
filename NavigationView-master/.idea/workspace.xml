@@ -9,6 +9,11 @@
       </config>
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/home.xml">
         <config>
           <theme>@style/AppTheme</theme>
@@ -20,26 +25,18 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cbd1768-0bd2-4b2a-9899-3a31b8035ef2" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\subga-mobile\NavigationView-master\.idea\inspectionProfiles\Project_Default.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\subga-mobile\NavigationView-master\.idea\inspectionProfiles\profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\subga-mobile\NavigationView-master\app\src\main\res\mipmap-xhdpi\button_bookmark.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\subga-mobile\NavigationView-master\app\src\main\res\mipmap-xhdpi\button_download.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\subga-mobile\NavigationView-master\app\src\main\res\mipmap-xhdpi\button_setting.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\subga-mobile\NavigationView-master\app\src\main\res\mipmap-xhdpi\home_bawah.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/button_new_document.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/button_new_document.png" />
+    <list default="true" id="5cbd1768-0bd2-4b2a-9899-3a31b8035ef2" name="Default" comment="home baru">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_22_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_22_2_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/home.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/sdp_android_1_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sdp_android_1_0_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_22_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_22_2_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_22_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_22_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/tool_bar.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/tool_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NavigationView-master.iws" />
@@ -118,46 +115,69 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tool_bar.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tool_bar.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5172415">
-              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/home.xml">
           <provider selected="true" editor-type-id="android-designer">
             <state />
           </provider>
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="241" column="21" selection-start-line="84" selection-start-column="4" selection-end-line="241" selection-end-column="21" />
               <folding>
-                <element signature="e#3279#3295#0" expanded="false" />
-                <element signature="e#4281#4297#0" expanded="false" />
-                <element signature="e#6794#6810#0" expanded="false" />
-                <element signature="e#7634#7650#0" expanded="false" />
+                <element signature="e#4167#4182#0" expanded="true" />
+                <element signature="e#5206#5222#0" expanded="true" />
+                <element signature="e#5257#5272#0" expanded="true" />
+                <element signature="e#5867#5883#0" expanded="true" />
+                <element signature="e#5918#5933#0" expanded="true" />
+                <element signature="e#6240#6255#0" expanded="true" />
+                <element signature="e#6845#6860#0" expanded="true" />
+                <element signature="e#7889#7905#0" expanded="true" />
+                <element signature="e#8317#8332#0" expanded="true" />
+                <element signature="e#8658#8674#0" expanded="true" />
+                <element signature="e#9145#9159#0" expanded="true" />
+                <element signature="e#9258#9274#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider selected="true" editor-type-id="android-designer">
             <state />
           </provider>
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <caret line="209" column="42" selection-start-line="209" selection-start-column="42" selection-end-line="209" selection-end-column="42" />
+              <folding>
+                <element signature="e#1474#1489#0" expanded="true" />
+                <element signature="e#1883#1897#0" expanded="true" />
+                <element signature="e#2290#2305#0" expanded="true" />
+                <element signature="e#2699#2715#0" expanded="true" />
+                <element signature="e#3110#3125#0" expanded="true" />
+                <element signature="e#3519#3534#0" expanded="true" />
+                <element signature="e#3760#3776#0" expanded="true" />
+                <element signature="e#4578#4592#0" expanded="true" />
+                <element signature="e#4670#4685#0" expanded="true" />
+                <element signature="e#4796#4812#0" expanded="true" />
+                <element signature="e#4851#4866#0" expanded="true" />
+                <element signature="e#4909#4923#0" expanded="true" />
+                <element signature="e#5017#5031#0" expanded="true" />
+                <element signature="e#5076#5091#0" expanded="true" />
+                <element signature="e#5797#5813#0" expanded="true" />
+                <element signature="e#5852#5867#0" expanded="true" />
+                <element signature="e#6514#6530#0" expanded="true" />
+                <element signature="e#6569#6584#0" expanded="true" />
+                <element signature="e#6915#6930#0" expanded="true" />
+                <element signature="e#7517#7533#0" expanded="true" />
+                <element signature="e#7572#7587#0" expanded="true" />
+                <element signature="e#8427#8442#0" expanded="true" />
+                <element signature="e#8800#8816#0" expanded="true" />
+                <element signature="e#9331#9345#0" expanded="true" />
+                <element signature="e#9456#9472#0" expanded="true" />
+                <marker date="1454098231317" expanded="true" signature="9834:9848" placeholder="&quot;350.00dp&quot;" />
+                <marker date="1454098231317" expanded="true" signature="10160:10176" placeholder="&quot;260.00dp&quot;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -650,6 +670,11 @@
                 <option name="description" value="Prepare com.intuit.sdp:sdp-android:1.0.2" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComIntuitSdpSdpAndroid102Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.mcxiaoke.volley:library-aar:1.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComMcxiaokeVolleyLibraryAar100Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare de.hdodenhof:circleimageview:1.3.0" />
@@ -1193,6 +1218,11 @@
                 <option name="name" value="prepareComIntuitSdpSdpAndroid102Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.mcxiaoke.volley:library-aar:1.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComMcxiaokeVolleyLibraryAar100Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Prepare de.hdodenhof:circleimageview:1.3.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="prepareDeHdodenhofCircleimageview130Library" />
@@ -1331,7 +1361,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="D:\subga-mobile\NavigationView-master" value="4322235179825" />
+        <entry key="D:\subga-mobile\NavigationView-master" value="4322390760912" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1501,6 +1531,7 @@
                             <option value="C:/Android/sdk/extras/android/m2repository/com/android/support/design/22.2.0/design-22.2.0.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.hdodenhof/circleimageview/1.3.0/97fc1d5d95b3bf84d18e25376d75bd2e136d120a/circleimageview-1.3.0.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.intuit.sdp/sdp-android/1.0.2/c7f6314d4037561690273c89e486a1bd21c655cb/sdp-android-1.0.2.aar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library-aar/1.0.0/cc8071e1ce2c478bc9974c1044c3f6f0b2a96bb0/library-aar-1.0.0.aar" />
                             <option value="C:/Android/sdk/extras/android/m2repository/com/android/support/support-v4/22.2.0/support-v4-22.2.0.aar" />
                             <option value="C:/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar" />
                           </list>
@@ -1643,6 +1674,7 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/layout/tool_bar.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/home.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
       </list>
     </option>
   </component>
@@ -1819,6 +1851,124 @@
       <recent name="D:\subga-mobile\NavigationView-master\app\src\main\res\mipmap-xhdpi" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/appcompat_v7_22_2_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/support_annotations_22_2_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/support_v4_22_2_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/app.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build.gradle</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/AndroidManifest.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/local.properties</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Login.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/res/layout/login.xml</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
@@ -1961,11 +2111,18 @@
       <option name="number" value="Default" />
       <updated>1454088049491</updated>
     </task>
+    <task id="LOCAL-00001" summary="home baru">
+      <created>1454096595929</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1454096595929</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1977,14 +2134,14 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.017035775" sideWeight="0.4969743" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.056218058" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -2001,6 +2158,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="home baru" />
+    <option name="LAST_COMMIT_MESSAGE" value="home baru" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2047,32 +2208,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Nav_setting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tool_bar.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5172415">
+        <state vertical-scroll-proportion="0.19615385">
           <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Nav_setting.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2083,12 +2233,59 @@
       </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="241" column="21" selection-start-line="84" selection-start-column="4" selection-end-line="241" selection-end-column="21" />
           <folding>
-            <element signature="e#3279#3295#0" expanded="false" />
-            <element signature="e#4281#4297#0" expanded="false" />
-            <element signature="e#6794#6810#0" expanded="false" />
-            <element signature="e#7634#7650#0" expanded="false" />
+            <element signature="e#4167#4182#0" expanded="true" />
+            <element signature="e#5206#5222#0" expanded="true" />
+            <element signature="e#5257#5272#0" expanded="true" />
+            <element signature="e#5867#5883#0" expanded="true" />
+            <element signature="e#5918#5933#0" expanded="true" />
+            <element signature="e#6240#6255#0" expanded="true" />
+            <element signature="e#6845#6860#0" expanded="true" />
+            <element signature="e#7889#7905#0" expanded="true" />
+            <element signature="e#8317#8332#0" expanded="true" />
+            <element signature="e#8658#8674#0" expanded="true" />
+            <element signature="e#9145#9159#0" expanded="true" />
+            <element signature="e#9258#9274#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="209" column="42" selection-start-line="209" selection-start-column="42" selection-end-line="209" selection-end-column="42" />
+          <folding>
+            <element signature="e#1474#1489#0" expanded="true" />
+            <element signature="e#1883#1897#0" expanded="true" />
+            <element signature="e#2290#2305#0" expanded="true" />
+            <element signature="e#2699#2715#0" expanded="true" />
+            <element signature="e#3110#3125#0" expanded="true" />
+            <element signature="e#3519#3534#0" expanded="true" />
+            <element signature="e#3760#3776#0" expanded="true" />
+            <element signature="e#4578#4592#0" expanded="true" />
+            <element signature="e#4670#4685#0" expanded="true" />
+            <element signature="e#4796#4812#0" expanded="true" />
+            <element signature="e#4851#4866#0" expanded="true" />
+            <element signature="e#4909#4923#0" expanded="true" />
+            <element signature="e#5017#5031#0" expanded="true" />
+            <element signature="e#5076#5091#0" expanded="true" />
+            <element signature="e#5797#5813#0" expanded="true" />
+            <element signature="e#5852#5867#0" expanded="true" />
+            <element signature="e#6514#6530#0" expanded="true" />
+            <element signature="e#6569#6584#0" expanded="true" />
+            <element signature="e#6915#6930#0" expanded="true" />
+            <element signature="e#7517#7533#0" expanded="true" />
+            <element signature="e#7572#7587#0" expanded="true" />
+            <element signature="e#8427#8442#0" expanded="true" />
+            <element signature="e#8800#8816#0" expanded="true" />
+            <element signature="e#9331#9345#0" expanded="true" />
+            <element signature="e#9456#9472#0" expanded="true" />
+            <marker date="1454098231317" expanded="true" signature="9834:9848" placeholder="&quot;350.00dp&quot;" />
+            <marker date="1454098231317" expanded="true" signature="10160:10176" placeholder="&quot;260.00dp&quot;" />
           </folding>
         </state>
       </provider>

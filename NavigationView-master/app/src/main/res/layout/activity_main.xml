@@ -86,39 +86,38 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="@dimen/_150sdp"
             android:layout_alignParentLeft="false"
             android:layout_alignParentStart="false"
             android:layout_alignParentTop="false"
             android:layout_centerHorizontal="true"
-            android:background="#add1dd">
+            android:background="#1f5aa6"
+            android:id="@+id/relativeLayout">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Navigasi"
-            android:id="@+id/textView6"
-            android:layout_alignParentTop="true"
-            android:layout_alignLeft="@+id/relativeLayout4"
-            android:layout_alignStart="@+id/relativeLayout4"
-            android:layout_marginTop="6dp"
-            android:textColor="#115c8c"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            android:layout_marginLeft="0dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Navigasi"
+                android:id="@+id/textView6"
+                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+id/relativeLayout4"
+                android:layout_alignStart="@+id/relativeLayout4"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:textColor="#d1d2d4"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
 
             <RelativeLayout
-                android:layout_width="152dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="6dp"
+                android:layout_width="@dimen/_145sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_6sdp"
                 android:id="@+id/relativeLayout4"
-                android:layout_marginStart="6dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_above="@+id/relativeLayout6"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="30dp">
+                android:layout_alignParentStart="true">
 
                 <ImageButton
                     android:layout_width="match_parent"
@@ -132,8 +131,8 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="145dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/_145sdp"
+                android:layout_height="@dimen/_40sdp"
                 android:id="@+id/relativeLayout6"
                 android:layout_alignParentBottom="true"
                 android:layout_alignLeft="@+id/relativeLayout4"
@@ -147,31 +146,32 @@
                     android:background="@mipmap/button_bookmark" />
 
             </RelativeLayout>
+
             <RelativeLayout
-                android:layout_width="150dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/_145sdp"
+                android:layout_height="@dimen/_40sdp"
                 android:id="@+id/relativeLayout3"
                 android:layout_alignTop="@+id/relativeLayout4"
                 android:layout_toRightOf="@+id/relativeLayout4"
                 android:layout_toEndOf="@+id/relativeLayout4"
                 android:layout_marginStart="6dp"
-                android:layout_marginLeft="0dp">
+                android:layout_marginLeft="@dimen/_15sdp">
 
                 <ImageButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btn_download"
-                    android:layout_alignParentRight="false"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentLeft="false"
                     android:adjustViewBounds="true"
-                    android:background="@mipmap/button_download" />
+                    android:background="@mipmap/button_download"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
 
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="150dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/_145sdp"
+                android:layout_height="@dimen/_40sdp"
                 android:id="@+id/relativeLayout5"
                 android:layout_alignTop="@+id/relativeLayout6"
                 android:layout_alignLeft="@+id/relativeLayout3"
@@ -187,25 +187,62 @@
                     android:background="@mipmap/button_setting" />
 
             </RelativeLayout>
+
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="350dp"
-            android:layout_height="160dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/relativeLayout2"
+            android:background="#2d9bd8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_100sdp"
+                android:text="Hot News"
+                android:id="@+id/textView47"
+                android:background="#2d9bd8"
+                android:autoText="false"
+                android:gravity="center|clip_vertical"
+                android:textColor="#d1d2d4"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/_235sdp"
+                android:layout_height="match_parent"
+                android:background="#d1d2d4"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"></RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="false"
             android:layout_alignParentBottom="true"
-            android:background="#115c8c">
+            android:background="#d1d2d4"
+            android:layout_below="@+id/relativeLayout2">
 
             <ImageView
-                android:layout_width="350dp"
-                android:layout_height="155dp"
-                android:id="@+id/imageView7"
+                android:layout_width="@dimen/_260sdp"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView2"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:background="@mipmap/home_bawah"
-                android:layout_alignParentTop="true" />
+                android:background="@mipmap/home_bawah" />
         </RelativeLayout>
+
+
 
     </LinearLayout>
 
