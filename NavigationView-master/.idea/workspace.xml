@@ -4,8 +4,12 @@
     <shared>
       <config>
         <devices>
-          <device id="Nexus S" />
+          <device id="Nexus 5X" />
+          <device id="Nexus 5" />
           <device id="Nexus One" />
+          <device id="Nexus 9" />
+          <device id="Nexus 4" />
+          <device id="Nexus S" />
         </devices>
       </config>
     </shared>
@@ -32,22 +36,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbd1768-0bd2-4b2a-9899-3a31b8035ef2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/about.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/about.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/duaempat.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/duaempat.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/edit_profile.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/edit_profile.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/help_center.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/help_center.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/notifications.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/notifications.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/office.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/office.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/team.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/team.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/coba_edit.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/coba_edit.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_bookmark.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_bookmark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_download.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_download.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_new.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_new.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_setting.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_setting.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/cobasaja.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/home.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NavigationView-master.iws" />
@@ -123,8 +113,50 @@
           </provider>
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+              <folding>
+                <element signature="e#355#371#0" expanded="true" />
+                <element signature="e#600#616#0" expanded="true" />
+                <element signature="e#651#667#0" expanded="true" />
+                <element signature="e#981#997#0" expanded="true" />
+                <element signature="e#1190#1205#0" expanded="true" />
+                <element signature="e#1367#1383#0" expanded="true" />
+                <element signature="e#1576#1590#0" expanded="true" />
+                <element signature="e#1751#1767#0" expanded="true" />
+                <element signature="e#1960#1975#0" expanded="true" />
+                <element signature="e#2137#2153#0" expanded="true" />
+                <element signature="e#2346#2362#0" expanded="true" />
+                <element signature="e#2525#2541#0" expanded="true" />
+                <element signature="e#2734#2749#0" expanded="true" />
+                <element signature="e#2911#2927#0" expanded="true" />
+                <element signature="e#3120#3135#0" expanded="true" />
+                <element signature="e#3287#3303#0" expanded="true" />
+                <element signature="e#3334#3350#0" expanded="true" />
+                <element signature="e#4094#4108#0" expanded="true" />
+                <element signature="e#4178#4193#0" expanded="true" />
+                <element signature="e#4292#4308#0" expanded="true" />
+                <element signature="e#4343#4358#0" expanded="true" />
+                <element signature="e#4497#4511#0" expanded="true" />
+                <element signature="e#4552#4567#0" expanded="true" />
+                <element signature="e#5325#5341#0" expanded="true" />
+                <element signature="e#5376#5391#0" expanded="true" />
+                <element signature="e#5986#6002#0" expanded="true" />
+                <element signature="e#6037#6052#0" expanded="true" />
+                <element signature="e#6315#6329#0" expanded="true" />
+                <element signature="e#6448#6464#0" expanded="true" />
+                <element signature="e#6503#6518#0" expanded="true" />
+                <element signature="e#6925#6941#0" expanded="true" />
+                <element signature="e#6976#6991#0" expanded="true" />
+                <element signature="e#7282#7298#0" expanded="true" />
+                <element signature="e#7337#7352#0" expanded="true" />
+                <element signature="e#7723#7739#0" expanded="true" />
+                <element signature="e#7770#7786#0" expanded="true" />
+                <element signature="e#8025#8041#0" expanded="true" />
+                <element signature="e#8453#8468#0" expanded="true" />
+                <element signature="e#8794#8810#0" expanded="true" />
+                <element signature="e#9281#9295#0" expanded="true" />
+                <element signature="e#9394#9410#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1630,13 +1662,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/layout/tool_bar.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/home.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_download.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_bookmark.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_new.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_setting.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/coba_edit.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/home.xml" />
       </list>
     </option>
   </component>
@@ -1919,6 +1951,36 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="mipmap-mdpi">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="main">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="res">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="mipmap-hdpi">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
@@ -1950,6 +2012,66 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="layout">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="main">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="res">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="drawable">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="main">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="res">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="anim">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -2349,7 +2471,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454105065645</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="btn">
+      <created>1454108682721</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1454108682721</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2588,14 +2716,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_in_right.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_out_left.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/home.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+          <folding>
+            <element signature="e#355#371#0" expanded="true" />
+            <element signature="e#600#616#0" expanded="true" />
+            <element signature="e#651#667#0" expanded="true" />
+            <element signature="e#981#997#0" expanded="true" />
+            <element signature="e#1190#1205#0" expanded="true" />
+            <element signature="e#1367#1383#0" expanded="true" />
+            <element signature="e#1576#1590#0" expanded="true" />
+            <element signature="e#1751#1767#0" expanded="true" />
+            <element signature="e#1960#1975#0" expanded="true" />
+            <element signature="e#2137#2153#0" expanded="true" />
+            <element signature="e#2346#2362#0" expanded="true" />
+            <element signature="e#2525#2541#0" expanded="true" />
+            <element signature="e#2734#2749#0" expanded="true" />
+            <element signature="e#2911#2927#0" expanded="true" />
+            <element signature="e#3120#3135#0" expanded="true" />
+            <element signature="e#3287#3303#0" expanded="true" />
+            <element signature="e#3334#3350#0" expanded="true" />
+            <element signature="e#4094#4108#0" expanded="true" />
+            <element signature="e#4178#4193#0" expanded="true" />
+            <element signature="e#4292#4308#0" expanded="true" />
+            <element signature="e#4343#4358#0" expanded="true" />
+            <element signature="e#4497#4511#0" expanded="true" />
+            <element signature="e#4552#4567#0" expanded="true" />
+            <element signature="e#5325#5341#0" expanded="true" />
+            <element signature="e#5376#5391#0" expanded="true" />
+            <element signature="e#5986#6002#0" expanded="true" />
+            <element signature="e#6037#6052#0" expanded="true" />
+            <element signature="e#6315#6329#0" expanded="true" />
+            <element signature="e#6448#6464#0" expanded="true" />
+            <element signature="e#6503#6518#0" expanded="true" />
+            <element signature="e#6925#6941#0" expanded="true" />
+            <element signature="e#6976#6991#0" expanded="true" />
+            <element signature="e#7282#7298#0" expanded="true" />
+            <element signature="e#7337#7352#0" expanded="true" />
+            <element signature="e#7723#7739#0" expanded="true" />
+            <element signature="e#7770#7786#0" expanded="true" />
+            <element signature="e#8025#8041#0" expanded="true" />
+            <element signature="e#8453#8468#0" expanded="true" />
+            <element signature="e#8794#8810#0" expanded="true" />
+            <element signature="e#9281#9295#0" expanded="true" />
+            <element signature="e#9394#9410#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
