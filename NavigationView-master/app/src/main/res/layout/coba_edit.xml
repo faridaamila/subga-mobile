@@ -25,7 +25,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginTop="@dimen/_19sdp"
             android:textStyle="bold"
-            android:textColor="#115c8c" />
+            android:textColor="#1F5AA6" />
 
     </RelativeLayout>
 
@@ -51,7 +51,7 @@
                 android:id="@+id/textView39"
                 android:layout_marginLeft="@dimen/_19sdp"
                 android:textStyle="bold"
-                android:textColor="#115c8c" />
+                android:textColor="#1F5AA6" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -373,7 +373,7 @@
                 android:text="USER DATA"
                 android:layout_marginLeft="@dimen/_19sdp"
                 android:textStyle="bold"
-                android:textColor="#115c8c"
+                android:textColor="#1F5AA6"
                 android:layout_marginTop="@dimen/_15sdp" />
 
             <RelativeLayout
@@ -530,7 +530,7 @@
                 android:text="LEGALITY"
                 android:layout_marginLeft="@dimen/_19sdp"
                 android:textStyle="bold"
-                android:textColor="#115c8c"
+                android:textColor="#1F5AA6"
                 android:layout_marginTop="@dimen/_15sdp" />
 
             <RelativeLayout
@@ -641,7 +641,8 @@
             android:id="@+id/btn_form_edit_profile"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:textColor="#1F5AA6" />
     </RelativeLayout>
 
 
