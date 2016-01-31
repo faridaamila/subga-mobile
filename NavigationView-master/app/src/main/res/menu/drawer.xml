@@ -6,79 +6,94 @@
         <item
             android:id="@+id/home"
             android:checked="false"
-            android:icon="@drawable/ic_inbox_black"
+            android:icon="@drawable/ic_home"
+            android:textColor="#1f5aa6"
             android:title="@string/home" />
+        </group>
 
+    <item android:title="Download Document">
+    <menu>
         <item
             android:id="@+id/add_on_yq"
             android:checked="false"
-            android:icon="@drawable/ic_star_black"
+            android:icon="@drawable/ic_menu"
+            android:textColor="#1f5aa6"
             android:title="@string/add_on_yq" />
 
         <item
             android:id="@+id/cargo"
             android:checked="false"
-            android:icon="@drawable/ic_send_black"
+            android:icon="@drawable/ic_menu"
+            android:textColor="#1f5aa6"
             android:title="@string/cargo" />
 
         <item
             android:id="@+id/codeshare_and_spa"
             android:checked="false"
-            android:icon="@drawable/ic_drafts_black"
+            android:icon="@drawable/ic_menu"
+            android:textColor="#1f5aa6"
             android:title="@string/codeshare_and_spa" />
-
 
         <item
             android:id="@+id/domestic"
             android:checked="false"
-            android:icon="@drawable/ic_email_black"
+            android:icon="@drawable/ic_menu"
+            android:textColor="#1f5aa6"
             android:title="@string/domestic" />
         <item
             android:id="@+id/flight_schedule"
             android:checked="false"
-            android:icon="@drawable/ic_delete_black"
+            android:icon="@drawable/ic_menu"
+            android:textColor="#1f5aa6"
             android:title="@string/fligh_schedule" />
         <item
             android:id="@+id/internal_news"
             android:checked="false"
-            android:icon="@drawable/ic_error_black"
+            android:icon="@drawable/ic_menu"
+            android:textColor="#1f5aa6"
             android:title="@string/internal_news" />
 
         <item
             android:id="@+id/international"
             android:checked="false"
-            android:icon="@drawable/ic_error_black"
+            android:icon="@drawable/ic_menu"
+            android:textColor="#1f5aa6"
             android:title="@string/international" />
 
         <item
             android:id="@+id/midle_east"
             android:checked="false"
-            android:icon="@drawable/ic_error_black"
+            android:icon="@drawable/ic_menu"
+            android:textColor="#1f5aa6"
             android:title="@string/midle_east" />
 
         <item
             android:id="@+id/other"
             android:checked="false"
-            android:icon="@drawable/ic_error_black"
+            android:icon="@drawable/ic_menu"
+            android:textColor="#1f5aa6"
             android:title="@string/other" />
 
         <item
             android:id="@+id/pin_hin"
             android:checked="false"
-            android:icon="@drawable/ic_error_black"
+            android:icon="@drawable/ic_menu"
+            android:textColor="#1f5aa6"
             android:title="@string/pin_hin" />
 
         <item
             android:id="@+id/rsp_yearly"
             android:checked="false"
-            android:icon="@drawable/ic_error_black"
+            android:icon="@drawable/ic_menu"
+            android:textColor="#1f5aa6"
             android:title="@string/rsp_yearly" />
 
         <item
             android:id="@+id/rules_and_procedure"
             android:checked="false"
-            android:icon="@drawable/ic_error_black"
+            android:icon="@drawable/ic_menu"
+            android:textColor="#1f5aa6"
             android:title="@string/rules_and_procedure" />
-
-    </group>
+        </menu>
+    </item>
 </menu>

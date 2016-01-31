@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -28,12 +29,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
     private EditText editTextUsername;
     private EditText editTextPassword;
-    private Button buttonLogin;
+    private ImageButton buttonLogin;
 
     private String username;
     private String password;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
@@ -41,7 +41,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         editTextUsername = (EditText) findViewById(R.id.editTextUsername);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
 
-        buttonLogin = (Button) findViewById(R.id.buttonLogin);
+        buttonLogin = (ImageButton) findViewById(R.id.buttonLogin);
 
         buttonLogin.setOnClickListener(Login.this);
     }
