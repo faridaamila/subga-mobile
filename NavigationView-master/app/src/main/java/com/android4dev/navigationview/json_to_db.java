@@ -19,57 +19,15 @@ import org.json.JSONObject;
 /**
  * Created by faridaamila on 01/02/2016.
  */
-public class get_member extends Activity{
+public class json_to_db extends Activity{
     int id_To_Update = 0;
     DBHelper mydb = new DBHelper(this);
     String jenis_member,password,npwp,username,no_fax_kantor,akta_pendirian,alamat_kantor,email_company,email_user,id_member,ijin_usaha,jabatan_pimpinan,jabatan_user,jenis_kantor,kode_pos,kota, merk_brand, nama_lengkap,nama_perusahaan,nama_pimpinan,nama_user,no_hp_pim,no_hp_user,no_telp_kantor;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-
-        Bundle extras = getIntent().getExtras();
-        if(extras !=null)
-        {
-            String Values = extras.getString("id");
-            int Value = Integer.parseInt(Values);
-
-            if(Value>0){
-                //means this is the view part not the add contact part.
-                Cursor rs = mydb.getData(Value);
-                id_To_Update = Value;
-                rs.moveToFirst();
-
-                akta_pendirian = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_AKTA_PENDIRIAN));
-                alamat_kantor = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_ALAMAT_KANTOR));
-                email_company = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_EMAIL_COMPANY));
-                email_user = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_EMAIL_USER));
-                ijin_usaha = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_IJIN_USAHA));
-                jabatan_pimpinan = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_JABATAN_PIMPINAN));
-                jabatan_user = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_JABATAN_USER));
-                jenis_kantor = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_JENIS_KANTOR));
-                kode_pos = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_KODEPOS));
-                kota = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_KOTA));
-                merk_brand = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_MERK_BRAND));
-                nama_lengkap = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_NAMA_LENGKAP_USER));
-                nama_perusahaan = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_NAMA_PERUSAHAAN));
-                nama_pimpinan = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_NAMA_PIMPINAN));
-                nama_user = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_USERNAME));
-                no_hp_pim = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_NO_HP_PIM));
-                no_hp_user = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_NO_HP_USER));
-                no_telp_kantor = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_TELEPHONE_KANTOR));
-                no_fax_kantor =rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_FAX_KANTOR));
-                npwp = rs.getString(rs.getColumnIndex(DBHelper.DATA_MEMBER_COLUMN_NPWP));
-
-                if (!rs.isClosed())
-                {
-                    rs.close();
-                }
-            }
-            else if (Value==0){
-                getData();
-            }
+    public json_to_db (String usernameku){
+        Cursor rs = mydb.getDataLogin(usernameku);
+        if (rs==null) {
+            getData();
         }
     }
 
@@ -87,7 +45,7 @@ public class get_member extends Activity{
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(get_member.this,"Check koneksi" ,Toast.LENGTH_LONG).show();
+                        Toast.makeText(json_to_db.this,"Check koneksi" ,Toast.LENGTH_LONG).show();
                     }
                 });
 
@@ -128,6 +86,8 @@ public class get_member extends Activity{
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        //mydb.insertMember(id_member, nama_perusahaan, merk_brand,alamat_kantor,kota,kode_pos,jenis_kantor,no_telp_kantor, email_company,nama_pimpinan,jabatan_pimpinan, no_hp_pim, username,nama_lengkap, jabatan_user,email_user, no_hp_user, npwp, ijin_usaha, akta_pendirian);
+        mydb.insertMember(id_member,nama_perusahaan,merk_brand,alamat_kantor,kota,kode_pos,jenis_kantor,no_telp_kantor,no_fax_kantor,
+                email_company,nama_pimpinan,jabatan_pimpinan,no_hp_pim,username, password, nama_lengkap,
+                jabatan_user,email_user,no_hp_user,akta_pendirian,ijin_usaha,npwp,jenis_member);
     }
 }
