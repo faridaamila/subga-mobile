@@ -609,7 +609,7 @@
     </ScrollView>
 
     <RelativeLayout
-        android:layout_width="@dimen/_285sdp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginRight="@dimen/_13sdp"
         android:layout_marginLeft="@dimen/_19sdp"

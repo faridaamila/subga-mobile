@@ -34,7 +34,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     private EditText editTextPassword;
     private ImageButton buttonLogin;
 
-    private String username;
+    public String username;
     private String password;
 
 
