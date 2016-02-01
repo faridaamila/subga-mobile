@@ -48,4 +48,7 @@
     <string name="sempat">Slide 4</string>
     <string name="slima">Slide 5</string>
     <string name="senam">Slide 6</string>
+
+    <string name="forgot_password"><a href="http://subga.info/homepage/lupa_password">Forgot your password</a></string>
+    <string name="register_here"><a href="http://subga.info/homepage/create_member">Register here</a></string>
 </resources>

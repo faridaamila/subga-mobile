@@ -2,10 +2,13 @@ package com.android4dev.navigationview;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -34,6 +37,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     private String username;
     private String password;
 
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
@@ -44,6 +49,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         buttonLogin = (ImageButton) findViewById(R.id.buttonLogin);
 
         buttonLogin.setOnClickListener(Login.this);
+
+        TextView forgot_password = (TextView) findViewById(R.id.forgot_password);
+        forgot_password.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView register_here = (TextView) findViewById(R.id.register_here);
+        register_here.setMovementMethod(LinkMovementMethod.getInstance());
+
     }
 
 
