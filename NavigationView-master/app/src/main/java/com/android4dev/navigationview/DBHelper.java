@@ -17,26 +17,30 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "db_subgamobi";
     public static final String DATA_MEMBER_TABLE = "data_member";
+
     public static final String DATA_MEMBER_COLUMN_ID_MEMBER = "id_member";
     public static final String DATA_MEMBER_COLUMN_NAMA_PERUSAHAAN = "nama_perusahaan";
-    public static final String DATA_MEMBER_COLUMN_MERK_BRAND = "merk_brand";
+    public static final String DATA_MEMBER_COLUMN_MERK_BRAND = "merk_brand_alias";
     public static final String DATA_MEMBER_COLUMN_ALAMAT_KANTOR = "alamat_kantor";
     public static final String DATA_MEMBER_COLUMN_KOTA = "kota";
-    public static final String DATA_MEMBER_COLUMN_KODEPOS = "kode_pos";
+    public static final String DATA_MEMBER_COLUMN_KODEPOS =  "kode_pos";
     public static final String DATA_MEMBER_COLUMN_JENIS_KANTOR = "jenis_kantor";
-    public static final String DATA_MEMBER_COLUMN_TELEPHONE_KANTOR = "telp_kantor";
-    public static final String DATA_MEMBER_COLUMN_EMAIL_COMPANY = "email_company";
+    public static final String DATA_MEMBER_COLUMN_TELEPHONE_KANTOR = "no_telepon";
+    public static final String DATA_MEMBER_COLUMN_EMAIL_COMPANY = "email_kantor";
     public static final String DATA_MEMBER_COLUMN_NAMA_PIMPINAN = "nama_pimpinan";
-    public static final String DATA_MEMBER_COLUMN_JABATAN_PIMPINAN = "jabatan_pim";
-    public static final String DATA_MEMBER_COLUMN_NO_HP_PIM = "no_hp_pim";
-    public static final String DATA_MEMBER_COLUMN_NAMA_USER = "username";
-    public static final String DATA_MEMBER_COLUMN_NAMA_LENGKAP = "nama_lengkap";
-    public static final String DATA_MEMBER_COLUMN_JABATAN_USER = "jabatan_user";
-    public static final String DATA_MEMBER_COLUMN_EMAIL_USER = "email_user";
-    public static final String DATA_MEMBER_COLUMN_NO_HP_USER = "no_hp_user";
-    public static final String DATA_MEMBER_COLUMN_NPWP = "npwp";
-    public static final String DATA_MEMBER_COLUMN_IJIN_USAHA = "ijin_usaha";
-    public static final String DATA_MEMBER_COLUMN_AKTA_PENDIRIAN = "akta_pendirian";
+    public static final String DATA_MEMBER_COLUMN_JABATAN_PIMPINAN =  "jabatan";
+    public static final String DATA_MEMBER_COLUMN_NO_HP_PIM = "nomor_hp_pimpinan_kantor";
+    public static final String DATA_MEMBER_COLUMN_USERNAME = "username";
+    public static final String DATA_MEMBER_COLUMN_PASSWORD = "password";
+    public static final String DATA_MEMBER_COLUMN_NAMA_LENGKAP_USER = "nama_lengkap_member";
+    public static final String DATA_MEMBER_COLUMN_JABATAN_USER = "jabatan_member";
+    public static final String DATA_MEMBER_COLUMN_EMAIL_USER = "email_member";
+    public static final String DATA_MEMBER_COLUMN_NO_HP_USER = "nomor_hp_member";
+    public static final String DATA_MEMBER_COLUMN_NPWP = "no_npwp";
+    public static final String DATA_MEMBER_COLUMN_IJIN_USAHA = "ijin_usaha_kantor";
+    public static final String DATA_MEMBER_COLUMN_AKTA_PENDIRIAN = "akta_pendirian_kantor";
+    public static final String DATA_MEMBER_COLUMN_FAX_KANTOR =  "fax_kantor";
+    public static final String DATA_MEMBER_COLUMN_JENIS_MEMBER = "jenis_member";
 
     private HashMap hp;
 
@@ -49,46 +53,45 @@ public class DBHelper extends SQLiteOpenHelper {
         // TODO Auto-generated method stub
         db.execSQL(
                 "create table data_member " +
-                        "(id_member,nama_perusahaan,merk_brand,alamat_kantor,kota,kode_pos" +
-                        "jenis_kantor,telp_kantor,email_company,nama_pimpinan,jabatan_pim,no_hp_pim,username" +
-                        "nama_lengkap,jabatan_user,email_user,no_hp_user,npwp,ijin_usaha,akta_pendirian)"
+                        "(id_member,nama_perusahaan,merk_brand_alias,alamat_kantor,kota,kode_pos,jenis_kantor,no_telepon,fax_kantor,email_kantor,nama_pimpinan,jabatan,nomor_hp_pimpinan_kantor,username, password, nama_lengkap_member,jabatan_member,email_member,nomor_hp_member,akta_pendirian_kantor,ijin_usaha_kantor,no_npwp,jenis_member)"
         );
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // TODO Auto-generated method stub
-        db.execSQL("DROP TABLE IF EXISTS contacts");
+        db.execSQL("DROP TABLE IF EXISTS data_member");
         onCreate(db);
     }
 
-    public boolean insertMember(String id_member, String nama_perusahaan, String merk_brand, String alamat_kantor, String kota, String kode_pos,
-                                String jenis_kantor, String telp_kantor, String email_company, String nama_pimpinan, String jabatan_pim, String no_hp_pim, String username,
-                                String nama_lengkap, String jabatan_user, String email_user, String no_hp_user, String npwp, String ijin_usaha, String akta_pendirian) {
+    public boolean insertMember(String id_member,String nama_perusahaan,String merk_brand_alias,String alamat_kantor,String kota,String kode_pos,String jenis_kantor,String no_telepon,String fax_kantor,String email_kantor,String nama_pimpinan,String jabatan,String nomor_hp_pimpinan_kantor,String username, String password, String nama_lengkap_member,String jabatan_member,String email_member,String nomor_hp_member,String akta_pendirian_kantor,String ijin_usaha_kantor,String no_npwp,String jenis_member) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("id_member", id_member);
         contentValues.put("nama_perusahaan", nama_perusahaan);
-        contentValues.put("merk_brand", merk_brand);
+        contentValues.put("merk_brand_alias", merk_brand_alias);
         contentValues.put("alamat_kantor", alamat_kantor);
         contentValues.put("kota", kota);
         contentValues.put("kode_pos", kode_pos);
         contentValues.put("id_member", id_member);
         contentValues.put("jenis_kantor", jenis_kantor);
-        contentValues.put("telp_kantor", telp_kantor);
-        contentValues.put("email_company", email_company);
+        contentValues.put("no_telepon", no_telepon);
+        contentValues.put("fax_kantor", fax_kantor);
+        contentValues.put("email_kantor", email_kantor);
         contentValues.put("nama_pimpinan", nama_pimpinan);
-        contentValues.put("jabatan_pim", jabatan_pim);
+        contentValues.put("jabatan", jabatan);
         contentValues.put("id_member", id_member);
-        contentValues.put("no_hp_pim", no_hp_pim);
+        contentValues.put("nomor_hp_pimpinan_kantor",nomor_hp_pimpinan_kantor);
         contentValues.put("username", username);
-        contentValues.put("nama_lengkap", nama_lengkap);
-        contentValues.put("jabatan_user", jabatan_user);
-        contentValues.put("email_user", email_user);
-        contentValues.put("no_hp_user", no_hp_user);
-        contentValues.put("npwp", npwp);
-        contentValues.put("ijin_usaha", ijin_usaha);
-        contentValues.put("akta_pendirian", akta_pendirian);
+        contentValues.put("password", password);
+        contentValues.put("nama_lengkap_member", nama_lengkap_member);
+        contentValues.put("jabatan_member", jabatan_member);
+        contentValues.put("email_member", email_member);
+        contentValues.put("nomor_hp_member", nomor_hp_member);
+        contentValues.put("no_npwp", no_npwp);
+        contentValues.put("ijin_usaha_kantor", ijin_usaha_kantor);
+        contentValues.put("akta_pendirian_kantor", akta_pendirian_kantor);
+        contentValues.put("jenis_member", jenis_member);
 
         db.insert("data_member", null, contentValues);
         return true;
