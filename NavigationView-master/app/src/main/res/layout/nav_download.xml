@@ -23,7 +23,7 @@
             android:layout_marginLeft="@dimen/_17sdp"
             android:layout_marginStart="17dp"
             android:layout_marginTop="@dimen/_21sdp"
-            android:textColor="#115c8c"
+            android:textColor="#1f5aa6"
             android:textStyle="bold" />
 
         <HorizontalScrollView

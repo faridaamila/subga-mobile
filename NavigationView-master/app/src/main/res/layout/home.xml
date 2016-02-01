@@ -284,7 +284,7 @@
 
     <RelativeLayout
         android:layout_width="@dimen/_350sdp"
-        android:layout_height="@dimen/_160sdp"
+        android:layout_height="@dimen/_180sdp"
         android:layout_centerHorizontal="true"
         android:background="#d1d2d4"
         android:layout_below="@+id/relativeLayout2"
@@ -297,7 +297,8 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:background="@mipmap/home_bawah" />
+            android:background="@mipmap/home_bawah"
+            android:layout_alignParentBottom="true" />
     </RelativeLayout>
 
     <RelativeLayout
