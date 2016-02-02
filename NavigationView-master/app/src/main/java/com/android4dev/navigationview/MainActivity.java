@@ -23,6 +23,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
@@ -54,6 +55,50 @@ public class MainActivity extends AppCompatActivity {
             flip.stopFlipping();
             mFlipping = 0;
         }
+
+        //Image Button untuk navigasi
+        ImageButton btn_new = (ImageButton) findViewById(R.id.btn_new);
+        ImageButton btn_bookmark = (ImageButton) findViewById(R.id.btn_bookmark);
+        ImageButton btn_download = (ImageButton) findViewById(R.id.btn_download);
+        ImageButton btn_setting = (ImageButton) findViewById(R.id.btn_setting);
+
+        btn_new.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Nav_new fragment = new Nav_new();
+                android.support.v4.app.FragmentTransaction ft1 = getSupportFragmentManager().beginTransaction();
+                ft1.replace(R.id.frame, fragment);
+                ft1.addToBackStack(null);
+                ft1.commit();
+            }
+        });
+        btn_bookmark.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Nav_bookmark fragment = new Nav_bookmark();
+                android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.frame, fragment);
+                ft.addToBackStack(null);
+                ft.commit();
+            }
+        });
+        btn_download.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Nav_download fragment = new Nav_download();
+                android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.frame, fragment);
+                ft.addToBackStack(null);
+                ft.commit();
+            }
+        });
+        btn_setting.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Nav_setting fragment = new Nav_setting();
+                android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.frame, fragment);
+                ft.addToBackStack(null);
+                ft.commit();
+            }
+        });
 
         //Initializing NavigationView
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
