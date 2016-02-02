@@ -71,7 +71,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                         if(response.equals("success")){
                             openProfile();
                         }else{
-                            Toast.makeText(Login.this, password, Toast.LENGTH_LONG).show();
+                            Toast.makeText(Login.this,"Username dan Password Salah", Toast.LENGTH_LONG).show();
                         }
                     }
                 },
@@ -102,7 +102,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         userLogin();
-        //json_to_db tutu =new json_to_db(username);
+        //json_to_db tutu =new json_to_db();
     }
 
     public static String md5(String s)
