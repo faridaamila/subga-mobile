@@ -1,7 +1,9 @@
 package com.android4dev.navigationview;
 
+import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        flip = (ViewFlipper)findViewById(R.id.viewFlipper1);
+        flip = (ViewFlipper) findViewById(R.id.viewFlipper1);
         if (mFlipping == 0) {
             flip.startFlipping();
             mFlipping = 1;
@@ -65,17 +67,17 @@ public class MainActivity extends AppCompatActivity {
                 String title = getString(R.string.app_name);
 
                 //Checking if the item is in checked state or not, if not make it in checked state
-               if(menuItem.isChecked()) menuItem.setChecked(false);
-               else menuItem.setChecked(true);
+                if (menuItem.isChecked()) menuItem.setChecked(false);
+                else menuItem.setChecked(true);
 
                 //Closing drawer on item click
-               drawerLayout.closeDrawers();
+                drawerLayout.closeDrawers();
 
                 //Check to see which item was being clicked and perform appropriate action
-                switch (menuItem.getItemId()){
+                switch (menuItem.getItemId()) {
                     //Replacing the main content with ContentFragment Which is our Inbox View;
                     case R.id.home:
-                        Toast.makeText(getApplicationContext(),"Inbox Selected",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Inbox Selected", Toast.LENGTH_SHORT).show();
                         Home fragment1 = new Home();
                         android.support.v4.app.FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction1.replace(R.id.frame, fragment1);
@@ -83,47 +85,47 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     // For rest of the options we just show a toast on click
                     case R.id.add_on_yq:
-                        Toast.makeText(getApplicationContext(),"Ini add on",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Ini add on", Toast.LENGTH_SHORT).show();
                         Content2Fragment fragment2 = new Content2Fragment();
                         android.support.v4.app.FragmentTransaction fragmentTransaction2 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction2.replace(R.id.frame, fragment2);
                         fragmentTransaction2.commit();
                         return true;
                     case R.id.cargo:
-                        Toast.makeText(getApplicationContext(),"Send Selected",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Send Selected", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.codeshare_and_spa:
-                        Toast.makeText(getApplicationContext(),"Drafts Selected",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Drafts Selected", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.domestic:
-                        Toast.makeText(getApplicationContext(),"All Mail Selected",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "All Mail Selected", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.flight_schedule:
-                        Toast.makeText(getApplicationContext(),"Trash Selected",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Trash Selected", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.internal_news:
-                        Toast.makeText(getApplicationContext(),"Spam Selected",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Spam Selected", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.international:
-                        Toast.makeText(getApplicationContext(),"Spam Selected",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Spam Selected", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.midle_east:
-                        Toast.makeText(getApplicationContext(),"Spam Selected",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Spam Selected", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.other:
-                        Toast.makeText(getApplicationContext(),"Spam Selected",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Spam Selected", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.pin_hin:
-                        Toast.makeText(getApplicationContext(),"Spam Selected",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Spam Selected", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.rsp_yearly:
-                        Toast.makeText(getApplicationContext(),"Spam Selected",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Spam Selected", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.rules_and_procedure:
-                        Toast.makeText(getApplicationContext(),"Spam Selected",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Spam Selected", Toast.LENGTH_SHORT).show();
                         return true;
                     default:
-                        Toast.makeText(getApplicationContext(),"Somethings Wrong",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Somethings Wrong", Toast.LENGTH_SHORT).show();
                         return true;
 
                 }
@@ -132,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Initializing Drawer Layout and ActionBarToggle
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.openDrawer, R.string.closeDrawer){
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.openDrawer, R.string.closeDrawer) {
 
             @Override
             public void onDrawerClosed(View drawerView) {
@@ -157,8 +159,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -173,10 +173,26 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        if (id == R.id.logout) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Anda Yakin Ingin Menutup Aplikasi?").
+                    setCancelable(false).setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    Intent exit = new Intent(
+                            Intent.ACTION_MAIN);
+                    exit.addCategory(Intent.CATEGORY_HOME);
+                    exit.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(exit);
+                }
 
+            }).setNegativeButton("Tidak",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+                            // return true;
+                        }
+                    }).show();
+        }
         return super.onOptionsItemSelected(item);
     }
 }

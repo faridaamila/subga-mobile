@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 /**
@@ -42,6 +43,7 @@ public class Home extends Fragment {
             @Override
             public void onClick(View v) {
                 Nav_new fragment14 = new Nav_new();
+                //Toast.makeText(getActivity(),"New Document!", Toast.LENGTH_SHORT).show();
                 android.support.v4.app.FragmentManager fm1 = getFragmentManager();
                 android.support.v4.app.FragmentTransaction ft1 = fm1.beginTransaction();
                 ft1.replace(R.id.frame, fragment14);
