@@ -31,7 +31,6 @@ public class json_to_db extends Activity{
         }
     }
 
-
     private void getData() {
         Login login = new Login();
         String url = "http://subga.info/Assets/get_data/data_member.php?username=" + login.username;
@@ -54,7 +53,6 @@ public class json_to_db extends Activity{
     }
 
     private void showJSON(String response) {
-
         try {
             JSONObject jsonObject = new JSONObject(response);
             JSONArray result = jsonObject.getJSONArray("result");

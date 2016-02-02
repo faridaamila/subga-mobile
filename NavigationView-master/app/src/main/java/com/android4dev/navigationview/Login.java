@@ -91,7 +91,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         userLogin();
-
+        json_to_db tutu =new json_to_db(username);
     }
 
     public static String md5(String s)

@@ -24,7 +24,8 @@ import org.json.JSONObject;
  * Created by S. Harsono on 1/27/2016.
  */
 public class Edit_profile extends Fragment{
-
+    String jenis_member,password,npwp,username,no_fax_kantor,akta_pendirian,alamat_kantor,email_company,email_user,id_member,ijin_usaha,jabatan_pimpinan,jabatan_user,jenis_kantor,kode_pos,kota, merk_brand, nama_lengkap,nama_perusahaan,nama_pimpinan,nama_user,no_hp_pim,no_hp_user,no_telp_kantor;
+    DBHelper mydb = new DBHelper(getActivity());
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.coba_edit, container, false);
         EditText eT_company_name= (EditText)v.findViewById(R.id.company_name);
@@ -47,7 +48,8 @@ public class Edit_profile extends Fragment{
         EditText eT_ijin_usaha= (EditText)v.findViewById(R.id.ijin_usaha);
         EditText eT_npwp= (EditText)v.findViewById(R.id.npwp);
 
-        /*Cursor rs = mydb.getDataLogin(usernameku);
+        Login masuk = new Login();
+        Cursor rs = mydb.getDataLogin(masuk.username);
         if (rs!=null) {
             rs.moveToFirst();
 
@@ -75,7 +77,28 @@ public class Edit_profile extends Fragment{
             if (!rs.isClosed()) {
                 rs.close();
             }
-        }*/
+        }
+
+        eT_company_name.setText(nama_perusahaan);
+        eT_merk_alias.setText(merk_brand);
+        eT_office_address.setText(alamat_kantor);
+        eT_city.setText(kota);
+        eT_zip_code.setText(kode_pos);
+        eT_telephone.setText(no_telp_kantor);
+        eT_fax.setText(no_fax_kantor);
+        eT_email.setText(email_company);
+        eT_chairman.setText(nama_pimpinan);
+        eT_position.setText(jabatan_pimpinan);
+        eT_mobile.setText(no_hp_pim);
+        eT_username.setText(username);
+        eT_full_name.setText(nama_lengkap);
+        eT_position2.setText(jabatan_user);
+        eT_email2.setText(email_user);
+        eT_mobile2.setText(no_hp_user);
+        eT_akta.setText(akta_pendirian);
+        eT_ijin_usaha.setText(ijin_usaha);
+        eT_npwp.setText(npwp);
+
 
         return v;
     }
