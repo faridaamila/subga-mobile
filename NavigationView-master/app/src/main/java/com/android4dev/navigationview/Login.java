@@ -38,7 +38,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     private String password;
 
 
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);

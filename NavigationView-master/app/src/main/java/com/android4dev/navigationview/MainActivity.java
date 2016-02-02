@@ -80,8 +80,6 @@ public class MainActivity extends AppCompatActivity {
                         android.support.v4.app.FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction1.replace(R.id.frame, fragment1);
                         fragmentTransaction1.commit();
-                        title  = getString(R.string.home);
-                        getSupportActionBar().setTitle(title);
                         return true;
                     // For rest of the options we just show a toast on click
                     case R.id.add_on_yq:
