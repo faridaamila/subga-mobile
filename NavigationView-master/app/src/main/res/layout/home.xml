@@ -299,6 +299,7 @@
             android:layout_alignParentEnd="true"
             android:background="@mipmap/home_bawah"
             android:layout_alignParentBottom="true" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -326,23 +327,67 @@
             android:layout_marginLeft="@dimen/_5sdp"
             android:textStyle="bold" />
 
-        <RelativeLayout
+        <ScrollView
             android:layout_width="@dimen/_230sdp"
             android:layout_height="match_parent"
+            android:scrollbars = "horizontal"
             android:background="#d1d2d4"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true">
 
-        <TextView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textColor="#1f5aa6"
                 android:textSize="@dimen/_14sdp"
-                android:id="@+id/hot_news"
+                android:id="@+id/hot_news2"
                 android:gravity="center_vertical|center|center_horizontal"
+                android:text="Mulai tanggal 12 Januari 2015 Garuda Indonesia membuka rute Surabaya ke Shanghai via Denpasar."
+
+                android:singleLine="true"
+                android:focusable="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:ellipsize="marquee"
+                android:typeface="serif"
+                android:scrollHorizontally="true"
+                android:focusableInTouchMode="true"
                 />
 
-        </RelativeLayout>
+        </ScrollView>
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#1f5aa6">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="© Copyright 2016. All Rights Reserved."
+            android:id="@+id/textView5"
+            android:textSize="@dimen/_7sdp"
+            android:textColor="#ffffff"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/textView7"
+            android:layout_toStartOf="@+id/textView7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Farida &amp; Winda | Politeknik Elektronika Negeri Surabaya"
+            android:id="@+id/textView7"
+            android:textSize="@dimen/_7sdp"
+            android:textColor="#9e9a9a"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
 </RelativeLayout>

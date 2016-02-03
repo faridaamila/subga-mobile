@@ -60,8 +60,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
     private void userLogin() {
         username = editTextUsername.getText().toString().trim();
-        password = "9c5c5c0fba714aa8b8c209c7c67e3e6b";//editTextPassword.getText().toString().trim();
-        //password = md5(password).trim();
+        password = editTextPassword.getText().toString().trim();
+        password = md5(password).trim();
 
         //Creating a string request
         StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL,

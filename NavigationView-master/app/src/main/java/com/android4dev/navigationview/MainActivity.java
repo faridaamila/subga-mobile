@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         flip = (ViewFlipper) findViewById(R.id.viewFlipper1);
         if (mFlipping == 0) {
             flip.startFlipping();

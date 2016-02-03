@@ -30,13 +30,6 @@ public class Home extends Fragment {
 
         View v = inflater.inflate(R.layout.home,container,false);
 
-        TextView tv2=(TextView)v.findViewById(R.id.hot_news);
-        tv2.setText("Mulai tanggal 12 Januari 2015 Garuda Indonesia membuka rute Surabaya ke Shanghai via Denpasar.");
-        tv2.setEllipsize(TextUtils.TruncateAt.MARQUEE);
-        tv2.setSingleLine(true);
-        tv2.setMarqueeRepeatLimit(5);
-        tv2.setSelected(true);
-
         flip = (ViewFlipper)v.findViewById(R.id.viewFlipper1);
         if (mFlipping == 0) {
             flip.startFlipping();
@@ -46,6 +39,12 @@ public class Home extends Fragment {
             mFlipping = 0;
         }
 
+
+
+        // tv2.setText("Mulai tanggal 12 Januari 2015 Garuda Indonesia membuka rute Surabaya ke Shanghai via Denpasar.");
+        // tv2.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+        // tv2.setSingleLine(true);
+        // tv2.setMarqueeRepeatLimit(5);
 
 
         ImageButton btn_new = (ImageButton)v.findViewById(R.id.btn_new);
@@ -100,7 +99,16 @@ public class Home extends Fragment {
             }
         });
 
+        TextView tv=(TextView)v.findViewById(R.id.hot_news2);
+        tv.setSelected(true);
+        tv.setFocusable(true);
+        tv.setFocusableInTouchMode(true);
 
+
+       // tv.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+       // tv.setSingleLine(true);
+       // tv.setMarqueeRepeatLimit(5);
+        //tv.setSelected(true);
 
         return v;
 

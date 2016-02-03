@@ -65,7 +65,10 @@
                     android:layout_height="match_parent"
                     android:text="Company Name"
                     android:id="@+id/textView40"
-                    android:gravity="bottom|center_vertical" />
+                    android:gravity="bottom|center_vertical"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
 
                 <ImageView
                     android:layout_width="@dimen/_10sdp"
@@ -80,11 +83,14 @@
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:id="@+id/company_name"
-                    android:gravity="center"
-                    android:background="@mipmap/edit_btn"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_alignParentEnd="true"
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14sdp" />
 
             </RelativeLayout>
 
@@ -110,7 +116,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -135,7 +144,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -160,7 +172,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -185,7 +200,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -235,7 +253,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -259,7 +280,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -292,7 +316,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -316,7 +343,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -340,7 +370,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -364,7 +397,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
             <TextView
@@ -406,7 +442,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -430,7 +469,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -454,7 +496,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -487,7 +532,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -520,7 +568,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
 
@@ -554,7 +605,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -578,7 +632,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -602,7 +659,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:background="@mipmap/edit_btn" />
+                    android:background="@mipmap/edit_btn"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/_14sdp" />
             </RelativeLayout>
 
         </LinearLayout>
