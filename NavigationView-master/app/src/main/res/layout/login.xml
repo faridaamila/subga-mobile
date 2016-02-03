@@ -24,7 +24,7 @@
             android:background="@mipmap/background_pass_user">
 
             <EditText
-                android:layout_width="@dimen/_100sdp"
+                android:layout_width="@dimen/_110sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:id="@+id/editTextUsername"
                 android:layout_alignParentRight="true"
@@ -34,7 +34,8 @@
                 android:layout_alignTop="@+id/imageView9"
                 android:gravity="top"
                 android:layout_alignBottom="@+id/imageView9"
-                android:layout_marginBottom="@dimen/_minus4sdp" />
+                android:layout_marginBottom="@dimen/_minus4sdp"
+                android:textSize="@dimen/_16sdp" />
 
             <ImageView
                 android:layout_width="@dimen/_15sdp"
@@ -69,7 +70,7 @@
                 android:layout_marginLeft="@dimen/_4sdp" />
 
             <EditText
-                android:layout_width="@dimen/_100sdp"
+                android:layout_width="@dimen/_110sdp"
                 android:layout_height="match_parent"
                 android:inputType="textPassword"
                 android:ems="10"
@@ -80,7 +81,8 @@
                 android:layout_alignTop="@+id/imageView10"
                 android:layout_alignBottom="@+id/imageView10"
                 android:layout_marginRight="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_minus4sdp" />
+                android:layout_marginBottom="@dimen/_minus4sdp"
+                android:textSize="@dimen/_16sdp" />
 
         </RelativeLayout>
 
