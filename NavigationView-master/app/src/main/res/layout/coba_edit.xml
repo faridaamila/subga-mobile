@@ -80,7 +80,7 @@
                     android:layout_marginRight="@dimen/_3sdp" />
 
                 <EditText
-                    android:layout_width="170dp"
+                    android:layout_width="171dp"
                     android:layout_height="match_parent"
                     android:id="@+id/company_name"
                     android:layout_alignParentTop="true"
