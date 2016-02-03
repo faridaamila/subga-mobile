@@ -2,60 +2,60 @@
 <items version="2" >
 
     <item
-        jar="D:\subga-mobile\NavigationView-master\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
-        <dex dex="D:\subga-mobile\NavigationView-master\app\build\intermediates\pre-dexed\debug\classes-8dd9548a70ed616b0828d21fa62ece856975f126.jar" />
-    </item>
-    <item
-        jar="D:\subga-mobile\NavigationView-master\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
+        jar="D:\OneDrive\subga-mobile\NavigationView-master\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
-        <dex dex="D:\subga-mobile\NavigationView-master\app\build\intermediates\pre-dexed\debug\classes-c374a1638cb28056ece0a625f6518b40723bb3d9.jar" />
-    </item>
-    <item
-        jar="D:\subga-mobile\NavigationView-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="D:\subga-mobile\NavigationView-master\app\build\intermediates\pre-dexed\debug\classes-6bdd0dbba541265fefbbd3becc15caf339f9afb7.jar" />
-    </item>
-    <item
-        jar="D:\subga-mobile\NavigationView-master\app\build\intermediates\exploded-aar\com.intuit.sdp\sdp-android\1.0.2\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="5831c1517a9c80bf19a6b76ad23b898a7d827c0f">
-        <dex dex="D:\subga-mobile\NavigationView-master\app\build\intermediates\pre-dexed\debug\classes-acdfb3cbb4663f1ef05a8f821023eaf2fb28c56b.jar" />
-    </item>
-    <item
-        jar="D:\subga-mobile\NavigationView-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="D:\subga-mobile\NavigationView-master\app\build\intermediates\pre-dexed\debug\classes-080766143d464e8074679c081bec4732c725e8ef.jar" />
-    </item>
-    <item
-        jar="D:\subga-mobile\NavigationView-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="D:\subga-mobile\NavigationView-master\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-aad56cf6ad497fad452ae7d1e955c5277a8099b3.jar" />
+        <dex dex="D:\OneDrive\subga-mobile\NavigationView-master\app\build\intermediates\pre-dexed\debug\classes-0f388307fd1c790005379ae3e7e6c56b765473ee.jar" />
     </item>
     <item
         jar="C:\Users\faridaamila\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="D:\subga-mobile\NavigationView-master\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-6b5368e33b7de1f9fd46c6726bda2577a1236142.jar" />
+        <dex dex="D:\OneDrive\subga-mobile\NavigationView-master\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-6b5368e33b7de1f9fd46c6726bda2577a1236142.jar" />
     </item>
     <item
-        jar="D:\subga-mobile\NavigationView-master\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\library-aar\1.0.0\jars\classes.jar"
+        jar="D:\OneDrive\subga-mobile\NavigationView-master\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\library-aar\1.0.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="e40b9a81989bd4a846018551c280f8c4d837bf2e">
-        <dex dex="D:\subga-mobile\NavigationView-master\app\build\intermediates\pre-dexed\debug\classes-9dd588cf4264a6787de18d4ec9dd650229112ba9.jar" />
+        <dex dex="D:\OneDrive\subga-mobile\NavigationView-master\app\build\intermediates\pre-dexed\debug\classes-e7845997b74dd0d33208ea164abb931378218bfb.jar" />
+    </item>
+    <item
+        jar="D:\OneDrive\subga-mobile\NavigationView-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="D:\OneDrive\subga-mobile\NavigationView-master\app\build\intermediates\pre-dexed\debug\classes-454a7cfebc624b7d202c3abb002fc68fea5e92e9.jar" />
+    </item>
+    <item
+        jar="D:\OneDrive\subga-mobile\NavigationView-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="D:\OneDrive\subga-mobile\NavigationView-master\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-d4f36ba570d3d00421ac03dfd1e8672b859704d7.jar" />
+    </item>
+    <item
+        jar="D:\OneDrive\subga-mobile\NavigationView-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="D:\OneDrive\subga-mobile\NavigationView-master\app\build\intermediates\pre-dexed\debug\classes-ed0dff39a34f9cef730c6642cf81d0433219efa1.jar" />
+    </item>
+    <item
+        jar="D:\OneDrive\subga-mobile\NavigationView-master\app\build\intermediates\exploded-aar\com.intuit.sdp\sdp-android\1.0.2\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5831c1517a9c80bf19a6b76ad23b898a7d827c0f">
+        <dex dex="D:\OneDrive\subga-mobile\NavigationView-master\app\build\intermediates\pre-dexed\debug\classes-71c958a400bb5368ea456dde9bbb647dbce95a81.jar" />
+    </item>
+    <item
+        jar="D:\OneDrive\subga-mobile\NavigationView-master\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
+        <dex dex="D:\OneDrive\subga-mobile\NavigationView-master\app\build\intermediates\pre-dexed\debug\classes-5d0556f5219587e71a97437dd88c2c04dd2932a7.jar" />
     </item>
 
 </items>

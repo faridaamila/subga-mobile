@@ -34,7 +34,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     private EditText editTextPassword;
     private ImageButton buttonLogin;
 
-    public String username;
+    public static String username;
     private String password;
 
 
@@ -60,8 +60,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
     private void userLogin() {
         username = editTextUsername.getText().toString().trim();
-        password = editTextPassword.getText().toString().trim();
-        password = md5(password).trim();
+        password = "9c5c5c0fba714aa8b8c209c7c67e3e6b";//editTextPassword.getText().toString().trim();
+        //password = md5(password).trim();
 
         //Creating a string request
         StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL,
@@ -102,7 +102,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         userLogin();
-        //json_to_db tutu =new json_to_db();
     }
 
     public static String md5(String s)
