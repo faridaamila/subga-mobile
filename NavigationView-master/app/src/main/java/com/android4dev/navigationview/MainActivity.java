@@ -1,28 +1,17 @@
 package com.android4dev.navigationview;
 
 import android.app.AlertDialog;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
-import android.support.v4.app.FragmentActivity;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.SubMenu;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -131,7 +120,6 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     //Replacing the main content with ContentFragment Which is our Inbox View;
                     case R.id.home:
-                        Toast.makeText(getApplicationContext(), "Inbox Selected", Toast.LENGTH_SHORT).show();
                         Home fragment1 = new Home();
                         android.support.v4.app.FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction1.replace(R.id.frame, fragment1);
@@ -139,14 +127,18 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     // For rest of the options we just show a toast on click
                     case R.id.add_on_yq:
-                        Toast.makeText(getApplicationContext(), "Ini add on", Toast.LENGTH_SHORT).show();
-                        Content2Fragment fragment2 = new Content2Fragment();
+                        Add_on fragment2 = new Add_on();
                         android.support.v4.app.FragmentTransaction fragmentTransaction2 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction2.replace(R.id.frame, fragment2);
                         fragmentTransaction2.commit();
                         return true;
                     case R.id.cargo:
-                        Toast.makeText(getApplicationContext(), "Send Selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Ini add on", Toast.LENGTH_SHORT).show();
+                        Content2Fragment fragment3 = new Content2Fragment();
+                        android.support.v4.app.FragmentTransaction fragmentTransaction3 = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction3.replace(R.id.frame, fragment3);
+                        fragmentTransaction3.commit();
+
                         return true;
                     case R.id.codeshare_and_spa:
                         Toast.makeText(getApplicationContext(), "Drafts Selected", Toast.LENGTH_SHORT).show();
