@@ -1,13 +1,18 @@
 package com.android4dev.navigationview;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
@@ -25,6 +30,13 @@ public class Home extends Fragment {
 
         View v = inflater.inflate(R.layout.home,container,false);
 
+        TextView tv2=(TextView)v.findViewById(R.id.hot_news);
+        tv2.setText("Mulai tanggal 12 Januari 2015 Garuda Indonesia membuka rute Surabaya ke Shanghai via Denpasar.");
+        tv2.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+        tv2.setSingleLine(true);
+        tv2.setMarqueeRepeatLimit(5);
+        tv2.setSelected(true);
+
         flip = (ViewFlipper)v.findViewById(R.id.viewFlipper1);
         if (mFlipping == 0) {
             flip.startFlipping();
@@ -33,6 +45,8 @@ public class Home extends Fragment {
             flip.stopFlipping();
             mFlipping = 0;
         }
+
+
 
         ImageButton btn_new = (ImageButton)v.findViewById(R.id.btn_new);
         ImageButton btn_bookmark = (ImageButton)v.findViewById(R.id.btn_bookmark);
@@ -49,7 +63,7 @@ public class Home extends Fragment {
                 ft1.replace(R.id.frame, fragment14);
                 ft1.addToBackStack(null);
                 ft1.commit();
-              //  title  = getString(R.string.home);
+                //  title  = getString(R.string.home);
             }
         });
         btn_bookmark.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +100,10 @@ public class Home extends Fragment {
             }
         });
 
+
+
         return v;
+
     }
 }
 

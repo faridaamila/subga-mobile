@@ -332,7 +332,17 @@
             android:background="#d1d2d4"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"></RelativeLayout>
-    </RelativeLayout>
+            android:layout_alignParentEnd="true">
 
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#1f5aa6"
+                android:textSize="@dimen/_14sdp"
+                android:id="@+id/hot_news"
+                android:gravity="center_vertical|center|center_horizontal"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
 </RelativeLayout>
