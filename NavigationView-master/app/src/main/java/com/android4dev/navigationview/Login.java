@@ -57,7 +57,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
     }
 
-
     private void userLogin() {
         username = editTextUsername.getText().toString().trim();
         password = editTextPassword.getText().toString().trim();
