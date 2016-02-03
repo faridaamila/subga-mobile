@@ -7,6 +7,8 @@ import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -105,8 +107,15 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     public Cursor getDataLogin(String username) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery("select * from contacts where username=" + username + "", null);
+        Cursor res = null;
+        SQLiteDatabase db = null;
+        try {
+            db = this.getReadableDatabase();
+            res = db.rawQuery("select * from contacts where username=" + username + "", null);
+        }catch (Exception e){
+            return res;
+        }
+
         return res;
     }
 
