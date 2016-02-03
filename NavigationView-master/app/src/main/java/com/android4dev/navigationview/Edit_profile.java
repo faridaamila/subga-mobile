@@ -69,7 +69,7 @@ public class Edit_profile extends Fragment{
         loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
 
         String url = "http://subga.info/Assets/get_data/data_member.php?username="+login_username;
-        Toast.makeText( getActivity(),url,Toast.LENGTH_LONG).show();
+        //Toast.makeText( getActivity(),url,Toast.LENGTH_LONG).show();
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override

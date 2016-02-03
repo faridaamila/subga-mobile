@@ -330,9 +330,7 @@
                     android:textColor="#1f5aa6"
                     android:textSize="@dimen/_14sdp"
                     android:id="@+id/hot_news"
-                    android:gravity="center_vertical|center|center_horizontal"
-                    android:text="Mulai tanggal 12 Januari 2015 Garuda Indonesia membuka rute Surabaya ke Shanghai via Denpasar."
-                   />
+                    android:gravity="center_vertical|center|center_horizontal" />
 
             </RelativeLayout>
         </RelativeLayout>

@@ -1,6 +1,7 @@
 package com.android4dev.navigationview;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,12 +19,24 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class MainActivity extends AppCompatActivity {
     //Defining Variables
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
     private boolean viewIsAtHome;
+    private ProgressDialog loading;
+    private TextView tv;
 
     ViewFlipper flip;
     int mFlipping = 0;
@@ -47,12 +60,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //text marque
-        TextView tv=(TextView)findViewById(R.id.hot_news);
+        tv=(TextView)findViewById(R.id.hot_news);
        // tv.setText("Mulai tanggal 12 Januari 2015 Garuda Indonesia membuka rute Surabaya ke Shanghai via Denpasar.");
         tv.setEllipsize(TextUtils.TruncateAt.MARQUEE);
         tv.setSingleLine(true);
         tv.setMarqueeRepeatLimit(5);
         tv.setSelected(true);
+
+        getData();
 
         //Image Button untuk navigasi
         ImageButton btn_new = (ImageButton) findViewById(R.id.btn_new);
@@ -240,5 +255,41 @@ public class MainActivity extends AppCompatActivity {
                     }).show();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void getData() {
+        loading = ProgressDialog.show(this,"Please wait...","Fetching...",false,false);
+
+        String url = "http://subga.info/Assets/get_data/freetext.php";
+
+        StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                loading.dismiss();
+                showJSON(response);
+            }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(MainActivity.this,error.toString(),Toast.LENGTH_LONG).show();
+                    }
+                });
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
+
+    private void showJSON(String response){
+        String isi_freetext="";
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            JSONArray result = jsonObject.getJSONArray("result");
+            JSONObject collegeData = result.getJSONObject(0);
+            isi_freetext = collegeData.getString("isi_freetext");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        tv.setText(isi_freetext);
     }
 }
