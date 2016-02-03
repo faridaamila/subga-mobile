@@ -13,10 +13,6 @@
             android:label="@string/app_name" >
             </activity>
         <activity
-            android:name=".json_to_db"
-            android:label="@string/app_name" >
-        </activity>
-        <activity
             android:name=".Splashscreen"
             android:label="@string/app_name" >
             <intent-filter>
