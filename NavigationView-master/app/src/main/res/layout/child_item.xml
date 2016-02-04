@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="50dp"
     android:paddingBottom="4dp"
     android:paddingTop="4dp" >
 
@@ -67,6 +66,26 @@
             android:layout_alignParentTop="true"
             android:layout_alignRight="@+id/to"
             android:layout_alignEnd="@+id/to" />
+
+        <ImageButton
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:background="@mipmap/btn_search"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/_5sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:id="@+id/textView8"
+            android:layout_centerVertical="true"
+            android:layout_alignRight="@+id/imageButton"
+            android:layout_alignEnd="@+id/imageButton"
+            android:layout_marginRight="@dimen/_7sdp" />
 
     </RelativeLayout>
 
