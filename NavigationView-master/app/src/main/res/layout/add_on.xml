@@ -93,7 +93,7 @@
                         android:id="@+id/textView18"
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="110dp"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="6dp"
                         android:layout_marginBottom="5dp" />
 
                     <TextView
