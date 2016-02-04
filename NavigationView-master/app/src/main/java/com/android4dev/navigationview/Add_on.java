@@ -197,7 +197,7 @@ public class Add_on extends Fragment {
             for (int i = 0; i < result.length(); i++) {
                 JSONObject file = result.getJSONObject(i);
                 jenis_dokumen[i]=file.getString("jenis_dokumen");
-                //if (jenis_member_awas.equals(jenis_dokumen[i])){
+
                     tgl_release[i] = file.getString("tgl_release");
                     periode_awal_muncul[i] = file.getString("periode_awal_muncul");
                     periode_akhir_muncul[i] = file.getString("periode_akhir_muncul");
@@ -207,7 +207,6 @@ public class Add_on extends Fragment {
                     status[i] = file.getString("status");
                     direktori_file[i] = file.getString("direktori_file");
                     jml_download[i] = file.getString("jml_download");
-                //}
             }
         }
         catch(JSONException e){
