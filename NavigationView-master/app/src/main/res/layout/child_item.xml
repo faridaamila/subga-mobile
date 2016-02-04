@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_below="@+id/relativeLayout11"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout12">
+
+        <TextView
+            android:id="@+id/from"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/_12sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="From"
+            android:gravity="center_vertical" />
+
+
+
+        <EditText
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="match_parent"
+            android:id="@+id/editForm"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:background="@mipmap/edit_btn"
+            android:layout_marginLeft="43dp"
+            android:layout_marginStart="43dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/to"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/_12sdp"
+            android:text="To"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/editForm"
+            android:layout_toEndOf="@+id/editForm"
+            android:layout_marginLeft="@dimen/_10sdp" />
+
+        <EditText
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="match_parent"
+            android:id="@+id/editTo"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:background="@mipmap/edit_btn"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/to"
+            android:layout_alignEnd="@+id/to" />
+
+        <ImageButton
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:background="@mipmap/btn_search"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/_5sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:id="@+id/textView8"
+            android:layout_centerVertical="true"
+            android:layout_alignRight="@+id/imageButton"
+            android:layout_alignEnd="@+id/imageButton"
+            android:layout_marginRight="@dimen/_7sdp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        android:id="@+id/relativeLayout11">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Issue Date"
+            android:id="@+id/issue_date"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#1f5aa6" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_below="@+id/relativeLayout12"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/relativeLayout13">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Keyword"
+            android:id="@+id/keyword"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#1f5aa6" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_below="@+id/relativeLayout13"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout14">
+
+        <TextView
+            android:id="@+id/text_keyword"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/_12sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="Keyword"
+            android:gravity="center_vertical" />
+
+        <EditText
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="match_parent"
+            android:id="@+id/editKeyword"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:background="@mipmap/edit_btn"
+            android:layout_marginLeft="65dp"
+            android:layout_marginStart="65dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

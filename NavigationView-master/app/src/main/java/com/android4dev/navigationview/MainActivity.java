@@ -142,48 +142,112 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     // For rest of the options we just show a toast on click
                     case R.id.add_on_yq:
+                        Toast.makeText(getApplicationContext(), "Ini add on", Toast.LENGTH_SHORT).show();
                         Add_on fragment2 = new Add_on();
+                        title  = getString(R.string.add_on_yq);
+                        getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction2 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction2.replace(R.id.frame, fragment2);
                         fragmentTransaction2.commit();
                         return true;
                     case R.id.cargo:
-                        Toast.makeText(getApplicationContext(), "Ini add on", Toast.LENGTH_SHORT).show();
-                        Content2Fragment fragment3 = new Content2Fragment();
+                        Toast.makeText(getApplicationContext(), "Ini CARGO", Toast.LENGTH_SHORT).show();
+                        Cargo fragment3 = new Cargo();
+                        title  = getString(R.string.cargo);
+                        getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction3 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction3.replace(R.id.frame, fragment3);
                         fragmentTransaction3.commit();
-
                         return true;
                     case R.id.codeshare_and_spa:
-                        Toast.makeText(getApplicationContext(), "Drafts Selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Ini CODESHARE AND SPA", Toast.LENGTH_SHORT).show();
+                        Codeshare fragment4 = new Codeshare();
+                        title  = getString(R.string.codeshare_and_spa);
+                        getSupportActionBar().setTitle(title);
+                        android.support.v4.app.FragmentTransaction fragmentTransaction4 = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction4.replace(R.id.frame, fragment4);
+                        fragmentTransaction4.commit();
                         return true;
                     case R.id.domestic:
-                        Toast.makeText(getApplicationContext(), "All Mail Selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Ini DOMESTIC", Toast.LENGTH_SHORT).show();
+                        Domestic fragment5 = new Domestic();
+                        title  = getString(R.string.domestic);
+                        getSupportActionBar().setTitle(title);
+                        android.support.v4.app.FragmentTransaction fragmentTransaction5 = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction5.replace(R.id.frame, fragment5);
+                        fragmentTransaction5.commit();
                         return true;
                     case R.id.flight_schedule:
-                        Toast.makeText(getApplicationContext(), "Trash Selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Ini FLIGHT_SCHEDULE", Toast.LENGTH_SHORT).show();
+                        Flight_schedule fragment6 = new Flight_schedule();
+                        title  = getString(R.string.fligh_schedule);
+                        getSupportActionBar().setTitle(title);
+                        android.support.v4.app.FragmentTransaction fragmentTransaction6 = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction6.replace(R.id.frame, fragment6);
+                        fragmentTransaction6.commit();
                         return true;
                     case R.id.internal_news:
-                        Toast.makeText(getApplicationContext(), "Spam Selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Ini INTERNAL NEWS", Toast.LENGTH_SHORT).show();
+                        Internal_news fragment7 = new Internal_news();
+                        title  = getString(R.string.internal_news);
+                        getSupportActionBar().setTitle(title);
+                        android.support.v4.app.FragmentTransaction fragmentTransaction7 = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction7.replace(R.id.frame, fragment7);
+                        fragmentTransaction7.commit();
                         return true;
                     case R.id.international:
-                        Toast.makeText(getApplicationContext(), "Spam Selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Ini INTERNATIONAL", Toast.LENGTH_SHORT).show();
+                        International fragment8 = new International();
+                        title  = getString(R.string.international);
+                        getSupportActionBar().setTitle(title);
+                        android.support.v4.app.FragmentTransaction fragmentTransaction8 = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction8.replace(R.id.frame, fragment8);
+                        fragmentTransaction8.commit();
                         return true;
                     case R.id.midle_east:
-                        Toast.makeText(getApplicationContext(), "Spam Selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Ini MIDDLE_EAST", Toast.LENGTH_SHORT).show();
+                        Middle_east fragment9 = new Middle_east();
+                        title  = getString(R.string.midle_east);
+                        getSupportActionBar().setTitle(title);
+                        android.support.v4.app.FragmentTransaction fragmentTransaction9 = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction9.replace(R.id.frame, fragment9);
+                        fragmentTransaction9.commit();
                         return true;
                     case R.id.other:
-                        Toast.makeText(getApplicationContext(), "Spam Selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Ini Other", Toast.LENGTH_SHORT).show();
+                        Other fragment10 = new Other();
+                        title  = getString(R.string.other);
+                        getSupportActionBar().setTitle(title);
+                        android.support.v4.app.FragmentTransaction fragmentTransaction10 = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction10.replace(R.id.frame, fragment10);
+                        fragmentTransaction10.commit();
                         return true;
                     case R.id.pin_hin:
-                        Toast.makeText(getApplicationContext(), "Spam Selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "ini PIN HIN RIN", Toast.LENGTH_SHORT).show();
+                        Pin_hin_rin fragment11 = new Pin_hin_rin();
+                        title  = getString(R.string.pin_hin);
+                        getSupportActionBar().setTitle(title);
+                        android.support.v4.app.FragmentTransaction fragmentTransaction11 = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction11.replace(R.id.frame, fragment11);
+                        fragmentTransaction11.commit();
                         return true;
                     case R.id.rsp_yearly:
-                        Toast.makeText(getApplicationContext(), "Spam Selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Ini RSP YEARLY", Toast.LENGTH_SHORT).show();
+                        Rsp_yearly fragment12 = new Rsp_yearly();
+                        title  = getString(R.string.rsp_yearly);
+                        getSupportActionBar().setTitle(title);
+                        android.support.v4.app.FragmentTransaction fragmentTransaction12 = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction12.replace(R.id.frame, fragment12);
+                        fragmentTransaction12.commit();
                         return true;
                     case R.id.rules_and_procedure:
-                        Toast.makeText(getApplicationContext(), "Spam Selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Ini RULES", Toast.LENGTH_SHORT).show();
+                        Rules_and_procedure fragment13 = new Rules_and_procedure();
+                        title  = getString(R.string.rules_and_procedure);
+                        getSupportActionBar().setTitle(title);
+                        android.support.v4.app.FragmentTransaction fragmentTransaction13 = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction13.replace(R.id.frame, fragment13);
+                        fragmentTransaction13.commit();
                         return true;
                     default:
                         Toast.makeText(getApplicationContext(), "Somethings Wrong", Toast.LENGTH_SHORT).show();
