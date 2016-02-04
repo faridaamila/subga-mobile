@@ -113,7 +113,7 @@ public class Add_on extends Fragment {
                 TableRow row = new TableRow(getActivity());
                 row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
                         TableRow.LayoutParams.WRAP_CONTENT));
-                for (int j = 0; j <= 8; j++) {
+                for (int j = 0; j <= 7; j++) {
                     TextView tv = new TextView(getActivity());
                     if (j == 0) {
                         tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
@@ -145,18 +145,13 @@ public class Add_on extends Fragment {
                         tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
                         tv.setPadding(5, 5, 5, 5);
-                        tv.setText(ga_info[i]);
+                        tv.setText(refer[i]);
                     } else if (j == 6) {
                         tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
                         tv.setPadding(5, 5, 5, 5);
-                        tv.setText(refer[i]);
-                    } else if (j == 7) {
-                        tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                TableRow.LayoutParams.WRAP_CONTENT));
-                        tv.setPadding(5, 5, 5, 5);
                         tv.setText("test1");
-                    } else if (j == 8) {
+                    } else if (j == 7) {
                         tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
                         tv.setPadding(5, 5, 5, 5);
