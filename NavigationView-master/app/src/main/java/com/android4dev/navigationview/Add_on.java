@@ -6,6 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -23,8 +27,24 @@ import org.json.JSONObject;
  */
 public class Add_on extends Fragment {
     private ProgressDialog loading;
+    TableLayout tl;
+    EditText no;
+    String[] jml_download;
+    String[] direktori_file;
+    String[] jenis_dokumen;
+    String[] status;
+    String[] refer;
+    String[] subjek;
+    String[] ga_info;
+    String[] periode_akhir_muncul;
+    String[] periode_awal_muncul;
+    String[]tgl_release;
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.add_on, container, false);
+        /* Find Tablelayout defined in main.xml */
+        tl = (TableLayout) v.findViewById(R.id.tableLayout1);
+
         getData();
         return v;
     }
@@ -32,7 +52,7 @@ public class Add_on extends Fragment {
     private void getData() {
         loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
 
-        String url = "http://subga.info/Assets/get_data/data_file_addon.php";
+        String url = "http://subga.info/Assets/get_data/data_file_addon.php?kategori=10";
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
@@ -52,18 +72,102 @@ public class Add_on extends Fragment {
         requestQueue.add(stringRequest);
     }
 
-    private void showJSON(String response){
-        String isi_freetext="";
+    private void showJSON(String response) {
+
+
+        JSONArray result = null;
         try {
             JSONObject jsonObject = new JSONObject(response);
-            JSONArray result = jsonObject.getJSONArray("result");
-            JSONObject collegeData = result.getJSONObject(0);
-            isi_freetext = collegeData.getString("isi_freetext");
-        } catch (JSONException e) {
+            result = jsonObject.getJSONArray("result");
+            tgl_release = new String[result.length()];
+            periode_awal_muncul = new String[result.length()];
+            periode_akhir_muncul = new String[result.length()];
+            ga_info = new String[result.length()];
+            subjek = new String[result.length()];
+            refer = new String[result.length()];
+            status = new String[result.length()];
+            jenis_dokumen = new String[result.length()];
+            direktori_file = new String[result.length()];
+            jml_download = new String[result.length()];
+
+            for (int i = 0; i < result.length(); i++) {
+                JSONObject file = result.getJSONObject(i);
+                tgl_release[i] = file.getString("tgl_release");
+                periode_awal_muncul[i] = file.getString("periode_awal_muncul");
+                periode_akhir_muncul[i] = file.getString("periode_akhir_muncul");
+                ga_info[i] = file.getString("ga_info");
+                subjek[i] = file.getString("subjek");
+                refer[i] = file.getString("refer");
+                status[i] = file.getString("status");
+                jenis_dokumen[i] = file.getString("jenis_dokumen");
+                direktori_file[i] = file.getString("direktori_file");
+                jml_download[i] = file.getString("jml_download");
+            }
+        }
+        catch(JSONException e){
             e.printStackTrace();
         }
-        //tv.setText(isi_freetext);
-    }
+        int k = 1;
+            for (int i = 0; i < result.length(); i++) {
 
+                TableRow row = new TableRow(getActivity());
+                row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
+                        TableRow.LayoutParams.WRAP_CONTENT));
+                for (int j = 0; j <= 8; j++) {
+                    TextView tv = new TextView(getActivity());
+                    if (j == 0) {
+                        tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        tv.setPadding(5, 5, 5, 5);
+                        tv.setText(Integer.toString(k));
+                        k++;
+                    } else if (j == 1) {
+                        tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        tv.setPadding(5, 5, 5, 5);
+                        tv.setText(tgl_release[i]);
+                    } else if (j == 2) {
+                        tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        tv.setPadding(5, 5, 5, 5);
+                        tv.setText(ga_info[i]);
+                    } else if (j == 3) {
+                        tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        tv.setPadding(5, 5, 5, 5);
+                        tv.setText(subjek[i]);
+                    } else if (j == 4) {
+                        tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        tv.setPadding(5, 5, 5, 5);
+                        tv.setText(jml_download[i]);
+                    } else if (j == 5) {
+                        tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        tv.setPadding(5, 5, 5, 5);
+                        tv.setText(ga_info[i]);
+                    } else if (j == 6) {
+                        tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        tv.setPadding(5, 5, 5, 5);
+                        tv.setText(refer[i]);
+                    } else if (j == 7) {
+                        tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        tv.setPadding(5, 5, 5, 5);
+                        tv.setText("test1");
+                    } else if (j == 8) {
+                        tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        tv.setPadding(5, 5, 5, 5);
+                        tv.setText("test2");
+                    }
+                    row.addView(tv);
+                }
+                tl.addView(row);
+            }
+
+
+    }
 }
 
