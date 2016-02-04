@@ -25,6 +25,7 @@ import org.json.JSONObject;
 public class Edit_profile extends Fragment{
 
     String login_username;
+    public static String jenis_member="";
     private ProgressDialog loading;
     EditText eT_npwp,eT_ijinusaha,eT_akta, eT_mobile2, eT_email2, eT_position2, eT_mobile, eT_position, eT_telephone, eT_zipcode, eT_city, eT_fax, eT_chairman, eT_email, eT_company, eT_officeaddress, eT_username, eT_fullname, eT_merkalias;
 
@@ -110,8 +111,6 @@ public class Edit_profile extends Fragment{
         String ijin_usaha_kantor="";
         String no_npwp="";
 
-
-
         try {
             JSONObject jsonObject = new JSONObject(response);
             JSONArray result = jsonObject.getJSONArray("result");
@@ -135,6 +134,7 @@ public class Edit_profile extends Fragment{
             akta_pendirian_kantor=collegeData.getString("akta_pendirian_kantor");
             ijin_usaha_kantor=collegeData.getString("ijin_usaha_kantor");
             no_npwp=collegeData.getString("no_npwp");
+            jenis_member=collegeData.getString("jenis_member");
         }
         catch (JSONException e) {
             e.printStackTrace();
