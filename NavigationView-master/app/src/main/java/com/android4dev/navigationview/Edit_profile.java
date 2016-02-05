@@ -1,14 +1,18 @@
 package com.android4dev.navigationview;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -18,6 +22,9 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by S. Harsono on 1/27/2016.
@@ -50,10 +57,84 @@ public class Edit_profile extends Fragment{
         eT_akta = (EditText) v.findViewById(R.id.akta);
         eT_ijinusaha = (EditText) v.findViewById(R.id.ijin_usaha);
         eT_npwp = (EditText) v.findViewById(R.id.npwp);
+        Button submit =(Button) v.findViewById(R.id.btn_form_edit_profile);
 
         getData();
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editProfil();
+            }
+        });
+
         return v;
     }
+    private void editProfil(){
+        final String company = eT_company.getText().toString().trim();
+        final String merkalias = eT_merkalias.getText().toString().trim();
+        final String officeaddress = eT_officeaddress.getText().toString().trim();
+        final String city = eT_city.getText().toString().trim();
+        final String zipcode = eT_zipcode.getText().toString().trim();
+        final String telephone = eT_telephone.getText().toString().trim();
+        final String fax = eT_fax.getText().toString().trim();
+        final String email = eT_email.getText().toString().trim();
+        final String chairman = eT_chairman.getText().toString().trim();
+        final String position = eT_position.getText().toString().trim();
+        final String mobile = eT_mobile.getText().toString().trim();
+        final String username = eT_username.getText().toString().trim();
+        final String fullname = eT_fullname.getText().toString().trim();
+        final String position2 = eT_position2.getText().toString().trim();
+        final String email2 = eT_email2.getText().toString().trim();
+        final String mobile2 = eT_email2.getText().toString().trim();
+        final String akta =  eT_akta.getText().toString().trim();
+        final String ijinusaha =  eT_ijinusaha.getText().toString().trim();
+        final String npwp =  eT_npwp.getText().toString().trim();
+
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://subga.info/Assets/get_data/update_profile.php",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Toast.makeText(getActivity(),response,Toast.LENGTH_LONG).show();
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getActivity(),error.toString(),Toast.LENGTH_LONG).show();
+                    }
+                }){
+            @Override
+            protected Map<String,String> getParams(){
+                Map<String,String> params = new HashMap<String, String>();
+                params.put("nama_perusahaan",company);
+                params.put("merk_brand_alias",merkalias);
+                params.put("alamat_kantor",officeaddress);
+                params.put("kota",city);
+                params.put("kode_pos",zipcode);
+                params.put("no_telepon",telephone);
+                params.put("fax_kantor",fax);
+                params.put("email_kantor",email);
+                params.put("nama_pimpinan",chairman);
+                params.put("jabatan",position);
+                params.put("nomor_hp_pimpinan_kantor",mobile);
+                params.put("username",username);
+                params.put("nama_lengkap_member",fullname);
+                params.put("jabatan_member",position2);
+                params.put("email_member",email2);
+                params.put("nomor_hp_member",mobile2);
+                params.put("akta_pendirian_kantor",akta);
+                params.put("ijin_usaha_kantor",ijinusaha);
+                params.put("no_npwp",npwp);
+                return params;
+            }
+
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+        requestQueue.add(stringRequest);
+    }
+
     private void getData() {
         Login loginku = new Login();
         login_username = loginku.username;
