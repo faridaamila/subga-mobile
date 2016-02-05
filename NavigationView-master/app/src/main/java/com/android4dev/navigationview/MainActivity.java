@@ -142,7 +142,6 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     // For rest of the options we just show a toast on click
                     case R.id.add_on_yq:
-                        Toast.makeText(getApplicationContext(), "Ini add on", Toast.LENGTH_SHORT).show();
                         Add_on fragment2 = new Add_on();
                         title  = getString(R.string.add_on_yq);
                         getSupportActionBar().setTitle(title);
@@ -151,7 +150,6 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction2.commit();
                         return true;
                     case R.id.cargo:
-                        Toast.makeText(getApplicationContext(), "Ini CARGO", Toast.LENGTH_SHORT).show();
                         Cargo fragment3 = new Cargo();
                         title  = getString(R.string.cargo);
                         getSupportActionBar().setTitle(title);
@@ -160,7 +158,6 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction3.commit();
                         return true;
                     case R.id.codeshare_and_spa:
-                        Toast.makeText(getApplicationContext(), "Ini CODESHARE AND SPA", Toast.LENGTH_SHORT).show();
                         Codeshare fragment4 = new Codeshare();
                         title  = getString(R.string.codeshare_and_spa);
                         getSupportActionBar().setTitle(title);
@@ -169,7 +166,6 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction4.commit();
                         return true;
                     case R.id.domestic:
-                        Toast.makeText(getApplicationContext(), "Ini DOMESTIC", Toast.LENGTH_SHORT).show();
                         Domestic fragment5 = new Domestic();
                         title  = getString(R.string.domestic);
                         getSupportActionBar().setTitle(title);
@@ -178,7 +174,6 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction5.commit();
                         return true;
                     case R.id.flight_schedule:
-                        Toast.makeText(getApplicationContext(), "Ini FLIGHT_SCHEDULE", Toast.LENGTH_SHORT).show();
                         Flight_schedule fragment6 = new Flight_schedule();
                         title  = getString(R.string.fligh_schedule);
                         getSupportActionBar().setTitle(title);
@@ -187,7 +182,6 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction6.commit();
                         return true;
                     case R.id.internal_news:
-                        Toast.makeText(getApplicationContext(), "Ini INTERNAL NEWS", Toast.LENGTH_SHORT).show();
                         Internal_news fragment7 = new Internal_news();
                         title  = getString(R.string.internal_news);
                         getSupportActionBar().setTitle(title);
@@ -196,7 +190,6 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction7.commit();
                         return true;
                     case R.id.international:
-                        Toast.makeText(getApplicationContext(), "Ini INTERNATIONAL", Toast.LENGTH_SHORT).show();
                         International fragment8 = new International();
                         title  = getString(R.string.international);
                         getSupportActionBar().setTitle(title);
@@ -205,7 +198,6 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction8.commit();
                         return true;
                     case R.id.midle_east:
-                        Toast.makeText(getApplicationContext(), "Ini MIDDLE_EAST", Toast.LENGTH_SHORT).show();
                         Middle_east fragment9 = new Middle_east();
                         title  = getString(R.string.midle_east);
                         getSupportActionBar().setTitle(title);
@@ -214,7 +206,6 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction9.commit();
                         return true;
                     case R.id.other:
-                        Toast.makeText(getApplicationContext(), "Ini Other", Toast.LENGTH_SHORT).show();
                         Other fragment10 = new Other();
                         title  = getString(R.string.other);
                         getSupportActionBar().setTitle(title);
@@ -223,7 +214,6 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction10.commit();
                         return true;
                     case R.id.pin_hin:
-                        Toast.makeText(getApplicationContext(), "ini PIN HIN RIN", Toast.LENGTH_SHORT).show();
                         Pin_hin_rin fragment11 = new Pin_hin_rin();
                         title  = getString(R.string.pin_hin);
                         getSupportActionBar().setTitle(title);
@@ -232,7 +222,6 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction11.commit();
                         return true;
                     case R.id.rsp_yearly:
-                        Toast.makeText(getApplicationContext(), "Ini RSP YEARLY", Toast.LENGTH_SHORT).show();
                         Rsp_yearly fragment12 = new Rsp_yearly();
                         title  = getString(R.string.rsp_yearly);
                         getSupportActionBar().setTitle(title);
@@ -241,12 +230,12 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction12.commit();
                         return true;
                     case R.id.rules_and_procedure:
-                        Toast.makeText(getApplicationContext(), "Ini RULES", Toast.LENGTH_SHORT).show();
                         Rules_and_procedure fragment13 = new Rules_and_procedure();
                         title  = getString(R.string.rules_and_procedure);
                         getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction13 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction13.replace(R.id.frame, fragment13);
+                       // fragmentTransaction13.addToBackStack(MainActivity.class);
                         fragmentTransaction13.commit();
                         return true;
                     default:

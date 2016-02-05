@@ -2,17 +2,12 @@ package com.android4dev.navigationview;
 
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
-import android.text.TextUtils;
-import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -103,6 +98,7 @@ public class Home extends Fragment {
         btn_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Nav_setting fragment17 = new Nav_setting();
                 android.support.v4.app.FragmentManager fm4 = getFragmentManager();
                 android.support.v4.app.FragmentTransaction ft4 = fm4.beginTransaction();
