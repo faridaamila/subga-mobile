@@ -201,7 +201,7 @@ public class Add_on extends Fragment {
                     refer[i] = file.getString("refer");
                     status[i] = file.getString("status");
                     direktori_file[i] = file.getString("direktori_file");
-                    //jml_download[i] = file.getString("jml_download");
+                    jml_download[i] = file.getString("jml_download");
             }
         }
         catch(JSONException e){
