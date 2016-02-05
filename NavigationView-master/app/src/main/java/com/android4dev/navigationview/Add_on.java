@@ -52,7 +52,7 @@ public class Add_on extends Fragment {
         View v = inflater.inflate(R.layout.add_on, container, false);
 
         /* Find Tablelayout defined in main.xml */
-        tl = (TableLayout) v.findViewById(R.id.tableLayout1);
+        tl = (TableLayout) v.findViewById(R.id.test);
         getData();
 
         String [] values = {"Issue Date","Subject","GA Info","Refer"};
