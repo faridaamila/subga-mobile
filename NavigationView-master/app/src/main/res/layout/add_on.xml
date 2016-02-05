@@ -25,7 +25,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent" >
                 <TableRow
-                    android:layout_width="@dimen/_325sdp"
+                    android:layout_width="@dimen/_324sdp"
                     android:layout_height="@dimen/_30sdp"
                     android:layout_below="@+id/textView12"
                     android:layout_alignLeft="@+id/textView12"
