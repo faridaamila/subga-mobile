@@ -71,24 +71,43 @@ public class Edit_profile extends Fragment{
     }
     private void editProfil(){
         final String company = eT_company.getText().toString().trim();
+        if (company == null) {company.replace(null, " ");}
         final String merkalias = eT_merkalias.getText().toString().trim();
+        if (merkalias == null) {merkalias.replace(null, " ");}
         final String officeaddress = eT_officeaddress.getText().toString().trim();
+        if (officeaddress == null) {officeaddress.replace(null, " ");}
         final String city = eT_city.getText().toString().trim();
+        if (city == null) {city.replace(null, " ");}
         final String zipcode = eT_zipcode.getText().toString().trim();
+        if (zipcode == null) {zipcode.replace(null, " ");}
         final String telephone = eT_telephone.getText().toString().trim();
+        if (telephone == null) {telephone.replace(null, " ");}
         final String fax = eT_fax.getText().toString().trim();
+        if (fax == null) {fax.replace(null, " ");}
         final String email = eT_email.getText().toString().trim();
+        if (email == null) {email.replace(null, " ");}
         final String chairman = eT_chairman.getText().toString().trim();
+        if (chairman == null) {chairman.replace(null, " ");}
         final String position = eT_position.getText().toString().trim();
+        if (position == null) {position.replace(null, " ");}
         final String mobile = eT_mobile.getText().toString().trim();
+        if (mobile == null) {mobile.replace(null, " ");}
         final String username = eT_username.getText().toString().trim();
+        if (username == null) {username.replace(null, " ");}
         final String fullname = eT_fullname.getText().toString().trim();
+        if (fullname == null) {fullname.replace(null, " ");}
         final String position2 = eT_position2.getText().toString().trim();
+        if (position2 == null) {position2.replace(null, " ");}
         final String email2 = eT_email2.getText().toString().trim();
+        if (email2 == null) {email2.replace(null, " ");}
         final String mobile2 = eT_email2.getText().toString().trim();
+        if (mobile2 == null) {mobile2.replace(null, " ");}
         final String akta =  eT_akta.getText().toString().trim();
+        if (akta == null) {akta.replace(null, " ");}
         final String ijinusaha =  eT_ijinusaha.getText().toString().trim();
+        if (ijinusaha == null) {ijinusaha.replace(null, " ");}
         final String npwp =  eT_npwp.getText().toString().trim();
+        if (npwp == null) {npwp.replace(null, " ");}
 
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://subga.info/Assets/get_data/update_profile.php",
