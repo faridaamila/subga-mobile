@@ -45,7 +45,6 @@ public class Add_on extends Fragment {
     String[] periode_awal_muncul;
     String[] tgl_release;
     String[] jenis_dokumen;
-    String jenis_member_awas;
 
     private ExpandListAdapter ExpAdapter;
     private ArrayList<Group> ExpListItems;
@@ -53,9 +52,6 @@ public class Add_on extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.add_on, container, false);
-        //jenis member awas
-        Edit_profile awas = new Edit_profile();
-        jenis_member_awas=awas.jenis_member;
 
         /* Find Tablelayout defined in main.xml */
         tl = (TableLayout) v.findViewById(R.id.tableLayout1);
@@ -155,7 +151,7 @@ public class Add_on extends Fragment {
     private void getData() {
         loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
 
-        String url = "http://subga.info/Assets/get_data/data_file.php?kategori=10";
+        String url = "http://subga.info/Assets/get_data/data_file_e.php?kategori=10";
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
@@ -197,7 +193,6 @@ public class Add_on extends Fragment {
             for (int i = 0; i < result.length(); i++) {
                 JSONObject file = result.getJSONObject(i);
                 jenis_dokumen[i]=file.getString("jenis_dokumen");
-
                     tgl_release[i] = file.getString("tgl_release");
                     periode_awal_muncul[i] = file.getString("periode_awal_muncul");
                     periode_akhir_muncul[i] = file.getString("periode_akhir_muncul");
@@ -206,7 +201,7 @@ public class Add_on extends Fragment {
                     refer[i] = file.getString("refer");
                     status[i] = file.getString("status");
                     direktori_file[i] = file.getString("direktori_file");
-                    jml_download[i] = file.getString("jml_download");
+                    //jml_download[i] = file.getString("jml_download");
             }
         }
         catch(JSONException e){
