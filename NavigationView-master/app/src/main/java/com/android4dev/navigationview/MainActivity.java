@@ -362,7 +362,7 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         if (getFragmentManager().getBackStackEntryCount() == 0) {
             Home fragment1 = new Home();
-            String title  = getString(R.string.home);
+            String title  = getString(R.string.app_name);
             getSupportActionBar().setTitle(title);
             android.support.v4.app.FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
             fragmentTransaction1.replace(R.id.frame, fragment1);
