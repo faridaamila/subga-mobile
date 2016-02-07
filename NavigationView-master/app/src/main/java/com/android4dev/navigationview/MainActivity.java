@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //text marque
-        tv=(TextView)findViewById(R.id.hot_news);
-       // tv.setText("Mulai tanggal 12 Januari 2015 Garuda Indonesia membuka rute Surabaya ke Shanghai via Denpasar.");
+        tv = (TextView) findViewById(R.id.hot_news);
+        // tv.setText("Mulai tanggal 12 Januari 2015 Garuda Indonesia membuka rute Surabaya ke Shanghai via Denpasar.");
         tv.setEllipsize(TextUtils.TruncateAt.MARQUEE);
         tv.setSingleLine(true);
         tv.setMarqueeRepeatLimit(5);
@@ -143,99 +143,111 @@ public class MainActivity extends AppCompatActivity {
                     // For rest of the options we just show a toast on click
                     case R.id.add_on_yq:
                         Add_on fragment2 = new Add_on();
-                        title  = getString(R.string.add_on_yq);
+                        title = getString(R.string.add_on_yq);
                         getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction2 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction2.replace(R.id.frame, fragment2);
+                        fragmentTransaction2.addToBackStack("Any name");
                         fragmentTransaction2.commit();
                         return true;
                     case R.id.cargo:
                         Cargo fragment3 = new Cargo();
-                        title  = getString(R.string.cargo);
+                        title = getString(R.string.cargo);
                         getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction3 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction3.replace(R.id.frame, fragment3);
+                        fragmentTransaction3.addToBackStack("Any name");
                         fragmentTransaction3.commit();
                         return true;
                     case R.id.codeshare_and_spa:
                         Codeshare fragment4 = new Codeshare();
-                        title  = getString(R.string.codeshare_and_spa);
+                        title = getString(R.string.codeshare_and_spa);
                         getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction4 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction4.replace(R.id.frame, fragment4);
+                        fragmentTransaction4.addToBackStack("Any name");
                         fragmentTransaction4.commit();
                         return true;
                     case R.id.domestic:
                         Domestic fragment5 = new Domestic();
-                        title  = getString(R.string.domestic);
+                        title = getString(R.string.domestic);
                         getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction5 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction5.replace(R.id.frame, fragment5);
+                        fragmentTransaction5.addToBackStack("Any name");
                         fragmentTransaction5.commit();
                         return true;
                     case R.id.flight_schedule:
                         Flight_schedule fragment6 = new Flight_schedule();
-                        title  = getString(R.string.fligh_schedule);
+                        title = getString(R.string.fligh_schedule);
                         getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction6 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction6.replace(R.id.frame, fragment6);
+                        fragmentTransaction6.addToBackStack("Any name");
                         fragmentTransaction6.commit();
                         return true;
                     case R.id.internal_news:
                         Internal_news fragment7 = new Internal_news();
-                        title  = getString(R.string.internal_news);
+                        title = getString(R.string.internal_news);
                         getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction7 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction7.replace(R.id.frame, fragment7);
+                        fragmentTransaction7.addToBackStack("Any name");
                         fragmentTransaction7.commit();
                         return true;
                     case R.id.international:
                         International fragment8 = new International();
-                        title  = getString(R.string.international);
+                        title = getString(R.string.international);
                         getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction8 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction8.replace(R.id.frame, fragment8);
+                        fragmentTransaction8.addToBackStack("Any name");
                         fragmentTransaction8.commit();
                         return true;
                     case R.id.midle_east:
                         Middle_east fragment9 = new Middle_east();
-                        title  = getString(R.string.midle_east);
+                        title = getString(R.string.midle_east);
                         getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction9 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction9.replace(R.id.frame, fragment9);
+                        fragmentTransaction9.addToBackStack("Any name");
                         fragmentTransaction9.commit();
                         return true;
                     case R.id.other:
                         Other fragment10 = new Other();
-                        title  = getString(R.string.other);
+                        title = getString(R.string.other);
                         getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction10 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction10.replace(R.id.frame, fragment10);
+                        fragmentTransaction10.addToBackStack("Any name");
                         fragmentTransaction10.commit();
                         return true;
                     case R.id.pin_hin:
                         Pin_hin_rin fragment11 = new Pin_hin_rin();
-                        title  = getString(R.string.pin_hin);
+                        title = getString(R.string.pin_hin);
                         getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction11 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction11.replace(R.id.frame, fragment11);
+                        fragmentTransaction11.addToBackStack("Any name");
                         fragmentTransaction11.commit();
                         return true;
                     case R.id.rsp_yearly:
                         Rsp_yearly fragment12 = new Rsp_yearly();
-                        title  = getString(R.string.rsp_yearly);
+                        title = getString(R.string.rsp_yearly);
                         getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction12 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction12.replace(R.id.frame, fragment12);
+                        fragmentTransaction12.addToBackStack("Any name");
                         fragmentTransaction12.commit();
                         return true;
                     case R.id.rules_and_procedure:
                         Rules_and_procedure fragment13 = new Rules_and_procedure();
-                        title  = getString(R.string.rules_and_procedure);
+                        title = getString(R.string.rules_and_procedure);
                         getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction13 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction13.replace(R.id.frame, fragment13);
-                       // fragmentTransaction13.addToBackStack(MainActivity.class);
+                        fragmentTransaction13.addToBackStack("Any name");
+                        // fragmentTransaction13.addToBackStack(MainActivity.class);
                         fragmentTransaction13.commit();
                         return true;
                     default:
@@ -311,7 +323,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getData() {
-        loading = ProgressDialog.show(this,"Please wait...","Fetching...",false,false);
+        loading = ProgressDialog.show(this, "Please wait...", "Fetching...", false, false);
 
         String url = "http://subga.info/Assets/get_data/freetext.php";
 
@@ -325,7 +337,7 @@ public class MainActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(MainActivity.this,error.toString(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_LONG).show();
                     }
                 });
 
@@ -333,8 +345,8 @@ public class MainActivity extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
 
-    private void showJSON(String response){
-        String isi_freetext="";
+    private void showJSON(String response) {
+        String isi_freetext = "";
         try {
             JSONObject jsonObject = new JSONObject(response);
             JSONArray result = jsonObject.getJSONArray("result");
@@ -344,5 +356,20 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         tv.setText(isi_freetext);
+    }
+
+
+    public void onBackPressed() {
+        if (getFragmentManager().getBackStackEntryCount() == 0) {
+            Home fragment1 = new Home();
+            String title  = getString(R.string.home);
+            getSupportActionBar().setTitle(title);
+            android.support.v4.app.FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction1.replace(R.id.frame, fragment1);
+            fragmentTransaction1.commit();
+
+        } else {
+
+        }
     }
 }
