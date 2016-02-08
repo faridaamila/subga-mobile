@@ -1,4 +1,5 @@
 package com.android4dev.navigationview;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,6 +34,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     private EditText editTextUsername;
     private EditText editTextPassword;
     private ImageButton buttonLogin;
+    private ProgressDialog loading;
 
     public static String username;
     private String password;
@@ -61,6 +63,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         username = editTextUsername.getText().toString().trim();
         password = editTextPassword.getText().toString().trim();
         password = md5(password).trim();
+
+        loading = ProgressDialog.show(this, "Please wait...", "Fetching...", false, false);
 
         //Creating a string request
         StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL,

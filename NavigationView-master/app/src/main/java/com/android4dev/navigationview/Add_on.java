@@ -101,7 +101,7 @@ public class Add_on extends Fragment {
     private void getData() {
         loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
 
-        String url = "http://subga.info/Assets/get_data/data_file_e.php?kategori=10";
+        String url = "http://subga.info/Assets/get_data/data_file.php?kategori=10";
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
