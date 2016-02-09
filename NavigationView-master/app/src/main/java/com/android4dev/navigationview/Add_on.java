@@ -58,7 +58,6 @@ public class Add_on extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.add_on, container, false);
 
-        /* Find Tablelayout defined in main.xml */
         tl = (TableLayout) v.findViewById(R.id.tableLayout1);
 
         String [] values = {"Issue Date","Subject","GA Info","Hits","Refer"};
