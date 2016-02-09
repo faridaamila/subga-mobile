@@ -9,64 +9,63 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/relativeLayout7"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_25sdp"
+            android:layout_height="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:id="@+id/relativeLayout16">
+            android:id="@+id/relativeLayout16"
+            android:background="@mipmap/search_back">
 
             <EditText
-                android:layout_width="@dimen/_140sdp"
+                android:layout_width="@dimen/_240sdp"
                 android:layout_height="match_parent"
                 android:id="@+id/search_bar"
                 android:text="Search"
-                android:background="@mipmap/search_bar"
+                android:textSize="@dimen/_12sdp"
+                android:singleLine="true"
+                android:scrollHorizontally="true"
+                android:paddingLeft="@dimen/_10sdp"
+                android:clickable="true"
+                android:background="@mipmap/pencarian"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:textSize="@dimen/_14sdp"
-                android:singleLine="true"
-                android:scrollHorizontally="true"
-                android:paddingLeft="@dimen/_10sdp" />
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:paddingBottom="@dimen/_9sdp"
+                android:textColorHint="#dfdbdb" />
 
             <ImageButton
                 android:layout_width="@dimen/_37sdp"
                 android:layout_height="match_parent"
                 android:id="@+id/imageButton2"
-                android:layout_alignParentTop="true"
+                android:background="@mipmap/pencarian_search"
+                android:layout_alignTop="@+id/search_bar"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:background="@mipmap/btn_search"
-                android:layout_marginRight="@dimen/_5sdp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Go"
-                android:id="@+id/textView9"
-                android:textSize="@dimen/_14sdp"
-                android:textStyle="bold"
-                android:layout_centerVertical="true"
-                android:layout_alignLeft="@+id/imageButton2"
-                android:layout_alignStart="@+id/imageButton2"
-                android:textColor="#ffffff"
-                android:layout_marginLeft="@dimen/_10sdp" />
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_8sdp" />
 
             <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_120sdp"
                 android:id="@+id/spinner"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@+id/textView9"
-                android:layout_toEndOf="@+id/search_bar"
-                android:layout_marginRight="@dimen/_5sdp"
                 android:textSize="@dimen/_10sdp"
-                android:layout_toRightOf="@+id/search_bar"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:touchscreenBlocksFocus="true" />
+                android:touchscreenBlocksFocus="true"
+                android:prompt="@string/spinner"
+                android:layout_toLeftOf="@+id/imageButton2"
+                android:layout_toStartOf="@+id/imageButton2"
+                android:clickable="true"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:layout_alignBottom="@+id/imageButton2"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_alignTop="@+id/search_bar"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:background="@mipmap/sort_baru" />
 
         </RelativeLayout>
 
@@ -79,8 +78,7 @@
             android:id="@+id/scrollView3"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="@dimen/_5sdp"
-            android:layout_marginRight="@dimen/_5sdp">>
+            android:layout_marginLeft="@dimen/_1sdp">>
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
