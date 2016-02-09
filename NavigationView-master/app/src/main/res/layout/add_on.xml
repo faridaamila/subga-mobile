@@ -35,7 +35,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:paddingBottom="@dimen/_9sdp"
                 android:textColorHint="#dfdbdb" />
 
