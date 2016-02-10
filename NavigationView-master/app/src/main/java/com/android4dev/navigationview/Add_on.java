@@ -13,14 +13,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -30,9 +30,6 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by S. Harsono on 2/3/2016.
@@ -53,7 +50,9 @@ public class Add_on extends Fragment {
     String[] jenis_dokumen;
     int urutposisi;
     TableRow row;
-
+    String isisearch;
+    String urls;
+    int search;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.add_on, container, false);
@@ -65,47 +64,62 @@ public class Add_on extends Fragment {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        spinner.setPrompt("By!");
         spinner.setAdapter(adapter);
 
+        ImageButton ibsearch = (ImageButton) v.findViewById(R.id.btn_search);
+        final EditText etsearch = (EditText) v.findViewById(R.id.search_bar);
+
+        RadioGroup searchmethod = (RadioGroup) v.findViewById(R.id.rb_grup);
+        searchmethod.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.radioButton) {
+                    search=1;
+                } else if (checkedId == R.id.radioButton2) {
+                    search=2;
+                }
+            }
+        });
+
+
+
+        ibsearch.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                isisearch = etsearch.getText().toString();
+                getSearch();
+            }
+        });
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
 
-                String selected = parentView.getItemAtPosition(position).toString();
-                Context context = parentView.getContext();
-                CharSequence text = selected;
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
-
-                //  TextView bk = (TextView) v.findViewById(R.id.by);
-
                 switch (position) {
                     case 0:
-                        tl.removeAllViews();
-                        urutposisi=1;
+                        urutposisi = 1;
                         break;
                     case 1:
-                        tl.removeAllViews();
-                        urutposisi=2;
+                        urutposisi = 2;
                         break;
                     case 2:
-                        tl.removeAllViews();
-                        urutposisi=3;
+                        urutposisi = 3;
                         break;
                     case 3:
-                        tl.removeAllViews();
-                        urutposisi=4;
+                        urutposisi = 4;
                         break;
                     case 4:
-                        tl.removeAllViews();
-                        urutposisi=5;
+                        urutposisi = 5;
                         break;
                     default:
                         break;
                 }
-                getData();
+                if (isisearch != null) {
+                    getSearch();
+                } else {
+                    getData();
+                }
             }
 
             public void onNothingSelected(AdapterView<?> parent) {
@@ -113,6 +127,42 @@ public class Add_on extends Fragment {
         });
         return v;
     }
+
+    private void getSearch() {
+        loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
+
+        if (search==1) {
+            //urls = "http://subga.info/Assets/get_data/search_subject.php?kategori=10&internal=%27E%27&urut=1&subject=%27PINALTY%27";
+        }
+        else if (search==2){
+            urls = "http://subga.info/Assets/get_data/search_subject.php?kategori=10&internal=%27E%27&urut="+urutposisi+"&subject=%27"+isisearch+"%27";
+            Toast.makeText(getActivity(), urls, Toast.LENGTH_LONG).show();
+        }
+        else{
+            Toast.makeText(getActivity(), "Please check the option search", Toast.LENGTH_SHORT).show();
+        }
+
+
+        StringRequest stringRequest = new StringRequest(urls, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                loading.dismiss();
+                tl.removeAllViews();
+                showJSON(response);
+            }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        //Toast.makeText(getActivity(), urls, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), error.toString(), Toast.LENGTH_LONG).show();
+                    }
+                });
+
+        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+        requestQueue.add(stringRequest);
+    }
+
 
     private void getData() {
         loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
@@ -125,6 +175,7 @@ public class Add_on extends Fragment {
             @Override
             public void onResponse(String response) {
                 loading.dismiss();
+                tl.removeAllViews();
                 showJSON(response);
             }
         },
@@ -140,8 +191,6 @@ public class Add_on extends Fragment {
     }
 
     private void showJSON(String response) {
-
-
         JSONArray result = null;
         try {
             JSONObject jsonObject = new JSONObject(response);
@@ -157,181 +206,180 @@ public class Add_on extends Fragment {
             direktori_file = new String[result.length()];
             jml_download = new String[result.length()];
 
-
             for (int i = 0; i < result.length(); i++) {
                 JSONObject file = result.getJSONObject(i);
                 jenis_dokumen[i]=file.getString("jenis_dokumen");
-                    tgl_release[i] = file.getString("tgl_release");
-                    periode_awal_muncul[i] = file.getString("periode_awal_muncul");
-                    periode_akhir_muncul[i] = file.getString("periode_akhir_muncul");
-                    ga_info[i] = file.getString("ga_info");
-                    subjek[i] = file.getString("subjek");
-                    refer[i] = file.getString("refer");
-                    status[i] = file.getString("status");
-                    direktori_file[i] = file.getString("direktori_file");
-                    jml_download[i] = file.getString("jml_download");
+                tgl_release[i] = file.getString("tgl_release");
+                periode_awal_muncul[i] = file.getString("periode_awal_muncul");
+                periode_akhir_muncul[i] = file.getString("periode_akhir_muncul");
+                ga_info[i] = file.getString("ga_info");
+                subjek[i] = file.getString("subjek");
+                refer[i] = file.getString("refer");
+                status[i] = file.getString("status");
+                direktori_file[i] = file.getString("direktori_file");
+                jml_download[i] = file.getString("jml_download");
             }
         }
         catch(JSONException e){
             e.printStackTrace();
         }
         int k = 1;
-            for (int u = 0; u < result.length(); u++) {
 
-                row = new TableRow(getActivity());
-                row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
-                        TableRow.LayoutParams.WRAP_CONTENT));
-                if (u ==0) {
-                    for (int j = 0; j <= 7; j++) {
-                        TextView lala = new TextView(getActivity());
-                        if (j == 0) {
-                            lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            //left top right bottom
-                            lala.setPadding(25,25,50,25);
-                            lala.setText("#");
-                            row.addView(lala);
-                            row.setBackgroundResource(R.color.Grey);
-                        }
-                        else if (j == 1) {
-                            lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            lala.setPadding(25, 25, 50, 25);
-                            lala.setText("Issue Date");
-                            row.addView(lala);
-                            row.setBackgroundResource(R.color.Grey);
-                        }
-                        else if (j == 2) {
-                            lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            lala.setPadding(25, 25, 250, 25);
-                            lala.setText("GA INFO");
-                            row.addView(lala);
-                            row.setBackgroundResource(R.color.Grey);
-                        }
-                        else if (j == 3) {
-                            lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            lala.setPadding(25, 25, 450, 25);
-                            lala.setText("Subject");
-                            row.addView(lala);
-                            row.setBackgroundResource(R.color.Grey);
-                        }
-                        else if (j == 4) {
-                            lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            lala.setPadding(25, 25, 25, 25);
-                            lala.setText("Hits");
-                            row.addView(lala);
-                            row.setBackgroundResource(R.color.Grey);
-                        }
-                        else if (j == 5) {
-                            lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            lala.setPadding(25, 25, 350, 25);
-                            lala.setText("Refer");
-                            row.addView(lala);
-                            row.setBackgroundResource(R.color.Grey);
-                        }
-                        else if (j == 6) {
-                            lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            lala.setPadding(25, 25, 0, 25);
-                            lala.setText("Action");
-                            row.addView(lala);
-                            row.setBackgroundResource(R.color.Grey);
-                        }
-                        else if (j == 7) {
-                            lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            lala.setPadding(25, 25, 50, 25);
-                            lala.setText(" ");
-                            row.addView(lala);
-                            row.setBackgroundResource(R.color.Grey);
-                        }
+        for (int u = 0; u < result.length(); u++) {
+            row = new TableRow(getActivity());
+            row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
+                    TableRow.LayoutParams.WRAP_CONTENT));
+            if (u ==0) {
+                for (int j = 0; j <= 7; j++) {
+                    TextView lala = new TextView(getActivity());
+                    if (j == 0) {
+                        lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        //left top right bottom
+                        lala.setPadding(25,25,50,25);
+                        lala.setText("#");
+                        row.addView(lala);
+                        row.setBackgroundResource(R.color.Grey);
+                    }
+                    else if (j == 1) {
+                        lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        lala.setPadding(25, 25, 50, 25);
+                        lala.setText("Issue Date");
+                        row.addView(lala);
+                        row.setBackgroundResource(R.color.Grey);
+                    }
+                    else if (j == 2) {
+                        lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        lala.setPadding(25, 25, 250, 25);
+                        lala.setText("GA INFO");
+                        row.addView(lala);
+                        row.setBackgroundResource(R.color.Grey);
+                    }
+                    else if (j == 3) {
+                        lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        lala.setPadding(25, 25, 450, 25);
+                        lala.setText("Subject");
+                        row.addView(lala);
+                        row.setBackgroundResource(R.color.Grey);
+                    }
+                    else if (j == 4) {
+                        lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        lala.setPadding(25, 25, 25, 25);
+                        lala.setText("Hits");
+                        row.addView(lala);
+                        row.setBackgroundResource(R.color.Grey);
+                    }
+                    else if (j == 5) {
+                        lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        lala.setPadding(25, 25, 350, 25);
+                        lala.setText("Refer");
+                        row.addView(lala);
+                        row.setBackgroundResource(R.color.Grey);
+                    }
+                    else if (j == 6) {
+                        lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        lala.setPadding(25, 25, 0, 25);
+                        lala.setText("Action");
+                        row.addView(lala);
+                        row.setBackgroundResource(R.color.Grey);
+                    }
+                    else if (j == 7) {
+                        lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        lala.setPadding(25, 25, 50, 25);
+                        lala.setText(" ");
+                        row.addView(lala);
+                        row.setBackgroundResource(R.color.Grey);
                     }
                 }
-                if (u>0) {
-                    for (int j = 0; j <= 7; j++) {
-                        TextView tv = new TextView(getActivity());
-                        ImageButton ib = new ImageButton(getActivity());
-                        ImageButton ibk = new ImageButton(getActivity());
-                        if (j == 0) {
-                            tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            tv.setPadding(25, 25, 25, 25);
-                            tv.setText(Integer.toString(k));
-                            k++;
-                            row.addView(tv);
-                        } else if (j == 1) {
-                            tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            tv.setPadding(25, 25, 25, 25);
-                            tv.setText(tgl_release[u]);
-                            row.addView(tv);
-                        } else if (j == 2) {
-                            tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            tv.setPadding(25, 25, 25, 25);
-                            tv.setText(ga_info[u]);
-                            row.addView(tv);
-                        } else if (j == 3) {
-                            tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            tv.setPadding(25, 25, 25, 25);
-                            tv.setText(subjek[u]);
-                            tv.setEms(3);
-                            row.addView(tv);
-                        } else if (j == 4) {
-                            tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            tv.setPadding(25, 25, 25, 25);
-                            tv.setText(jml_download[u]);
-                            row.addView(tv);
-                        } else if (j == 5) {
-                            tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            tv.setPadding(25, 25, 25, 25);
-                            tv.setText(refer[u]);
-                            tv.setEms(3);
-                            row.addView(tv);
-                        } else if (j == 6) {
-                            ibk.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            ibk.setBackgroundResource(R.mipmap.btn_download);
-                            ibk.getLayoutParams().width = 100;
-                            ibk.getLayoutParams().height = 100;
-                            row.addView(ibk);
-                            final int finalU = u;
-                            ibk.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    Intent i = new Intent(Intent.ACTION_VIEW);
-                                    i.setData(Uri.parse("http://subga.info/" + direktori_file[finalU]));
-                                    getActivity().startActivity(i);
-                                }
-                            });
-
-                        } else if (j == 7) {
-                            ib.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            ib.setBackgroundResource(R.mipmap.btn_star_full);
-                            ib.getLayoutParams().width = 100;
-                            ib.getLayoutParams().height = 100;
-                            row.addView(ib);
-                            ib.setOnClickListener(new View.OnClickListener() {
-
-                                @Override
-                                public void onClick(View arg0) {
-
-                                }
-
-                            });
-                        }
-                    }
-                }
-                tl.addView(row);
             }
+            if (u>0) {
+                for (int j = 0; j <= 7; j++) {
+                    TextView tv = new TextView(getActivity());
+                    ImageButton ib = new ImageButton(getActivity());
+                    ImageButton ibk = new ImageButton(getActivity());
+                    if (j == 0) {
+                        tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        tv.setPadding(25, 25, 25, 25);
+                        tv.setText(Integer.toString(k));
+                        k++;
+                        row.addView(tv);
+                    } else if (j == 1) {
+                        tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        tv.setPadding(25, 25, 25, 25);
+                        tv.setText(tgl_release[u]);
+                        row.addView(tv);
+                    } else if (j == 2) {
+                        tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        tv.setPadding(25, 25, 25, 25);
+                        tv.setText(ga_info[u]);
+                        row.addView(tv);
+                    } else if (j == 3) {
+                        tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        tv.setPadding(25, 25, 25, 25);
+                        tv.setText(subjek[u]);
+                        tv.setEms(3);
+                        row.addView(tv);
+                    } else if (j == 4) {
+                        tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        tv.setPadding(25, 25, 25, 25);
+                        tv.setText(jml_download[u]);
+                        row.addView(tv);
+                    } else if (j == 5) {
+                        tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        tv.setPadding(25, 25, 25, 25);
+                        tv.setText(refer[u]);
+                        tv.setEms(3);
+                        row.addView(tv);
+                    } else if (j == 6) {
+                        ibk.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        ibk.setBackgroundResource(R.mipmap.btn_download);
+                        ibk.getLayoutParams().width = 100;
+                        ibk.getLayoutParams().height = 100;
+                        row.addView(ibk);
+                        final int finalU = u;
+                        ibk.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent i = new Intent(Intent.ACTION_VIEW);
+                                i.setData(Uri.parse("http://subga.info/" + direktori_file[finalU]));
+                                getActivity().startActivity(i);
+                            }
+                        });
+
+                    } else if (j == 7) {
+                        ib.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        ib.setBackgroundResource(R.mipmap.btn_star_full);
+                        ib.getLayoutParams().width = 100;
+                        ib.getLayoutParams().height = 100;
+                        row.addView(ib);
+                        ib.setOnClickListener(new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View arg0) {
+
+                            }
+
+                        });
+                    }
+                }
+            }
+            tl.addView(row);
+        }
     }
 }
 
