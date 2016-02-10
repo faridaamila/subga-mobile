@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">SUBGA Mobile</string>
 
+
     <string name="hello_world">Hello world!</string>
     <string name="logout">Logout</string>
     <string name="navigation_item_1">Home</string>
@@ -16,7 +17,6 @@
     <string name="spam_string">Spams</string>
     <string name="closeDrawer">Navigation View</string>
     <string name="openDrawer">Navigation View Closed</string>
-    <string name="spinner">spinner</string>
 
     <string name="title">Title</string>
     <string name="home">Home</string>
@@ -42,6 +42,8 @@
     <string name="notifications">Notifications</string>
     <string name="help_center">Help Center</string>
     <string name="about">About</string>
+
+    <string name="spinner">By</string>
 
     <string name="ssatu">Slide</string>
     <string name="sdua">Slide 2</string>

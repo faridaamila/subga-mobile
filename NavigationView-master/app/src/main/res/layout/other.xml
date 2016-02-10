@@ -11,198 +11,174 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <TextView
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/relativeLayout16">
+
+            <EditText
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="match_parent"
+                android:id="@+id/search_bar"
+                android:text="Search"
+                android:background="@mipmap/search_bar"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textSize="@dimen/_14sdp"
+                android:singleLine="true"
+                android:scrollHorizontally="true"
+                android:paddingLeft="@dimen/_10sdp" />
+
+            <ImageButton
+                android:layout_width="@dimen/_37sdp"
+                android:layout_height="match_parent"
+                android:id="@+id/btn_search"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="@mipmap/btn_search"
+                android:layout_marginRight="@dimen/_5sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go"
+                android:id="@+id/textView9"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/btn_search"
+                android:layout_alignStart="@+id/btn_search"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="@dimen/_10sdp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/textView9"
+                android:layout_toEndOf="@+id/search_bar"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:textSize="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/search_bar"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:touchscreenBlocksFocus="true" />
+
+        </RelativeLayout>
+
+        <ScrollView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Other"
-            android:id="@+id/textView12"
-            android:layout_alignParentTop="true"
+            android:layout_height="@dimen/_410sdp"
+            android:layout_below="@+id/relativeLayout16"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginLeft="@dimen/_17sdp"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="@dimen/_21sdp"
-            android:textColor="#1f5aa6"
-            android:textStyle="bold" />
+            android:id="@+id/scrollView3"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp">>
 
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/horizontalScrollView"
-            android:layout_below="@+id/textView12"
-            android:layout_alignLeft="@+id/textView12"
-            android:layout_alignStart="@+id/textView12"
-            android:layout_marginRight="@dimen/_15sdp">
-            <TableLayout
-                android:id="@+id/tableLayout1"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent" >
-                <TableRow
-                    android:layout_width="@dimen/_325sdp"
-                    android:layout_height="@dimen/_30sdp"
-                    android:layout_below="@+id/textView12"
-                    android:layout_alignLeft="@+id/textView12"
-                    android:layout_alignStart="@+id/textView12"
-                    android:layout_marginTop="@dimen/_15sdp"
-                    android:background="#d1d2d4">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/horizontalScrollView"
+                android:layout_below="@+id/relativeLayout16"
+                android:layout_centerHorizontal="true">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="#"
-                        android:id="@+id/textView13"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="5dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Issue Date"
-                        android:id="@+id/textView14"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginRight="30dp" />
+                <TableLayout
+                    android:id="@+id/tableLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignTop="@+id/scrollView3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+                    <TableRow
+                        android:layout_width="@dimen/_325sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@+id/textView12"
+                        android:layout_alignLeft="@+id/textView12"
+                        android:layout_alignStart="@+id/textView12"
+                        android:background="#d1d2d4">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="GA Info"
-                        android:id="@+id/textView15"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="110dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginBottom="5dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#"
+                            android:id="@+id/textView13"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="5dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Subject"
-                        android:id="@+id/textView16"
-                        android:layout_marginRight="200dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginBottom="5dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Issue Date"
+                            android:id="@+id/textView14"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="30dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Hits"
-                        android:id="@+id/textView17"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginBottom="5dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GA Info"
+                            android:id="@+id/textView15"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="110dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Refer"
-                        android:id="@+id/textView18"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="110dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginBottom="5dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Subject"
+                            android:id="@+id/textView16"
+                            android:layout_marginRight="200dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Action"
-                        android:id="@+id/textView19"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginBottom="5dp" />
-                </TableRow>
-                <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hits"
+                            android:id="@+id/textView17"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="1"
-                        android:id="@+id/textView20"
-                        android:layout_below="@+id/horizontalScrollView"
-                        android:layout_alignLeft="@+id/horizontalScrollView"
-                        android:layout_alignStart="@+id/horizontalScrollView"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginBottom="5dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Refer"
+                            android:id="@+id/textView18"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="110dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="19-01-2016"
-                        android:id="@+id/textView21"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="GA.INFO/8007/VII/15"
-                        android:id="@+id/textView22"
-                        android:layout_column="2"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="[REVISI] PROSEDUR PEMBUKUAN GRUP RUTE DOMESTIK INTERNATIONAL PERIODE LOW PEAK 2015/2016"
-                        android:id="@+id/textView23"
-                        android:layout_column="3"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:ems= "3"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="14"
-                        android:id="@+id/textView24"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="SUBSSGA/00014/E/JUL15-VR (CORR TABEL DEPOSIT POINT OF SALE IDN)"
-                        android:id="@+id/textView25"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:ems= "3" />
-
-                    <ImageButton
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:id="@+id/imageButton9"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="@mipmap/btn_download" />
-
-                    <ImageButton
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:id="@+id/imageButton10"
-                        android:background="@mipmap/btn_star_full"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp" />
-                </TableRow>
-            </TableLayout>
-
-        </HorizontalScrollView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Action"
+                            android:id="@+id/textView19"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp" />
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+        </ScrollView>
 
 
     </RelativeLayout>
 
 </LinearLayout>
-

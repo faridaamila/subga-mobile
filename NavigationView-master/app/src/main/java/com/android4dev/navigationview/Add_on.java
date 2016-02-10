@@ -19,8 +19,6 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -30,9 +28,6 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by S. Harsono on 2/3/2016.
@@ -53,6 +48,8 @@ public class Add_on extends Fragment {
     String[] jenis_dokumen;
     int urutposisi;
     TableRow row;
+    String date;
+    String dari,sampek;
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -65,7 +62,55 @@ public class Add_on extends Fragment {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        spinner.setPrompt("By!");
         spinner.setAdapter(adapter);
+
+        ImageButton ibsearch = (ImageButton) v.findViewById(R.id.btn_search);
+        EditText etsearch = (EditText) v.findViewById(R.id.search_bar);
+        String isian = etsearch.getText().toString();
+        char [] date_dari = new char[date.length()];
+        char [] date_sampek = new char[date.length()];
+
+        for (int y =0; y<=isian.length(); y++){
+            char a = isian.charAt(y);
+            if (a=='/'){
+                date = isian;
+                for (int p =0; p<=date.length(); p++){
+                    char b = date.charAt(p);
+                    if (b=='/'){
+                        date.replace('/','-');
+                    }
+                    else if (b==' '){
+                        if (isian.charAt(p+1)== '-') {
+
+                            for (int k = 0; k<=b; k++){
+                                date_dari[k]=date.charAt(k);
+                            }
+
+                            dari = String.valueOf(date_dari);
+                        }
+                        else if (isian.charAt(p + 1) < 0){
+                            for (int k = 0; k<=b; k++){
+                                date_sampek[k]=date.charAt(k);
+                            }
+
+                            sampek = String.valueOf(date_dari);
+                        }
+                    }
+                }
+            }
+        }
+
+        ibsearch.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+
+            }
+
+        });
+
 
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -113,6 +158,10 @@ public class Add_on extends Fragment {
         });
         return v;
     }
+
+
+
+
 
     private void getData() {
         loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);

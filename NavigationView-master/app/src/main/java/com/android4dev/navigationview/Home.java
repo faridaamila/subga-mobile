@@ -123,6 +123,8 @@ public class Home extends Fragment {
         return v;
 
     }
+
+
     private void getData() {
         loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
 

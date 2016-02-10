@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
-    private boolean viewIsAtHome;
     private ProgressDialog loading;
     private TextView tv;
 
