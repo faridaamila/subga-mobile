@@ -224,8 +224,9 @@ public class Add_on extends Fragment {
             e.printStackTrace();
         }
         int k = 1;
+        int c = result.length()+1;
 
-        for (int u = 0; u < result.length(); u++) {
+        for (int u = 0; u < c; u++) {
             row = new TableRow(getActivity());
             row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
                     TableRow.LayoutParams.WRAP_CONTENT));
@@ -300,6 +301,7 @@ public class Add_on extends Fragment {
                 }
             }
             if (u>0) {
+                int g =u -1;
                 for (int j = 0; j <= 7; j++) {
                     TextView tv = new TextView(getActivity());
                     ImageButton ib = new ImageButton(getActivity());
@@ -315,32 +317,32 @@ public class Add_on extends Fragment {
                         tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
                         tv.setPadding(25, 25, 25, 25);
-                        tv.setText(tgl_release[u]);
+                        tv.setText(tgl_release[g]);
                         row.addView(tv);
                     } else if (j == 2) {
                         tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
                         tv.setPadding(25, 25, 25, 25);
-                        tv.setText(ga_info[u]);
+                        tv.setText(ga_info[g]);
                         row.addView(tv);
                     } else if (j == 3) {
                         tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
                         tv.setPadding(25, 25, 25, 25);
-                        tv.setText(subjek[u]);
+                        tv.setText(subjek[g]);
                         tv.setEms(3);
                         row.addView(tv);
                     } else if (j == 4) {
                         tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
                         tv.setPadding(25, 25, 25, 25);
-                        tv.setText(jml_download[u]);
+                        tv.setText(jml_download[g]);
                         row.addView(tv);
                     } else if (j == 5) {
                         tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
                         tv.setPadding(25, 25, 25, 25);
-                        tv.setText(refer[u]);
+                        tv.setText(refer[g]);
                         tv.setEms(3);
                         row.addView(tv);
                     } else if (j == 6) {
@@ -350,7 +352,7 @@ public class Add_on extends Fragment {
                         ibk.getLayoutParams().width = 100;
                         ibk.getLayoutParams().height = 100;
                         row.addView(ibk);
-                        final int finalU = u;
+                        final int finalU = g;
                         ibk.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
