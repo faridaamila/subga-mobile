@@ -1,7 +1,6 @@
 package com.android4dev.navigationview;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,7 +12,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TableLayout;
@@ -53,6 +51,7 @@ public class Add_on extends Fragment {
     String isisearch;
     String urls;
     int search;
+    int check;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.add_on, container, false);
@@ -74,22 +73,28 @@ public class Add_on extends Fragment {
         searchmethod.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                check = checkedId;
                 if (checkedId == R.id.radioButton) {
                     search=1;
                 } else if (checkedId == R.id.radioButton2) {
                     search=2;
                 }
+                else {
+                    Toast.makeText(getActivity(), "Please check the option search", Toast.LENGTH_SHORT).show();
+                }
             }
         });
-
-
 
         ibsearch.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
                 isisearch = etsearch.getText().toString();
-                getSearch();
+                if (check != 0) {
+                    getSearch();
+                }
+                else
+                    Toast.makeText(getActivity(), "Please check the option search", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -132,7 +137,7 @@ public class Add_on extends Fragment {
         loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
 
         if (search==1) {
-            //urls = "http://subga.info/Assets/get_data/search_subject.php?kategori=10&internal=%27E%27&urut=1&subject=%27PINALTY%27";
+            urls = "http://subga.info/Assets/get_data/search_gainfo.php?kategori=10&internal=%27E%27&urut="+urutposisi+"&gainfo=%27"+isisearch+"%27";
         }
         else if (search==2){
             urls = "http://subga.info/Assets/get_data/search_subject.php?kategori=10&internal=%27E%27&urut="+urutposisi+"&subject=%27"+isisearch+"%27";
