@@ -42,6 +42,12 @@ public class Nav_setting extends Fragment {
         btn_notificatios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Notifications fragment = new Notifications();
+                android.support.v4.app.FragmentManager fm1 = getFragmentManager();
+                android.support.v4.app.FragmentTransaction ft1 = fm1.beginTransaction();
+                ft1.replace(R.id.frame, fragment);
+                ft1.addToBackStack(null);
+                ft1.commit();
             }
         });
         btn_help_center.setOnClickListener(new View.OnClickListener() {
