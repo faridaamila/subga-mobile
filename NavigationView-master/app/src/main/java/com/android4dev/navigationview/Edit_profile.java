@@ -1,8 +1,6 @@
 package com.android4dev.navigationview;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -41,18 +39,18 @@ public class Edit_profile extends Fragment{
         Login loginku = new Login();
         login_username = loginku.username;
         View v = inflater.inflate(R.layout.coba_edit, container, false);
-        eT_company = (EditText) v.findViewById(R.id.company_name);
+        eT_company = (EditText) v.findViewById(R.id.company_name_header);
         eT_merkalias = (EditText) v.findViewById(R.id.merk_alias);
         eT_officeaddress = (EditText) v.findViewById(R.id.office_address);
         eT_city = (EditText) v.findViewById(R.id.city);
         eT_zipcode = (EditText) v.findViewById(R.id.zip_code);
         eT_telephone = (EditText) v.findViewById(R.id.telephone);
         eT_fax = (EditText) v.findViewById(R.id.fax);
-        eT_email = (EditText) v.findViewById(R.id.email);
+        eT_email = (EditText) v.findViewById(R.id.company_name_header);
         eT_chairman = (EditText) v.findViewById(R.id.chairman);
         eT_position = (EditText) v.findViewById(R.id.position);
         eT_mobile = (EditText) v.findViewById(R.id.mobile);
-        eT_username = (EditText) v.findViewById(R.id.username);
+        eT_username = (EditText) v.findViewById(R.id.username_header);
         eT_fullname = (EditText) v.findViewById(R.id.full_name);
         eT_position2 = (EditText) v.findViewById(R.id.position2);
         eT_email2 = (EditText) v.findViewById(R.id.email2);
