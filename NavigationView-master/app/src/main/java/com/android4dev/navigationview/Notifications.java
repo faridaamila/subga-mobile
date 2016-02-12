@@ -13,6 +13,8 @@ public class Notifications extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.notification, container, false);
 
+        
+
         return v;
     }
 }

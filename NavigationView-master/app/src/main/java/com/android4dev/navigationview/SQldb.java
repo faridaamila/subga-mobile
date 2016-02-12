@@ -42,8 +42,7 @@ public class SQldb extends Activity {
                     + " id_member integer PRIMARY KEY autoincrement, "
                     + " username text, "
                     + " jenis_member text, "
-                    + " nama_company text,"
-                    + " rememberme_code integer); ");
+                    + " nama_company text); ");
             db.execSQL("create table table_bookmark("
                     + " id_bookmark integer PRIMARY KEY autoincrement, "
                     + " id_file integer, "
@@ -76,12 +75,23 @@ public class SQldb extends Activity {
     }
 
 
-    public void insertMember(String username_get,String jenis_member_get, String nama_company_get,int remember_me_get) {
+    public void insertMember(String username_get,String jenis_member_get, String nama_company_get) {
         ContentValues initialValues = new ContentValues();
         initialValues.put("username", username_get);
         initialValues.put("jenis_member", jenis_member_get);
         initialValues.put("nama_company", nama_company_get);
-        initialValues.put("rememberme_code", remember_me_get);
         db.insert("table_member", null, initialValues);
     }
+
+    public void getMember(String usernameget) {
+        Cursor cursor = db.rawQuery("SELECT * FROM table_member" , null);
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                String username_push = cursor.getString(cursor.getColumnIndex("username"));
+                String jenismember_push = cursor.getString(cursor.getColumnIndex("jenis_member"));
+                String namacompany_push = cursor.getString(cursor.getColumnIndex("nama_company"));
+            }
+        }
+    }
+
 }

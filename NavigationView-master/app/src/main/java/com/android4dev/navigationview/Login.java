@@ -85,6 +85,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                         if(response.equals("success")){
                             if(ch.isChecked()){
                                 rememberMe(username,password);}
+                            getDatatoDB();
                             openProfile();
                         }else{
                             Toast.makeText(Login.this,"Username dan Password Salah", Toast.LENGTH_LONG).show();
@@ -132,7 +133,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
         if (username != null || password != null) {
             //directly show logout form
+            getDatatoDB();
             openProfile();
+
         }
     }
 
@@ -179,7 +182,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         String usernamejson="";
         String jenis_memberjson="";
 
-
         try {
             JSONObject jsonObject = new JSONObject(response);
             JSONArray result = jsonObject.getJSONArray("result");
@@ -191,8 +193,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         catch (JSONException e) {
             e.printStackTrace();
         }
-
-
+        SQldb mysql = new SQldb();
+        mysql.openDatabase();
+        mysql.insertMember(usernamejson, jenis_memberjson, nama_perusahaanjson);
     }
 
     @Override
