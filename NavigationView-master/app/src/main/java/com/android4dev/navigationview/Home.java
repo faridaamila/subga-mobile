@@ -38,7 +38,6 @@ public class Home extends Fragment {
     ViewFlipper flip;
     int mFlipping = 0;
     private TextView tv;
-    String simpanbanner1;
    // String title = getString(R.string.app_name);
 
 
@@ -121,8 +120,6 @@ public class Home extends Fragment {
         tv.setFocusable(true);
         tv.setFocusableInTouchMode(true);
         getData();
-        getBanner();
-        new DownloadImageTask((ImageView) v.findViewById(R.id.image1)).execute(simpanbanner1);
 
 
 
@@ -136,28 +133,6 @@ public class Home extends Fragment {
 
     }
 
-    private void getBanner() {
-        loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
-
-        String urlbanner = "http://subga.info/Assets/get_data/slideshow.php";
-
-        StringRequest stringRequest = new StringRequest(urlbanner, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                loading.dismiss();
-                showJSONbanner(response);
-            }
-        },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getActivity(),error.toString(),Toast.LENGTH_LONG).show();
-                    }
-                });
-
-        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
-        requestQueue.add(stringRequest);
-    }
 
     private void getData() {
         loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
@@ -195,47 +170,6 @@ public class Home extends Fragment {
         tv.setText(isi_freetext);
     }
 
-    private void showJSONbanner(String response){
-        String isi_freetext="";
-        try {
-            JSONObject jsonObject = new JSONObject(response);
-            JSONArray result = jsonObject.getJSONArray("result");
-            for (int i = 0; i < result.length(); i++) {
-                JSONObject file = result.getJSONObject(i);
-            simpanbanner1 = file.getString("direktori_slideshow");
-            }
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        tv.setText(isi_freetext);
-    }
-
-    private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
-        ImageView bmImage;
-
-        public DownloadImageTask(ImageView bmImage) {
-            this.bmImage = bmImage;
-        }
-
-        protected Bitmap doInBackground(String... urls) {
-            String urldisplay = urls[0];
-            Bitmap mIcon11 = null;
-            try {
-                InputStream in = new java.net.URL(urldisplay).openStream();
-                mIcon11 = BitmapFactory.decodeStream(in);
-            } catch (Exception e) {
-                Log.e("Error", e.getMessage());
-                e.printStackTrace();
-            }
-            return mIcon11;
-        }
-
-        protected void execute(Bitmap result) {
-            bmImage.setImageBitmap(result);
-        }
-
-    }
 }
 
 

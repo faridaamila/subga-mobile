@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -299,6 +300,10 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.logout) {
+            SharedPreferences sharedPrefs =getSharedPreferences(Login.PREFS_NAME,MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPrefs.edit();
+            editor.clear();
+            editor.commit();
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("Anda Yakin Ingin Menutup Aplikasi?").
                     setCancelable(false).setPositiveButton("Ya", new DialogInterface.OnClickListener() {

@@ -1,12 +1,14 @@
 package com.android4dev.navigationview;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.text.util.Linkify;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -19,6 +21,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.math.BigInteger;
 import java.nio.charset.Charset;
@@ -35,6 +41,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     private EditText editTextPassword;
     private ImageButton buttonLogin;
     private ProgressDialog loading;
+    CheckBox ch;
+    public static String  PREFS_NAME="mypre";
+    public static String PREF_USERNAME="username";
+    public static String PREF_PASSWORD="password";
 
     public static String username;
     private String password;
@@ -46,6 +56,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
         editTextUsername = (EditText) findViewById(R.id.editTextUsername);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        ch = (CheckBox) findViewById(R.id.remember_me);
 
         buttonLogin = (ImageButton) findViewById(R.id.buttonLogin);
 
@@ -72,6 +83,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                     @Override
                     public void onResponse(String response) {
                         if(response.equals("success")){
+                            if(ch.isChecked()){
+                                rememberMe(username,password);}
                             openProfile();
                         }else{
                             Toast.makeText(Login.this,"Username dan Password Salah", Toast.LENGTH_LONG).show();
@@ -97,14 +110,95 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         requestQueue.add(stringRequest);
     }
 
+    public void rememberMe(String user, String password){
+        //save username and password in SharedPreferences
+        getSharedPreferences(PREFS_NAME,MODE_PRIVATE)
+                .edit()
+                .putString(PREF_USERNAME,user)
+                .putString(PREF_PASSWORD,password)
+                .commit();
+    }
+
+    public void onStart(){
+        super.onStart();
+        //read username and password from SharedPreferences
+        getUser();
+    }
+
+    public void getUser(){
+        SharedPreferences pref = getSharedPreferences(PREFS_NAME,MODE_PRIVATE);
+        String username = pref.getString(PREF_USERNAME, null);
+        String password = pref.getString(PREF_PASSWORD, null);
+
+        if (username != null || password != null) {
+            //directly show logout form
+            openProfile();
+        }
+    }
+
     private void openProfile(){
         Intent intent = new Intent(Login.this, MainActivity.class);
         startActivity(intent);
     }
 
+    private void getDatatoDB() {
+        //spasi convert
+        int i;
+        for (i=0; i<username.length();i++){
+            char a_char = username.charAt(i);
+            if (a_char == ' '){
+                username=username.replace(" ","%20");
+            }
+        }
+
+        loading = ProgressDialog.show(this, "Please wait...", "Fetching...", false, false);
+
+        String url = "http://subga.info/Assets/get_data/data_member.php?username="+username;
+        //Toast.makeText( getActivity(),url,Toast.LENGTH_LONG).show();
+
+        StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                loading.dismiss();
+                showJSONdb(response);
+            }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(Login.this,error.toString(),Toast.LENGTH_LONG).show();
+                    }
+                });
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
+
+    private void showJSONdb(String response){
+        String nama_perusahaanjson="";
+        String usernamejson="";
+        String jenis_memberjson="";
+
+
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            JSONArray result = jsonObject.getJSONArray("result");
+            JSONObject collegeData = result.getJSONObject(0);
+            nama_perusahaanjson=collegeData.getString("nama_perusahaan");
+            usernamejson=collegeData.getString("username");
+            jenis_memberjson=collegeData.getString("jenis_member");
+        }
+        catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
     @Override
     public void onClick(View v) {
         userLogin();
+        getDatatoDB();
     }
 
     public static String md5(String s)

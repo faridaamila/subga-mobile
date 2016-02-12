@@ -17,10 +17,12 @@ public class Splashscreen extends Activity{
     protected boolean _active = true;
     protected int _splashTime = 3000; // time to display the splash screen in ms
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splashscreen);
+
 
         Thread splashTread = new Thread() {
             @Override
@@ -36,10 +38,9 @@ public class Splashscreen extends Activity{
                 } catch (Exception e) {
 
                 } finally {
-
-                    startActivity(new Intent(Splashscreen.this, Login.class));
+                        startActivity(new Intent(Splashscreen.this, Login.class));
+                    }
                     finish();
-                }
             };
         };
         splashTread.start();
