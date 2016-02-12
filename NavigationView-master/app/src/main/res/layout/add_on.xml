@@ -15,91 +15,66 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_80sdp"
+            android:layout_height="@dimen/_35sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:id="@+id/relativeLayout16"
-            android:background="@mipmap/search_back">
+            android:layout_marginBottom="@dimen/_10sdp">
 
             <EditText
-                android:layout_width="@dimen/_240sdp"
+                android:layout_width="@dimen/_195sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:id="@+id/search_bar"
-                android:text="Search"
+                android:hint="Search"
                 android:textSize="@dimen/_12sdp"
                 android:singleLine="true"
                 android:scrollHorizontally="true"
                 android:paddingLeft="@dimen/_10sdp"
                 android:clickable="true"
+                android:background="@mipmap/search_fix"
+                android:textColorHint="#1f5aa6"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:paddingBottom="@dimen/_9sdp"
-                android:textColorHint="#dfdbdb" />
-
-            <ImageButton
-                android:layout_width="@dimen/_37sdp"
-                android:layout_height="@dimen/_50sdp"
-                android:id="@+id/btn_search"
-                android:layout_alignTop="@+id/search_bar"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_35sdp" />
+                android:layout_toLeftOf="@+id/btn_sort" />
 
             <Spinner
-                android:layout_width="@dimen/_70sdp"
-                android:layout_height="@dimen/_50sdp"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="match_parent"
                 android:id="@+id/spinner"
-                android:textSize="@dimen/_10sdp"
-                android:touchscreenBlocksFocus="true"
-                android:prompt="@string/spinner"
-                android:layout_toLeftOf="@+id/btn_search"
-                android:layout_toStartOf="@+id/btn_search"
-                android:clickable="true"
-                android:layout_marginRight="@dimen/_4sdp"
-                android:layout_alignBottom="@+id/btn_search"
-                android:layout_marginBottom="@dimen/_2sdp"
-                android:layout_alignTop="@+id/search_bar"
-                android:layout_marginTop="@dimen/_1sdp"
-                android:background="@mipmap/sort_baru" />
-            <RadioGroup
-                android:layout_width="@dimen/_150sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@mipmap/group"
+                android:layout_toLeftOf="@+id/search_bar"
+                android:layout_toStartOf="@+id/search_bar"
+                android:layout_marginRight="@dimen/_minus3sdp" />
+
+            <ImageButton
+                android:layout_width="@dimen/_25sdp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/rb_grup"
-                android:layout_below="@+id/spinner"
-                android:layout_alignLeft="@+id/search_bar"
-                android:layout_alignStart="@+id/search_bar">
+                android:id="@+id/btn_sort"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="@mipmap/sort_baru"
+                android:layout_marginLeft="@dimen/_5sdp" />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="GA INFO"
-                    android:id="@+id/radioButton"
-                    android:layout_gravity="center_horizontal" />
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Subject"
-                    android:id="@+id/radioButton2"
-                    android:checked="false" />
-
-            </RadioGroup>
+            <ImageButton
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:id="@+id/btn_search"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btn_sort"
+                android:layout_toStartOf="@+id/btn_sort"
+                android:background="@mipmap/search_btn"
+                android:layout_marginRight="@dimen/_5sdp" />
 
         </RelativeLayout>
 
         <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_410sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:id="@+id/scrollView3"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="@dimen/_2sdp"
-            android:layout_marginRight="@dimen/_1sdp"
             android:layout_below="@+id/relativeLayout16">>
 
             <HorizontalScrollView

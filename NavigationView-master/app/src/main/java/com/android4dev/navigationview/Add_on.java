@@ -1,7 +1,10 @@
 package com.android4dev.navigationview;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,7 +15,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -58,66 +60,31 @@ public class Add_on extends Fragment {
 
         tl = (TableLayout) v.findViewById(R.id.tableLayout1);
 
-        String [] values = {"Issue Date","Subject","GA Info","Hits","Refer"};
+
+        ////////////////////SEARCH BY//////////////////////////////////////////////////////////////
+        String [] values = {"All", "GA Info","Subject"};
         Spinner spinner = (Spinner) v.findViewById(R.id.spinner);
+
+
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-        spinner.setPrompt("By!");
         spinner.setAdapter(adapter);
-
-        ImageButton ibsearch = (ImageButton) v.findViewById(R.id.btn_search);
-        final EditText etsearch = (EditText) v.findViewById(R.id.search_bar);
-
-        RadioGroup searchmethod = (RadioGroup) v.findViewById(R.id.rb_grup);
-        searchmethod.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                check = checkedId;
-                if (checkedId == R.id.radioButton) {
-                    search=1;
-                } else if (checkedId == R.id.radioButton2) {
-                    search=2;
-                }
-                else {
-                    Toast.makeText(getActivity(), "Please check the option search", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-        ibsearch.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                isisearch = etsearch.getText().toString();
-                if (check != 0) {
-                    getSearch();
-                }
-                else
-                    Toast.makeText(getActivity(), "Please check the option search", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
 
+                ((TextView) parentView.getChildAt(0)).setTextColor(Color.WHITE);
+
                 switch (position) {
                     case 0:
-                        urutposisi = 1;
+                        search = 1;
                         break;
                     case 1:
-                        urutposisi = 2;
-                        break;
-                    case 2:
-                        urutposisi = 3;
+                        search = 2;
                         break;
                     case 3:
-                        urutposisi = 4;
-                        break;
-                    case 4:
-                        urutposisi = 5;
-                        break;
-                    default:
+                       search = 3;
                         break;
                 }
                 if (isisearch != null) {
@@ -130,6 +97,68 @@ public class Add_on extends Fragment {
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
+
+        ImageButton ibsearch = (ImageButton) v.findViewById(R.id.btn_search);
+        final EditText etsearch = (EditText) v.findViewById(R.id.search_bar);
+
+        ibsearch.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                isisearch = etsearch.getText().toString();
+                if (search != 0) {
+                    getSearch();
+                }
+                else
+                    Toast.makeText(getActivity(), "Please check the option search", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        //////SORT BY///////////////////////////////////////////////////////////////////////////////////////////////////////////
+        final CharSequence[] options = {"Issue Date","Subject","GA Info","Hits","Refer","Cancel"};
+        ImageButton btn_sort = (ImageButton)v.findViewById(R.id.btn_sort);
+
+        btn_sort.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Sort by");
+                builder.setItems(options, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int item) {
+                        switch(item) {
+                            case 0:
+                                urutposisi = 1;
+                                break;
+                            case 1:
+                                urutposisi = 2;
+                                break;
+                            case 2:
+                                urutposisi = 3;
+                                break;
+                            case 3:
+                                urutposisi = 4;
+                                break;
+                            case 4:
+                                urutposisi = 5;
+                                break;
+                            case 5:
+                                dialog.dismiss();
+                                break;
+                            default:
+                                break;
+                        }
+                        if (isisearch != null) {
+                            getSearch();
+                        } else {
+                            getData();
+                        }
+                    }
+                });builder.show();
+            }
+        });
+
         return v;
     }
 
@@ -137,11 +166,13 @@ public class Add_on extends Fragment {
         loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
 
         if (search==1) {
-            urls = "http://subga.info/Assets/get_data/search_gainfo.php?kategori=10&internal=%27E%27&urut="+urutposisi+"&gainfo=%27"+isisearch+"%27";
+            urls = "http://subga.info/Assets/get_data/data_file.php?kategori=10&internal=%27E%27&urut="+urutposisi;
         }
         else if (search==2){
+            urls = "http://subga.info/Assets/get_data/search_gainfo.php?kategori=10&internal=%27E%27&urut="+urutposisi+"&gainfo=%27"+isisearch+"%27";
+        }
+        else if (search==3){
             urls = "http://subga.info/Assets/get_data/search_subject.php?kategori=10&internal=%27E%27&urut="+urutposisi+"&subject=%27"+isisearch+"%27";
-            Toast.makeText(getActivity(), urls, Toast.LENGTH_LONG).show();
         }
         else{
             Toast.makeText(getActivity(), "Please check the option search", Toast.LENGTH_SHORT).show();

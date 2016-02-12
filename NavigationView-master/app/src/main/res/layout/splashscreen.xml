@@ -17,7 +17,7 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:textStyle="bold"
-            android:textColor="#fffff0"
+            android:textColor="#ffffff"
             android:gravity="center_vertical|clip_vertical|center_horizontal"
             android:textSize="@dimen/_16sdp" />
 
