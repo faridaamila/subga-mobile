@@ -6,12 +6,13 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="@dimen/_120sdp"
         android:layout_below="@+id/relativeLayout7"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="19dp"
-        android:layout_marginRight="19dp">
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp">
 
         <TextView
             android:layout_width="match_parent"
@@ -22,11 +23,9 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginLeft="0dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="19dp"
             android:textColor="#1F5AA6"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_20sdp" />
 
         <ImageButton
             android:layout_width="match_parent"
@@ -35,7 +34,6 @@
             android:layout_centerVertical="true"
             android:layout_alignRight="@+id/textView26"
             android:layout_alignEnd="@+id/textView26"
-            android:layout_marginRight="0dp"
             android:background="@mipmap/background_setting" />
 
         <ImageView
@@ -96,8 +94,8 @@
         android:layout_height="140dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="19dp"
-        android:layout_marginRight="19dp">
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -105,7 +103,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Support"
             android:id="@+id/textView27"
-            android:layout_marginTop="21dp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:textStyle="bold"
             android:textColor="#1F5AA6"/>
 
@@ -132,7 +130,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Help Center"
+            android:text="Contact Center"
             android:id="@+id/textView56"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/imageView13"

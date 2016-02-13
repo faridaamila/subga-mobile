@@ -9,78 +9,75 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/relativeLayout7"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_25sdp"
+            android:layout_height="@dimen/_35sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:id="@+id/relativeLayout16">
+            android:id="@+id/relativeLayout16"
+            android:layout_marginBottom="@dimen/_10sdp">
 
             <EditText
-                android:layout_width="@dimen/_140sdp"
-                android:layout_height="match_parent"
+                android:layout_width="@dimen/_195sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:id="@+id/search_bar"
-                android:text="Search"
-                android:background="@mipmap/search_bar"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:textSize="@dimen/_14sdp"
+                android:hint="Search"
+                android:textSize="@dimen/_12sdp"
                 android:singleLine="true"
                 android:scrollHorizontally="true"
-                android:paddingLeft="@dimen/_10sdp" />
+                android:paddingLeft="@dimen/_10sdp"
+                android:clickable="true"
+                android:background="@mipmap/search_fix"
+                android:textColorHint="#1f5aa6"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/btn_sort" />
+
+            <Spinner
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="match_parent"
+                android:id="@+id/spinner"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@mipmap/group"
+                android:layout_toLeftOf="@+id/search_bar"
+                android:layout_toStartOf="@+id/search_bar"
+                android:layout_marginRight="@dimen/_minus3sdp" />
 
             <ImageButton
-                android:layout_width="@dimen/_37sdp"
-                android:layout_height="match_parent"
-                android:id="@+id/btn_search"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:id="@+id/btn_sort"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:background="@mipmap/btn_search"
-                android:layout_marginRight="@dimen/_5sdp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Go"
-                android:id="@+id/textView9"
-                android:textSize="@dimen/_14sdp"
-                android:textStyle="bold"
-                android:layout_centerVertical="true"
-                android:layout_alignLeft="@+id/btn_search"
-                android:layout_alignStart="@+id/btn_search"
-                android:textColor="#ffffff"
-                android:layout_marginLeft="@dimen/_10sdp" />
-
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinner"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@+id/textView9"
-                android:layout_toEndOf="@+id/search_bar"
-                android:layout_marginRight="@dimen/_5sdp"
-                android:textSize="@dimen/_10sdp"
-                android:layout_toRightOf="@+id/search_bar"
+                android:background="@mipmap/sort_baru"
                 android:layout_marginLeft="@dimen/_5sdp"
-                android:touchscreenBlocksFocus="true" />
+                android:foregroundGravity="center"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <ImageButton
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:id="@+id/btn_search"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btn_sort"
+                android:layout_toStartOf="@+id/btn_sort"
+                android:background="@mipmap/search_btn"
+                android:layout_marginRight="@dimen/_5sdp" />
 
         </RelativeLayout>
 
         <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_410sdp"
-            android:layout_below="@+id/relativeLayout16"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:id="@+id/scrollView3"
-            android:layout_marginTop="@dimen/_10sdp"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="@dimen/_5sdp"
-            android:layout_marginRight="@dimen/_5sdp">>
+            android:layout_below="@+id/relativeLayout16">>
 
             <HorizontalScrollView
                 android:layout_width="match_parent"

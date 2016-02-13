@@ -304,14 +304,14 @@
                     android:layout_height="@dimen/_10sdp"
                     android:background="#ff0000"
                     android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@+id/company_header"
-                    android:layout_toStartOf="@+id/company_header"
+                    android:layout_toLeftOf="@+id/email"
+                    android:layout_toStartOf="@+id/email"
                     android:layout_marginRight="@dimen/_3sdp" />
 
                 <EditText
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/company_header"
+                    android:id="@+id/email"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
@@ -430,14 +430,14 @@
                     android:layout_height="@dimen/_10sdp"
                     android:background="#ff0000"
                     android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@+id/username_header"
-                    android:layout_toStartOf="@+id/username_header"
+                    android:layout_toLeftOf="@+id/username"
+                    android:layout_toStartOf="@+id/username"
                     android:layout_marginRight="@dimen/_3sdp" />
 
                 <EditText
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/username_header"
+                    android:id="@+id/username"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"

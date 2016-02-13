@@ -16,36 +16,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Call Center"
+            android:text="Contact Center"
             android:id="@+id/textView28"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="19dp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:textStyle="bold"
-            android:textColor="#1f5aa6" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0315321640"
-            android:id="@+id/textView29"
-            android:layout_marginTop="18dp"
-            android:layout_below="@+id/textView28"
-            android:layout_alignLeft="@+id/textView28"
-            android:layout_alignStart="@+id/textView28"
-            android:layout_marginLeft="37dp"
-            android:layout_marginStart="37dp" />
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/imageView7"
-            android:src="@mipmap/duaempat"
-            android:layout_below="@+id/textView28"
-            android:layout_alignLeft="@+id/textView28"
-            android:layout_alignStart="@+id/textView28"
-            android:layout_marginTop="12dp" />
+            android:textColor="#1f5aa6"
+            android:layout_marginBottom="@dimen/_10sdp" />
 
         <ImageView
             android:layout_width="30dp"
@@ -53,9 +32,9 @@
             android:id="@+id/imageView8"
             android:layout_marginTop="7dp"
             android:src="@mipmap/office"
-            android:layout_below="@+id/imageView7"
-            android:layout_alignLeft="@+id/imageView7"
-            android:layout_alignStart="@+id/imageView7" />
+            android:layout_below="@+id/textView28"
+            android:layout_alignLeft="@+id/textView28"
+            android:layout_alignStart="@+id/textView28" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -63,9 +42,10 @@
             android:text="PT. Garuda Indonesia"
             android:id="@+id/textView30"
             android:layout_alignTop="@+id/imageView8"
-            android:layout_alignLeft="@+id/textView29"
-            android:layout_alignStart="@+id/textView29"
-            android:layout_marginTop="5dp" />
+            android:layout_toRightOf="@+id/imageView8"
+            android:layout_toEndOf="@+id/imageView8"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -80,29 +60,104 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Graha Bumi Surabaya 4th Floor "
-            android:id="@+id/textView32"
+            android:text="Graha Bumi Modern Lt. 1, Jl. Basuki Rachmat 106-128 (62-31)5468505"
+            android:id="@+id/textView8"
+            android:layout_marginTop="@dimen/_11sdp"
             android:layout_below="@+id/textView31"
             android:layout_alignLeft="@+id/textView31"
-            android:layout_alignStart="@+id/textView31" />
+            android:layout_alignStart="@+id/textView31"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jl. Basuki Rahmat 106-128"
-            android:id="@+id/textView33"
-            android:layout_below="@+id/textView32"
-            android:layout_alignLeft="@+id/textView32"
-            android:layout_alignStart="@+id/textView32" />
+            android:text="City of Tomorrow GE 3, Jl. A. Yani No. 288 Bundaran Waru (62-31)58251400"
+            android:id="@+id/textView9"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/textView8"
+            android:layout_alignLeft="@+id/textView8"
+            android:layout_alignStart="@+id/textView8" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Surabaya, 60271, Indonesia"
-            android:id="@+id/textView34"
-            android:layout_below="@+id/textView33"
-            android:layout_alignLeft="@+id/textView33"
-            android:layout_alignStart="@+id/textView33" />
+            android:text="Juanda International Airport Service Center (62-31)8688666"
+            android:id="@+id/textView10"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/textView9"
+            android:layout_alignLeft="@+id/textView9"
+            android:layout_alignStart="@+id/textView9" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mall Ciputra World 1st floor Unit 15-16, Jl. Mayjen Sungkono No. 89, Surabaya (62-31)51200373"
+            android:id="@+id/textView20"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/textView10"
+            android:layout_alignLeft="@+id/textView10"
+            android:layout_alignStart="@+id/textView10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jl. Tunjungan 29 (62-31)5345886"
+            android:id="@+id/textView11"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/textView20"
+            android:layout_alignLeft="@+id/textView20"
+            android:layout_alignStart="@+id/textView20" />
+
+        <ImageView
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="@dimen/_5sdp"
+            android:id="@+id/imageView16"
+            android:background="#1f5aa6"
+            android:layout_alignTop="@+id/textView8"
+            android:layout_alignLeft="@+id/textView31"
+            android:layout_alignStart="@+id/textView31"
+            android:layout_marginTop="@dimen/_5sdp" />
+
+        <ImageView
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="@dimen/_5sdp"
+            android:id="@+id/imageView17"
+            android:background="#1f5aa6"
+            android:layout_alignTop="@+id/textView9"
+            android:layout_alignLeft="@+id/imageView16"
+            android:layout_alignStart="@+id/imageView16"
+            android:layout_marginTop="@dimen/_5sdp" />
+
+        <ImageView
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="@dimen/_5sdp"
+            android:id="@+id/imageView18"
+            android:background="#1f5aa6"
+            android:layout_alignTop="@+id/textView10"
+            android:layout_alignLeft="@+id/imageView17"
+            android:layout_alignStart="@+id/imageView17"
+            android:layout_marginTop="@dimen/_5sdp" />
+
+        <ImageView
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="@dimen/_5sdp"
+            android:id="@+id/imageView19"
+            android:background="#1f5aa6"
+            android:layout_alignTop="@+id/textView20"
+            android:layout_alignLeft="@+id/imageView18"
+            android:layout_alignStart="@+id/imageView18"
+            android:layout_marginTop="@dimen/_5sdp" />
+
+        <ImageView
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="@dimen/_5sdp"
+            android:id="@+id/imageView20"
+            android:background="#1f5aa6"
+            android:layout_alignTop="@+id/textView11"
+            android:layout_alignLeft="@+id/imageView19"
+            android:layout_alignStart="@+id/imageView19"
+            android:layout_marginTop="@dimen/_5sdp" />
 
     </RelativeLayout>
 

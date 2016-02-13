@@ -1,19 +1,23 @@
 package com.android4dev.navigationview;
 
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
-import android.widget.ListView;
 
 /**
  * Created by S. Harsono on 1/27/2016.
  */
 public class Nav_setting extends Fragment {
+    private static final int MY_NOTIFICATION_ID=1;
+    NotificationManager notificationManager;
+    Notification myNotification;
+    private final String myBlog = "http://android-er.blogspot.com/";
+
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -38,12 +42,6 @@ public class Nav_setting extends Fragment {
         btn_notificatios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Notifications fragment = new Notifications();
-                android.support.v4.app.FragmentManager fm2 = getFragmentManager();
-                android.support.v4.app.FragmentTransaction ft2 = fm2.beginTransaction();
-                ft2.replace(R.id.frame, fragment);
-                ft2.addToBackStack(null);
-                ft2.commit();
             }
         });
         btn_help_center.setOnClickListener(new View.OnClickListener() {
