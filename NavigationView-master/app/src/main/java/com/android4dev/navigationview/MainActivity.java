@@ -1,6 +1,9 @@
 package com.android4dev.navigationview;
 
 import android.app.AlertDialog;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -41,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
     ViewFlipper flip;
     int mFlipping = 0;
 
+    Notification notification;
+    private static final int NOTIFICATION_ID=1;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
             flip.stopFlipping();
             mFlipping = 0;
         }
+        //////////NOTIICATION////////////
+
+
 
         //text marque
         tv = (TextView) findViewById(R.id.hot_news);
@@ -322,7 +333,18 @@ public class MainActivity extends AppCompatActivity {
                             // return true;
                         }
                     }).show();
+        } else if (id == R.id.notifications){
+            final NotificationManager mgr=(NotificationManager)getSystemService(NOTIFICATION_SERVICE);
+            notification=new Notification(R.drawable.ic_home,"You've got a new notification", System.currentTimeMillis());
+            //Intent to start new activity on click of expanded view
+            Intent intent=new Intent(getApplicationContext(), MainActivity.class);
+            PendingIntent pendingIntent= PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
+            notification.setLatestEventInfo(this, "You've got a new notification", "Check navigation New Document", pendingIntent);
+            mgr.notify(NOTIFICATION_ID, notification);
+
         }
+
+
         return super.onOptionsItemSelected(item);
     }
 
