@@ -8,6 +8,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     Notification notification;
     private static final int NOTIFICATION_ID=1;
+    DBHelper mydb;
 
 
 
@@ -53,6 +55,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mydb = new DBHelper(this);
+
+        TextView header_username = (TextView) findViewById(R.id.username_header);
+        TextView company_header = (TextView) findViewById(R.id.company_header);
+        Login loginku = new Login();
+
+        Cursor rs = mydb.getMember(loginku.username);
+
+            String dbusername = rs.getString(rs.getColumnIndex(DBHelper.MEMBER_COLUMN_USERNAME));
+            String dbnama_company = rs.getString(rs.getColumnIndex(DBHelper.MEMBER_COLUMN_NAMA_COMPANY));
+            header_username.setText((CharSequence)dbusername);
+            company_header.setText((CharSequence)dbnama_company);
+
+        /*rs.moveToFirst();
+
+
+        if (!rs.isClosed())
+        {
+            rs.close();
+        }
+        */
 
         // Initializing Toolbar and setting it as the actionbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);

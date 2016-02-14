@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.text.util.Linkify;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -26,10 +27,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Console;
 import java.math.BigInteger;
 import java.nio.charset.Charset;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -48,11 +51,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
     public static String username;
     private String password;
+    DBHelper mydb;
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+
+        mydb = new DBHelper(this);
 
         editTextUsername = (EditText) findViewById(R.id.editTextUsername);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
@@ -67,6 +73,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
         TextView register_here = (TextView) findViewById(R.id.register_here);
         register_here.setMovementMethod(LinkMovementMethod.getInstance());
+
+
 
     }
 
@@ -135,7 +143,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
             //directly show logout form
             getDatatoDB();
             openProfile();
-
         }
     }
 
@@ -193,15 +200,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         catch (JSONException e) {
             e.printStackTrace();
         }
-        SQldb mysql = new SQldb();
-        mysql.openDatabase();
-        mysql.insertMember(usernamejson, jenis_memberjson, nama_perusahaanjson);
+        boolean test = mydb.insertMember(usernamejson,jenis_memberjson,nama_perusahaanjson);
+        Log.d("status insert", String.valueOf(test));
     }
 
     @Override
     public void onClick(View v) {
         userLogin();
-        getDatatoDB();
     }
 
     public static String md5(String s)
