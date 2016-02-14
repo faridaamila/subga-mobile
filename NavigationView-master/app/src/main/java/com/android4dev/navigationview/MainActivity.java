@@ -147,6 +147,8 @@ public class MainActivity extends AppCompatActivity {
                     //Replacing the main content with ContentFragment Which is our Inbox View;
                     case R.id.home:
                         Home fragment1 = new Home();
+                        title = "SUBGA Mobile";
+                        getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction1.replace(R.id.frame, fragment1);
                         fragmentTransaction1.commit();

@@ -66,7 +66,6 @@ public class Add_on extends Fragment {
         Spinner spinner = (Spinner) v.findViewById(R.id.spinner);
 
 
-
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner.setAdapter(adapter);
@@ -78,16 +77,16 @@ public class Add_on extends Fragment {
 
                 switch (position) {
                     case 0:
-                        search = 1;
+                        search = 0;
                         break;
                     case 1:
-                        search = 2;
+                        search = 1;
                         break;
-                    case 3:
-                       search = 3;
+                    case 2:
+                       search = 2;
                         break;
                 }
-                if (isisearch != null) {
+                if (search != 0) {
                     getSearch();
                 } else {
                     getData();
@@ -164,20 +163,11 @@ public class Add_on extends Fragment {
 
     private void getSearch() {
         loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
-
-        if (search==1) {
-            urls = "http://subga.info/Assets/get_data/data_file.php?kategori=10&internal=%27E%27&urut="+urutposisi;
+        if (search == 1) {
+            urls = "http://subga.info/Assets/get_data/search_gainfo.php?kategori=10&internal=%27E%27&urut=" + urutposisi + "&gainfo=%27" + isisearch + "%27";
+        }  else {
+            urls = "http://subga.info/Assets/get_data/search_subject.php?kategori=10&internal=%27E%27&urut=" + urutposisi + "&subject=%27" + isisearch + "%27";
         }
-        else if (search==2){
-            urls = "http://subga.info/Assets/get_data/search_gainfo.php?kategori=10&internal=%27E%27&urut="+urutposisi+"&gainfo=%27"+isisearch+"%27";
-        }
-        else if (search==3){
-            urls = "http://subga.info/Assets/get_data/search_subject.php?kategori=10&internal=%27E%27&urut="+urutposisi+"&subject=%27"+isisearch+"%27";
-        }
-        else{
-            Toast.makeText(getActivity(), "Please check the option search", Toast.LENGTH_SHORT).show();
-        }
-
 
         StringRequest stringRequest = new StringRequest(urls, new Response.Listener<String>() {
             @Override
