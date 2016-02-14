@@ -1,5 +1,7 @@
 package com.android4dev.navigationview;
 
+import android.util.Log;
+
 /**
  * Created by faridaamila on 12/02/2016.
  */
@@ -12,6 +14,9 @@ public class Member {
         this.username = username;
         this.jenis_member = jenis_member;
         this.nama_company = nama_company;
+        Log.d("username : ",username);
+        Log.d("jenis_member : ",jenis_member);
+        Log.d("nama_company : ",nama_company);
     }
 
     public void setUsername(String username) {

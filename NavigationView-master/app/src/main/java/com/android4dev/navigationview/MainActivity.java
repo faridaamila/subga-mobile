@@ -61,22 +61,10 @@ public class MainActivity extends AppCompatActivity {
         TextView header_username = (TextView) findViewById(R.id.username_header);
         TextView company_header = (TextView) findViewById(R.id.company_header);
         Login loginku = new Login();
+        Member memberku = mydb.getMember(loginku.username);
+        header_username.setText(memberku.getUsername());
+        company_header.setText(memberku.getNama_company());
 
-        Cursor rs = mydb.getMember(loginku.username);
-
-            String dbusername = rs.getString(rs.getColumnIndex(DBHelper.MEMBER_COLUMN_USERNAME));
-            String dbnama_company = rs.getString(rs.getColumnIndex(DBHelper.MEMBER_COLUMN_NAMA_COMPANY));
-            header_username.setText((CharSequence)dbusername);
-            company_header.setText((CharSequence)dbnama_company);
-
-        /*rs.moveToFirst();
-
-
-        if (!rs.isClosed())
-        {
-            rs.close();
-        }
-        */
 
         // Initializing Toolbar and setting it as the actionbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);

@@ -196,12 +196,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
             nama_perusahaanjson=collegeData.getString("nama_perusahaan");
             usernamejson=collegeData.getString("username");
             jenis_memberjson=collegeData.getString("jenis_member");
+            boolean test = mydb.insertMember(usernamejson,jenis_memberjson,nama_perusahaanjson);
+            Log.d("status insert", String.valueOf(test));
         }
         catch (JSONException e) {
             e.printStackTrace();
         }
-        boolean test = mydb.insertMember(usernamejson,jenis_memberjson,nama_perusahaanjson);
-        Log.d("status insert", String.valueOf(test));
+
     }
 
     @Override

@@ -9,15 +9,19 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8441ef18-a574-4ae9-86f3-f6f040134e01" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/DBHelper.java" />
-      <change type="DELETED" beforePath="D:\subga-mobile\NavigationView-master\app\src\main\java\com\android4dev\navigationview\SQldb.java" afterPath="" />
+    <list default="true" id="ab25d933-08bd-44cf-83f7-89f589eaac11" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/DBHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/DBHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Login.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Login.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Member.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Member.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NavigationView-master.iws" />
@@ -46,14 +50,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DBHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/DBHelper.java">
+      <file leaf-file-name="Member.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Member.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
               <folding>
-                <element signature="e#932#933#0" expanded="true" />
-                <element signature="e#986#987#0" expanded="true" />
+                <element signature="e#3351#3753#0" expanded="true" />
+                <element signature="e#3752#3753#0" expanded="true" />
+                <element signature="e#3796#4182#0" expanded="true" />
+                <element signature="e#4181#4182#0" expanded="true" />
+                <element signature="e#4225#4611#0" expanded="true" />
+                <element signature="e#4610#4611#0" expanded="true" />
+                <element signature="e#4653#5037#0" expanded="true" />
+                <element signature="e#5036#5037#0" expanded="true" />
+                <element signature="e#5320#14464#0" expanded="true" />
+                <element signature="e#5576#5604#0" expanded="true" />
+                <element signature="e#6866#6895#0" expanded="true" />
+                <element signature="e#7464#7489#0" expanded="true" />
+                <element signature="e#8078#8115#0" expanded="true" />
+                <element signature="e#8693#8721#0" expanded="true" />
+                <element signature="e#9320#9354#0" expanded="true" />
+                <element signature="e#9947#9980#0" expanded="true" />
+                <element signature="e#10573#10606#0" expanded="true" />
+                <element signature="e#11192#11222#0" expanded="true" />
+                <element signature="e#11792#11817#0" expanded="true" />
+                <element signature="e#12406#12433#0" expanded="true" />
+                <element signature="e#13023#13053#0" expanded="true" />
+                <element signature="e#13670#13709#0" expanded="true" />
+                <element signature="e#14463#14464#0" expanded="true" />
+                <element signature="e#14700#14719#0" expanded="true" />
+                <element signature="e#14721#14741#0" expanded="true" />
+                <element signature="e#16595#16999#0" expanded="true" />
+                <element signature="e#16998#16999#0" expanded="true" />
+                <element signature="e#17048#17302#0" expanded="true" />
+                <element signature="e#17301#17302#0" expanded="true" />
+                <element signature="e#18355#18559#0" expanded="true" />
+                <element signature="e#18558#18559#0" expanded="true" />
+                <element signature="e#18577#18849#0" expanded="true" />
+                <element signature="e#18848#18849#0" expanded="true" />
+                <element signature="e#19606#19634#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,57 +109,21 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Login.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="96" column="32" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="32" />
+              <caret line="199" column="57" selection-start-line="199" selection-start-column="12" selection-end-line="199" selection-end-column="57" />
               <folding>
-                <element signature="e#7352#7353#0" expanded="true" />
-                <element signature="e#7379#7380#0" expanded="true" />
+                <element signature="e#7361#7362#0" expanded="true" />
+                <element signature="e#7388#7389#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/MainActivity.java">
+      <file leaf-file-name="DBHelper.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/DBHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3846154">
-              <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3676#4078#0" expanded="true" />
-                <element signature="e#4077#4078#0" expanded="true" />
-                <element signature="e#4121#4507#0" expanded="true" />
-                <element signature="e#4506#4507#0" expanded="true" />
-                <element signature="e#4550#4936#0" expanded="true" />
-                <element signature="e#4935#4936#0" expanded="true" />
-                <element signature="e#4978#5362#0" expanded="true" />
-                <element signature="e#5361#5362#0" expanded="true" />
-                <element signature="e#5645#14789#0" expanded="true" />
-                <element signature="e#5901#5929#0" expanded="true" />
-                <element signature="e#7191#7220#0" expanded="true" />
-                <element signature="e#7789#7814#0" expanded="true" />
-                <element signature="e#8403#8440#0" expanded="true" />
-                <element signature="e#9018#9046#0" expanded="true" />
-                <element signature="e#9645#9679#0" expanded="true" />
-                <element signature="e#10272#10305#0" expanded="true" />
-                <element signature="e#10898#10931#0" expanded="true" />
-                <element signature="e#11517#11547#0" expanded="true" />
-                <element signature="e#12117#12142#0" expanded="true" />
-                <element signature="e#12731#12758#0" expanded="true" />
-                <element signature="e#13348#13378#0" expanded="true" />
-                <element signature="e#13995#14034#0" expanded="true" />
-                <element signature="e#14788#14789#0" expanded="true" />
-                <element signature="e#15025#15044#0" expanded="true" />
-                <element signature="e#15046#15066#0" expanded="true" />
-                <element signature="e#16920#17324#0" expanded="true" />
-                <element signature="e#17323#17324#0" expanded="true" />
-                <element signature="e#17373#17627#0" expanded="true" />
-                <element signature="e#17626#17627#0" expanded="true" />
-                <element signature="e#18680#18884#0" expanded="true" />
-                <element signature="e#18883#18884#0" expanded="true" />
-                <element signature="e#18902#19174#0" expanded="true" />
-                <element signature="e#19173#19174#0" expanded="true" />
-                <element signature="e#19931#19959#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="1.2880143">
+              <caret line="67" column="103" selection-start-line="67" selection-start-column="103" selection-end-line="67" selection-end-column="103" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1290,7 +1300,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="D:\subga-mobile\NavigationView-master" value="4365730076296" />
+        <entry key="D:\OneDrive\subga-mobile\NavigationView-master" value="4362103305540" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1601,9 +1611,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Member.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Login.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/DBHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/DBHelper.java" />
       </list>
     </option>
   </component>
@@ -1639,7 +1650,10 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1692,9 +1706,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1703,127 +1714,6 @@
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="d7174fbc" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_One_API_23" />
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Add_on.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Cargo.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Codeshare.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Domestic.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Flight_schedule.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Internal_news.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/International.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/MainActivity.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Middle_east.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Pin_hin_rin.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Rsp_yearly.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Rules_and_procedure.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1962,10 +1852,10 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8441ef18-a574-4ae9-86f3-f6f040134e01" name="Default" comment="" />
-      <created>1455452203883</created>
+      <changelist id="ab25d933-08bd-44cf-83f7-89f589eaac11" name="Default" comment="" />
+      <created>1455460693965</created>
       <option name="number" value="Default" />
-      <updated>1455452203883</updated>
+      <updated>1455460693965</updated>
     </task>
     <servers />
   </component>
@@ -1974,14 +1864,14 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.63202727" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.56558776" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1990,7 +1880,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2011,69 +1901,73 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+          <folding>
+            <element signature="e#3351#3753#0" expanded="true" />
+            <element signature="e#3752#3753#0" expanded="true" />
+            <element signature="e#3796#4182#0" expanded="true" />
+            <element signature="e#4181#4182#0" expanded="true" />
+            <element signature="e#4225#4611#0" expanded="true" />
+            <element signature="e#4610#4611#0" expanded="true" />
+            <element signature="e#4653#5037#0" expanded="true" />
+            <element signature="e#5036#5037#0" expanded="true" />
+            <element signature="e#5320#14464#0" expanded="true" />
+            <element signature="e#5576#5604#0" expanded="true" />
+            <element signature="e#6866#6895#0" expanded="true" />
+            <element signature="e#7464#7489#0" expanded="true" />
+            <element signature="e#8078#8115#0" expanded="true" />
+            <element signature="e#8693#8721#0" expanded="true" />
+            <element signature="e#9320#9354#0" expanded="true" />
+            <element signature="e#9947#9980#0" expanded="true" />
+            <element signature="e#10573#10606#0" expanded="true" />
+            <element signature="e#11192#11222#0" expanded="true" />
+            <element signature="e#11792#11817#0" expanded="true" />
+            <element signature="e#12406#12433#0" expanded="true" />
+            <element signature="e#13023#13053#0" expanded="true" />
+            <element signature="e#13670#13709#0" expanded="true" />
+            <element signature="e#14463#14464#0" expanded="true" />
+            <element signature="e#14700#14719#0" expanded="true" />
+            <element signature="e#14721#14741#0" expanded="true" />
+            <element signature="e#16595#16999#0" expanded="true" />
+            <element signature="e#16998#16999#0" expanded="true" />
+            <element signature="e#17048#17302#0" expanded="true" />
+            <element signature="e#17301#17302#0" expanded="true" />
+            <element signature="e#18355#18559#0" expanded="true" />
+            <element signature="e#18558#18559#0" expanded="true" />
+            <element signature="e#18577#18849#0" expanded="true" />
+            <element signature="e#18848#18849#0" expanded="true" />
+            <element signature="e#19606#19634#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Member.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="32" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="32" />
+          <caret line="199" column="57" selection-start-line="199" selection-start-column="12" selection-end-line="199" selection-end-column="57" />
           <folding>
-            <element signature="e#7352#7353#0" expanded="true" />
-            <element signature="e#7379#7380#0" expanded="true" />
+            <element signature="e#7361#7362#0" expanded="true" />
+            <element signature="e#7388#7389#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/DBHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
-          <folding>
-            <element signature="e#932#933#0" expanded="true" />
-            <element signature="e#986#987#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3846154">
-          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3676#4078#0" expanded="true" />
-            <element signature="e#4077#4078#0" expanded="true" />
-            <element signature="e#4121#4507#0" expanded="true" />
-            <element signature="e#4506#4507#0" expanded="true" />
-            <element signature="e#4550#4936#0" expanded="true" />
-            <element signature="e#4935#4936#0" expanded="true" />
-            <element signature="e#4978#5362#0" expanded="true" />
-            <element signature="e#5361#5362#0" expanded="true" />
-            <element signature="e#5645#14789#0" expanded="true" />
-            <element signature="e#5901#5929#0" expanded="true" />
-            <element signature="e#7191#7220#0" expanded="true" />
-            <element signature="e#7789#7814#0" expanded="true" />
-            <element signature="e#8403#8440#0" expanded="true" />
-            <element signature="e#9018#9046#0" expanded="true" />
-            <element signature="e#9645#9679#0" expanded="true" />
-            <element signature="e#10272#10305#0" expanded="true" />
-            <element signature="e#10898#10931#0" expanded="true" />
-            <element signature="e#11517#11547#0" expanded="true" />
-            <element signature="e#12117#12142#0" expanded="true" />
-            <element signature="e#12731#12758#0" expanded="true" />
-            <element signature="e#13348#13378#0" expanded="true" />
-            <element signature="e#13995#14034#0" expanded="true" />
-            <element signature="e#14788#14789#0" expanded="true" />
-            <element signature="e#15025#15044#0" expanded="true" />
-            <element signature="e#15046#15066#0" expanded="true" />
-            <element signature="e#16920#17324#0" expanded="true" />
-            <element signature="e#17323#17324#0" expanded="true" />
-            <element signature="e#17373#17627#0" expanded="true" />
-            <element signature="e#17626#17627#0" expanded="true" />
-            <element signature="e#18680#18884#0" expanded="true" />
-            <element signature="e#18883#18884#0" expanded="true" />
-            <element signature="e#18902#19174#0" expanded="true" />
-            <element signature="e#19173#19174#0" expanded="true" />
-            <element signature="e#19931#19959#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="1.2880143">
+          <caret line="67" column="103" selection-start-line="67" selection-start-column="103" selection-end-line="67" selection-end-column="103" />
+          <folding />
         </state>
       </provider>
     </entry>

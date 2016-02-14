@@ -19,7 +19,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "subgamobi_db";
     public static final String MEMBER_TABLE_NAME = "table_member";
-    public static final String MEMBER_COLUMN_ID = "_id";
+    public static final String MEMBER_COLUMN_ID = "id";
     public static final String MEMBER_COLUMN_USERNAME = "username";
     public static final String MEMBER_COLUMN_NAMA_COMPANY = "nama_company";
     public static final String MEMBER_COLUMN_JENIS_MEMBER = "jenis_member";
@@ -34,8 +34,11 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         // TODO Auto-generated method stub
         db.execSQL(
-                "create table table_member " +
-                        "(_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, username TEXT,nama_company TEXT,jenis_member TEXT)"
+                "CREATE TABLE IF NOT EXISTS " + MEMBER_TABLE_NAME + " ( " +
+                        MEMBER_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT , " +
+                        MEMBER_COLUMN_USERNAME + " TEXT NOT NULL , " +
+                        MEMBER_COLUMN_JENIS_MEMBER + " TEXT NOT NULL , " +
+                        MEMBER_COLUMN_NAMA_COMPANY + " TEXT NOT NULL );"
         );
 
     }
@@ -54,25 +57,22 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put(MEMBER_COLUMN_USERNAME, username);
         contentValues.put(MEMBER_COLUMN_JENIS_MEMBER, jenis_member);
         contentValues.put(MEMBER_COLUMN_NAMA_COMPANY, nama_company);
-        db.insert(MEMBER_TABLE_NAME, null, contentValues);
+        long lala = db.insert(MEMBER_TABLE_NAME, null, contentValues);
+        Log.d("insert", String.valueOf(lala));
         return true;
     }
 
-    public Cursor getMember(String username){
-        //SQLiteDatabase db = this.getReadableDatabase();
-        /*Cursor res = db.query
-                (
-                        MEMBER_TABLE_NAME,
-                        new String[] { MEMBER_COLUMN_ID, MEMBER_COLUMN_USERNAME, MEMBER_COLUMN_NAMA_COMPANY, MEMBER_COLUMN_JENIS_MEMBER },
-                        MEMBER_COLUMN_USERNAME + "=" + username,
-                        null, null, null, null, null
-                );*/
-        //Cursor res = db.query("table_member", columns, "username=?", new String[] { username }, null, null, null);
-        //Cursor res =  db.rawQuery( "select * from table_member where username = '"+username+"'", null );
+    public Member getMember(String username){
+        Member memberku = null;
         Cursor res = getReadableDatabase().
-                rawQuery("select * from table_member where username = '"+username+"'", null);
+                rawQuery("SELECT * FROM table_member WHERE " + MEMBER_COLUMN_USERNAME + "='" + username + "'", null);
+        if (res != null && res.moveToFirst() ) {
+                memberku = new Member(res.getString(res.getColumnIndex("username")),res.getString(res.getColumnIndex("jenis_member")),res.getString(res.getColumnIndex("nama_company")));
+        }
+        else
+            Log.d("member error : ", " = null");
 
-        return res;
+        return memberku;
     }
 
     /*public int numberOfRows(){
