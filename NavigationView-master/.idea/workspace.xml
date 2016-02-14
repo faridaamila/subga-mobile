@@ -30,8 +30,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Add_on.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Add_on.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Cargo.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Cargo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Codeshare.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Codeshare.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Domestic.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Domestic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Flight_schedule.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Flight_schedule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Internal_news.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Internal_news.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/International.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/International.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Middle_east.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Middle_east.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Pin_hin_rin.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Pin_hin_rin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Rsp_yearly.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Rsp_yearly.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Rules_and_procedure.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Rules_and_procedure.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NavigationView-master.iws" />
@@ -91,15 +99,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Add_on.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Add_on.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Add_on.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.423676">
-              <caret line="132" column="35" selection-start-line="132" selection-start-column="35" selection-end-line="132" selection-end-column="35" />
+            <state vertical-scroll-proportion="-9.896552">
+              <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
               <folding>
                 <element signature="e#7256#7497#0" expanded="true" />
                 <element signature="e#7496#7497#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pin_hin_rin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Pin_hin_rin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rsp_yearly.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Rsp_yearly.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6457143">
+              <caret line="86" column="34" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rules_and_procedure.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Rules_and_procedure.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="90" column="32" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1586,30 +1624,20 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/splashscreen.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Edit_profile.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/login.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Cargo.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/coba_edit.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Codeshare.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/add_on.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/cargo.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/codeshare.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/domestic.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Domestic.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Flight_schedule.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/flight_schedule.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/internal_news.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Internal_news.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/International.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/international.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/middle_east.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/other.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/pin_hin_rin.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/rsp_yearly.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/rules_and_procedure.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Middle_east.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Other.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Pin_hin_rin.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Rsp_yearly.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Rules_and_procedure.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_bookmark.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_download.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_new.xml" />
@@ -1624,6 +1652,16 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Add_on.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Cargo.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Codeshare.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Flight_schedule.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Domestic.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Internal_news.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/International.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Middle_east.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Rsp_yearly.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Rules_and_procedure.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Pin_hin_rin.java" />
       </list>
     </option>
   </component>
@@ -1946,7 +1984,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455409674164</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="baru da">
+      <created>1455484392010</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1455484392010</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2034,7 +2078,8 @@
     <MESSAGE value="INI BARU" />
     <MESSAGE value="INI BARU amin" />
     <MESSAGE value="notification" />
-    <option name="LAST_COMMIT_MESSAGE" value="notification" />
+    <MESSAGE value="baru da" />
+    <option name="LAST_COMMIT_MESSAGE" value="baru da" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2120,13 +2165,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Codeshare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.310345">
-          <caret line="206" column="80" selection-start-line="206" selection-start-column="80" selection-end-line="206" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/cargo.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2189,13 +2227,6 @@
       </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Domestic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="206" column="80" selection-start-line="206" selection-start-column="80" selection-end-line="206" selection-end-column="80" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Content2Fragment.java">
@@ -2267,20 +2298,6 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Internal_news.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="206" column="81" selection-start-line="206" selection-start-column="81" selection-end-line="206" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Flight_schedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="421" column="1" selection-start-line="421" selection-start-column="1" selection-end-line="421" selection-end-column="1" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/international.xml">
@@ -2475,38 +2492,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Middle_east.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70434785">
-          <caret line="174" column="83" selection-start-line="174" selection-start-column="83" selection-end-line="174" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Other.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22608696">
           <caret line="168" column="78" selection-start-line="168" selection-start-column="78" selection-end-line="168" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Pin_hin_rin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48405796">
-          <caret line="172" column="9" selection-start-line="172" selection-start-column="9" selection-end-line="172" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Rsp_yearly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16521738">
-          <caret line="168" column="78" selection-start-line="168" selection-start-column="78" selection-end-line="168" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Rules_and_procedure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33273703">
-          <caret line="171" column="80" selection-start-line="171" selection-start-column="80" selection-end-line="171" selection-end-column="80" />
         </state>
       </provider>
     </entry>
@@ -2638,24 +2627,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/International.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="403" column="32" selection-start-line="403" selection-start-column="32" selection-end-line="403" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Nav_bookmark.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3942029">
           <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Cargo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="414" column="20" selection-start-line="414" selection-start-column="20" selection-end-line="414" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -2786,14 +2761,99 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Cargo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04857143">
+          <caret line="166" column="100" selection-start-line="166" selection-start-column="100" selection-end-line="166" selection-end-column="100" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Codeshare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51428574">
+          <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Flight_schedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="83" column="35" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Domestic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38857144">
+          <caret line="87" column="30" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
+          <folding>
+            <element signature="e#6562#6919#0" expanded="true" />
+            <element signature="e#6918#6919#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Internal_news.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.105714284">
+          <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/International.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09714286">
+          <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Middle_east.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04857143">
+          <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Add_on.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.423676">
-          <caret line="132" column="35" selection-start-line="132" selection-start-column="35" selection-end-line="132" selection-end-column="35" />
+        <state vertical-scroll-proportion="-9.896552">
+          <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
           <folding>
             <element signature="e#7256#7497#0" expanded="true" />
             <element signature="e#7496#7497#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Rules_and_procedure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="90" column="32" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Pin_hin_rin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android4dev/navigationview/Rsp_yearly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6457143">
+          <caret line="86" column="34" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>

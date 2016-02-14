@@ -78,16 +78,16 @@ public class International extends Fragment {
 
                 switch (position) {
                     case 0:
-                        search = 1;
+                        search = 0;
                         break;
                     case 1:
+                        search = 1;
+                        break;
+                    case 2:
                         search = 2;
                         break;
-                    case 3:
-                        search = 3;
-                        break;
                 }
-                if (isisearch != null) {
+                if (search != 0) {
                     getSearch();
                 } else {
                     getData();
@@ -164,20 +164,11 @@ public class International extends Fragment {
 
     private void getSearch() {
         loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
-
-        if (search==1) {
-            urls = "http://subga.info/Assets/get_data/data_file.php?kategori=2&internal=%27E%27&urut="+urutposisi;
+        if (search == 1) {
+            urls = "http://subga.info/Assets/get_data/search_gainfo.php?kategori=2&internal=%27E%27&urut=" + urutposisi + "&gainfo=%27" + isisearch + "%27";
+        }  else {
+            urls = "http://subga.info/Assets/get_data/search_subject.php?kategori=2&internal=%27E%27&urut=" + urutposisi + "&subject=%27" + isisearch + "%27";
         }
-        else if (search==2){
-            urls = "http://subga.info/Assets/get_data/search_gainfo.php?kategori=2&internal=%27E%27&urut="+urutposisi+"&gainfo=%27"+isisearch+"%27";
-        }
-        else if (search==3){
-            urls = "http://subga.info/Assets/get_data/search_subject.php?kategori=2&internal=%27E%27&urut="+urutposisi+"&subject=%27"+isisearch+"%27";
-        }
-        else{
-            Toast.makeText(getActivity(), "Please check the option search", Toast.LENGTH_SHORT).show();
-        }
-
 
         StringRequest stringRequest = new StringRequest(urls, new Response.Listener<String>() {
             @Override
