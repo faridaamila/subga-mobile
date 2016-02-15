@@ -212,35 +212,27 @@ public class Nav_bookmark extends Fragment{
     private void getData() {
         loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
 
-        ArrayList<Integer> al = new ArrayList<>();
-        al = mydb.getAllBookmark();
-        int idtitip;
-        int pop = al.size();
-
-        for (int pi=0; pi< al.size(); pi++){
-            idtitip=al.get(pi);
-            String url = "http://subga.info/Assets/get_data/data_file_book.php?id_file="+ idtitip +"&urut="+urutposisi;
+            String url = "http://subga.info/Assets/get_data/data_file_book.php?id_file=309";
             StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    loading.dismiss();
-                    tl.removeAllViews();
-                    showJSON(response);
-
-                }
+            @Override
+            public void onResponse(String response) {
+                loading.dismiss();
+                tl.removeAllViews();
+                showJSON(response);
+            }
             },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(getActivity(), error.toString(), Toast.LENGTH_LONG).show();
-                        }
-                    });
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getActivity(), error.toString(), Toast.LENGTH_LONG).show();
+                    }
+                });
 
-            RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
-            requestQueue.add(stringRequest);
+        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+        requestQueue.add(stringRequest);
         }
 
-    }
+
 
     private void showJSON(String response) {
         JSONArray result = null;
@@ -257,11 +249,9 @@ public class Nav_bookmark extends Fragment{
             jenis_dokumen = new String[result.length()];
             direktori_file = new String[result.length()];
             jml_download = new String[result.length()];
-            id_file = new String[result.length()];
 
             for (int i = 0; i < result.length(); i++) {
                 JSONObject file = result.getJSONObject(i);
-                id_file[i]=file.getString("id_file");
                 jenis_dokumen[i]=file.getString("jenis_dokumen");
                 tgl_release[i] = file.getString("tgl_release");
                 periode_awal_muncul[i] = file.getString("periode_awal_muncul");
@@ -278,7 +268,9 @@ public class Nav_bookmark extends Fragment{
             e.printStackTrace();
         }
         int k = 1;
-        for (int u = 0; u < pop;u++) {
+        int c = result.length()+1;
+
+        for (int u = 0; u < c; u++) {
             row = new TableRow(getActivity());
             row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
                     TableRow.LayoutParams.WRAP_CONTENT));
@@ -417,39 +409,23 @@ public class Nav_bookmark extends Fragment{
                     } else if (j == 7) {
                         ib.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
-                        final int finalU = g;
-                        final ImageButton ibj = ib;
-                        final boolean getBook = mydb.getBookmark(Integer.parseInt(id_file[finalU]));
-                        if (getBook ==true){
-                            ibj.setBackgroundResource(R.mipmap.btn_star_full);
-                        }
-                        else {
-                            ibj.setBackgroundResource(R.mipmap.btn_star);
-                        }
+                        ib.setBackgroundResource(R.mipmap.btn_star_full);
                         ib.getLayoutParams().width = 100;
                         ib.getLayoutParams().height = 100;
                         row.addView(ib);
                         ib.setOnClickListener(new View.OnClickListener() {
+
                             @Override
                             public void onClick(View arg0) {
-                                if (getBook==true){
-                                    ibj.setBackgroundResource(R.mipmap.btn_star);
-                                    boolean delete = mydb.deleteBookmark(Integer.parseInt(id_file[finalU]));
-                                    Log.d("deletebookmark : ", String.valueOf(delete));
-                                }
-                                else{
-                                    ibj.setBackgroundResource(R.mipmap.btn_star_full);
-                                    boolean insert = mydb.insertBookmark(Integer.parseInt(id_file[finalU]));
-                                    Log.d("insertbookmark : ", String.valueOf(insert));
-                                }
+
                             }
+
                         });
                     }
                 }
             }
             tl.addView(row);
         }
-
     }
 }
 
