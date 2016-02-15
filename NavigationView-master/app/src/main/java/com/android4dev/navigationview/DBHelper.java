@@ -7,7 +7,6 @@ package com.android4dev.navigationview;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -156,22 +155,23 @@ public class DBHelper extends SQLiteOpenHelper {
         db.update("contacts", contentValues, "id = ? ", new String[] { Integer.toString(id) } );
         return true;
     }
+    */
 
 
-    public ArrayList<String> getAllMember()
+    public ArrayList<Integer> getAllBookmark()
     {
-        ArrayList<String> array_list = new ArrayList<String>();
+        ArrayList<Integer> array_list = new ArrayList<>();
 
         //hp = new HashMap();
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "select * from table_member", null );
+        Cursor res =  db.rawQuery( "select * from table_bookmark", null );
         res.moveToFirst();
 
         while(res.isAfterLast() == false){
-            array_list.add(res.getString(res.getColumnIndex(MEMBER_TABLE_NAME)));
+            array_list.add(res.getInt(res.getColumnIndex(BOOKMARK_COLUMN_ID_FILE)));
             res.moveToNext();
         }
         return array_list;
     }
-    */
+
 }
