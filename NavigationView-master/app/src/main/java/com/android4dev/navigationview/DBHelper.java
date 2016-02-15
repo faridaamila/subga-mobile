@@ -18,11 +18,21 @@ import java.util.HashMap;
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "subgamobi_db";
+
     public static final String MEMBER_TABLE_NAME = "table_member";
     public static final String MEMBER_COLUMN_ID = "id";
     public static final String MEMBER_COLUMN_USERNAME = "username";
     public static final String MEMBER_COLUMN_NAMA_COMPANY = "nama_company";
     public static final String MEMBER_COLUMN_JENIS_MEMBER = "jenis_member";
+
+    public static final String BOOKMARK_TABLE_NAME = "table_bookmark";
+    public static final String BOOKMARK_COLUMN_ID = "id";
+    public static final String BOOKMARK_COLUMN_ID_FILE = "id_file";
+
+    public static final String NEW_TABLE_NAME = "table_new";
+    public static final String NEW_COLUMN_ID = "id";
+    public static final String NEW_COLUMN_ID_FILE_LAMA = "id_file_lama";
+
     private HashMap hp;
 
     public DBHelper(Context context)
@@ -40,7 +50,16 @@ public class DBHelper extends SQLiteOpenHelper {
                         MEMBER_COLUMN_JENIS_MEMBER + " TEXT NOT NULL , " +
                         MEMBER_COLUMN_NAMA_COMPANY + " TEXT NOT NULL );"
         );
-
+        db.execSQL(
+                "CREATE TABLE IF NOT EXISTS " + BOOKMARK_TABLE_NAME + " ( " +
+                        BOOKMARK_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT , " +
+                        BOOKMARK_COLUMN_ID_FILE + " INTEGER NOT NULL );"
+        );
+        db.execSQL(
+                "CREATE TABLE IF NOT EXISTS " + NEW_TABLE_NAME + " ( " +
+                        NEW_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT , " +
+                        NEW_COLUMN_ID_FILE_LAMA + " INTEGER NOT NULL );"
+        );
     }
 
     @Override
@@ -62,6 +81,26 @@ public class DBHelper extends SQLiteOpenHelper {
         return true;
     }
 
+    public boolean insertBookmark  (int id_file)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(BOOKMARK_COLUMN_ID_FILE, id_file);
+        long lala = db.insert(BOOKMARK_TABLE_NAME, null, contentValues);
+        Log.d("insert", String.valueOf(lala));
+        return true;
+    }
+
+    public boolean insertNew  (int id_file)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(NEW_COLUMN_ID_FILE_LAMA, id_file);
+        long lala = db.insert(NEW_COLUMN_ID_FILE_LAMA, null, contentValues);
+        Log.d("insert", String.valueOf(lala));
+        return true;
+    }
+
     public Member getMember(String username){
         Member memberku = null;
         Cursor res = getReadableDatabase().
@@ -74,6 +113,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
         return memberku;
     }
+
+
 
     /*public int numberOfRows(){
         SQLiteDatabase db = this.getReadableDatabase();
