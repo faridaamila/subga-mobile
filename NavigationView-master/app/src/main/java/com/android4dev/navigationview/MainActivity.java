@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
         TextView company_header = (TextView) findViewById(R.id.company_header);
         Login loginku = new Login();
         Member memberku = mydb.getMember(loginku.username);
-        header_username.setText(memberku.getUsername());
-        company_header.setText(memberku.getNama_company());
+        //header_username.setText(memberku.getUsername());
+        //company_header.setText(memberku.getNama_company());
 
 
         // Initializing Toolbar and setting it as the actionbar
