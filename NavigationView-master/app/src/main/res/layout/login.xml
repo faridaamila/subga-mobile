@@ -32,6 +32,8 @@
                 android:layout_marginRight="@dimen/_10sdp"
                 android:layout_alignTop="@+id/imageView9"
                 android:gravity="top"
+                android:singleLine="true"
+                android:scrollHorizontally="true"
                 android:layout_alignBottom="@+id/imageView9"
                 android:layout_marginBottom="@dimen/_minus4sdp"
                 android:textSize="@dimen/_16sdp" />
@@ -77,6 +79,8 @@
                 android:background="#d1d2d4"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
+                android:singleLine="true"
+                android:scrollHorizontally="true"
                 android:layout_alignTop="@+id/imageView10"
                 android:layout_alignBottom="@+id/imageView10"
                 android:layout_marginRight="@dimen/_10sdp"

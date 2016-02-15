@@ -1,18 +1,15 @@
 package com.android4dev.navigationview;
 
 
+import android.app.DownloadManager;
 import android.app.ProgressDialog;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -26,8 +23,6 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.InputStream;
 
 /**
  * Created by S. Harsono on 1/26/2016.
@@ -94,12 +89,10 @@ public class Home extends Fragment {
         btn_download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Nav_download fragment16 = new Nav_download();
-                android.support.v4.app.FragmentManager fm3 = getFragmentManager();
-                android.support.v4.app.FragmentTransaction ft3 = fm3.beginTransaction();
-                ft3.replace(R.id.frame, fragment16);
-                ft3.addToBackStack(null);
-                ft3.commit();
+                Intent intent = new Intent();
+                intent.setAction(DownloadManager.ACTION_VIEW_DOWNLOADS);
+                startActivity(intent);
+                //  title  = getString(R.string.home);
             }
         });
         btn_setting.setOnClickListener(new View.OnClickListener() {
