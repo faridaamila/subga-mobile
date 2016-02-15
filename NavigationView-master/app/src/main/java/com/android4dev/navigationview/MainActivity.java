@@ -1,7 +1,6 @@
 package com.android4dev.navigationview;
 
 import android.app.AlertDialog;
-import android.app.DownloadManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -9,6 +8,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
         TextView company_header = (TextView) findViewById(R.id.company_header);
         Login loginku = new Login();
         Member memberku = mydb.getMember(loginku.username);
-      //  header_username.setText(memberku.getUsername());
-     //   company_header.setText(memberku.getNama_company());
+        header_username.setText(memberku.getUsername());
+        company_header.setText(memberku.getNama_company());
 
 
         // Initializing Toolbar and setting it as the actionbar
@@ -119,9 +119,11 @@ public class MainActivity extends AppCompatActivity {
         });
         btn_download.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(DownloadManager.ACTION_VIEW_DOWNLOADS);
-                startActivity(intent);
+                Nav_download fragment = new Nav_download();
+                android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.frame, fragment);
+                ft.addToBackStack(null);
+                ft.commit();
             }
         });
         btn_setting.setOnClickListener(new View.OnClickListener() {
@@ -211,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.internal_news:
                         Internal_news fragment7 = new Internal_news();
-                        title = "Internal News";
+                        title = getString(R.string.internal_news);
                         getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction7 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction7.replace(R.id.frame, fragment7);

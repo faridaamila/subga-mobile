@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +49,7 @@ public class Add_on extends Fragment {
     String[] periode_awal_muncul;
     String[] tgl_release;
     String[] jenis_dokumen;
+    String[] id_file;
     int urutposisi;
     TableRow row;
     String isisearch;
@@ -244,9 +246,11 @@ public class Add_on extends Fragment {
             jenis_dokumen = new String[result.length()];
             direktori_file = new String[result.length()];
             jml_download = new String[result.length()];
+            id_file = new String[result.length()];
 
             for (int i = 0; i < result.length(); i++) {
                 JSONObject file = result.getJSONObject(i);
+                id_file[i]=file.getString("id_file");
                 jenis_dokumen[i]=file.getString("jenis_dokumen");
                 tgl_release[i] = file.getString("tgl_release");
                 periode_awal_muncul[i] = file.getString("periode_awal_muncul");
@@ -404,17 +408,19 @@ public class Add_on extends Fragment {
                     } else if (j == 7) {
                         ib.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
-                        ib.setBackgroundResource(R.mipmap.btn_star_full);
+                        ib.setBackgroundResource(R.mipmap.btn_star);
                         ib.getLayoutParams().width = 100;
                         ib.getLayoutParams().height = 100;
                         row.addView(ib);
+                        final int finalU = g;
+                        final ImageButton ibj = ib;
                         ib.setOnClickListener(new View.OnClickListener() {
-
                             @Override
                             public void onClick(View arg0) {
-
+                                boolean insert = mydb.insertBookmark(Integer.parseInt(id_file[finalU]));
+                                Log.d("insertbookmark : ", String.valueOf(insert));
+                                ibj.setBackgroundResource(R.mipmap.btn_star_full);
                             }
-
                         });
                     }
                 }

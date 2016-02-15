@@ -66,6 +66,8 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // TODO Auto-generated method stub
         db.execSQL("DROP TABLE IF EXISTS table_member");
+        db.execSQL("DROP TABLE IF EXISTS table_bookmark");
+        db.execSQL("DROP TABLE IF EXISTS table_new");
         onCreate(db);
     }
 
@@ -113,6 +115,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         return memberku;
     }
+
 
 
     /*public int numberOfRows(){
