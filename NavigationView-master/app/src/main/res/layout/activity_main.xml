@@ -166,7 +166,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignLeft="@+id/relativeLayout4"
                 android:layout_alignStart="@+id/relativeLayout4"
-                android:layout_marginBottom="30dp">
+                android:layout_marginBottom="@dimen/_25sdp">
 
                 <ImageButton
                     android:layout_width="match_parent"
@@ -344,7 +344,7 @@
             android:layout_alignParentBottom="true">
 
             <ImageView
-                android:layout_width="@dimen/_250sdp"
+                android:layout_width="@dimen/_255sdp"
                 android:layout_height="match_parent"
                 android:id="@+id/imageView2"
                 android:layout_alignParentTop="true"

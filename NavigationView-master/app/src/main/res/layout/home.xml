@@ -157,7 +157,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignLeft="@+id/relativeLayout4"
             android:layout_alignStart="@+id/relativeLayout4"
-            android:layout_marginBottom="30dp">
+            android:layout_marginBottom="@dimen/_25sdp">
 
             <ImageButton
                 android:layout_width="match_parent"
@@ -334,7 +334,9 @@
             android:background="#d1d2d4"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true">
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="@dimen/_3sdp">
 
             <TextView
                 android:layout_width="wrap_content"
