@@ -1,6 +1,7 @@
 package com.android4dev.navigationview;
 
 import android.app.AlertDialog;
+import android.app.DownloadManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -8,7 +9,6 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -119,11 +119,9 @@ public class MainActivity extends AppCompatActivity {
         });
         btn_download.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Nav_download fragment = new Nav_download();
-                android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.frame, fragment);
-                ft.addToBackStack(null);
-                ft.commit();
+                Intent intent = new Intent();
+                intent.setAction(DownloadManager.ACTION_VIEW_DOWNLOADS);
+                startActivity(intent);
             }
         });
         btn_setting.setOnClickListener(new View.OnClickListener() {
