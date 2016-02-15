@@ -115,7 +115,6 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
-
     /*public int numberOfRows(){
         SQLiteDatabase db = this.getReadableDatabase();
         int numRows = (int) DatabaseUtils.queryNumEntries(db, MEMBER_TABLE_NAME);

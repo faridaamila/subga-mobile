@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,11 +55,19 @@ public class Nav_new extends Fragment{
     String urls;
     int search;
     int check;
+    DBHelper mydb;
+    String internalawas;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.add_on, container, false);
 
         tl = (TableLayout) v.findViewById(R.id.tableLayout1);
+
+        mydb = new DBHelper(getActivity());
+
+        Login loginku = new Login();
+        Member memberku = mydb.getMember(loginku.username);
+        internalawas = memberku.getJenis_member();
 
 
         ////////////////////SEARCH BY//////////////////////////////////////////////////////////////
@@ -163,21 +172,16 @@ public class Nav_new extends Fragment{
     }
 
     private void getSearch() {
-        loading = ProgressDialog.show(getActivity(), "Please wait...", "Loading...", false, false);
-
-        if (search==1) {
-            urls = "http://subga.info/Assets/get_data/data_file.php?kategori=13&internal=%27E%27&urut="+urutposisi;
+        loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
+        if (search == 1&& internalawas.equals("E")) {
+            urls = "http://subga.info/Assets/get_data/search_gainfo_new.php?internal=%27E%27&urut=" + urutposisi + "&gainfo=%27" + isisearch + "%27";
+        }  else if (search != 1 && internalawas.equals("E")){
+            urls = "http://subga.info/Assets/get_data/search_subject_new.php?&internal=%27E%27&urut=" + urutposisi + "&subject=%27" + isisearch + "%27";
+        } else if (search == 1 && internalawas.equals("I")){
+            urls = "http://subga.info/Assets/get_data/search_gainfo_internal_new.php?urut=" + urutposisi + "&gainfo=%27" + isisearch + "%27";
+        } else if (search != 1 && internalawas.equals("I")) {
+            urls = "http://subga.info/Assets/get_data/search_subject_internal_new.php?urut=" + urutposisi + "&subject=%27" + isisearch + "%27";
         }
-        else if (search==2){
-            urls = "http://subga.info/Assets/get_data/search_gainfo.php?kategori=13&internal=%27E%27&urut="+urutposisi+"&gainfo=%27"+isisearch+"%27";
-        }
-        else if (search==3){
-            urls = "http://subga.info/Assets/get_data/search_subject.php?kategori=13&internal=%27E%27&urut="+urutposisi+"&subject=%27"+isisearch+"%27";
-        }
-        else{
-            Toast.makeText(getActivity(), "Please check the option search", Toast.LENGTH_SHORT).show();
-        }
-
 
         StringRequest stringRequest = new StringRequest(urls, new Response.Listener<String>() {
             @Override
@@ -201,10 +205,13 @@ public class Nav_new extends Fragment{
 
 
     private void getData() {
-        loading = ProgressDialog.show(getActivity(), "Getting your data...", "Please wait...", false, false);
+        loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
+        String url;
 
-
-        String url = "http://subga.info/Assets/get_data/data_file.php?kategori=13&internal=%27E%27&urut="+urutposisi;
+        if (internalawas.equals("E")) {
+            url = "http://subga.info/Assets/get_data/data_file_new.php?internal=%27E%27&urut=" + urutposisi;
+        }
+        else url = "http://subga.info/Assets/get_data/data_file_new_internal.php?urut=" + urutposisi;
 
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
