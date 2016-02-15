@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
         TextView company_header = (TextView) findViewById(R.id.company_header);
         Login loginku = new Login();
         Member memberku = mydb.getMember(loginku.username);
-        header_username.setText(memberku.getUsername());
-        company_header.setText(memberku.getNama_company());
+      //  header_username.setText(memberku.getUsername());
+     //   company_header.setText(memberku.getNama_company());
 
 
         // Initializing Toolbar and setting it as the actionbar
@@ -211,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.internal_news:
                         Internal_news fragment7 = new Internal_news();
-                        title = getString(R.string.internal_news);
+                        title = "Internal News";
                         getSupportActionBar().setTitle(title);
                         android.support.v4.app.FragmentTransaction fragmentTransaction7 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction7.replace(R.id.frame, fragment7);

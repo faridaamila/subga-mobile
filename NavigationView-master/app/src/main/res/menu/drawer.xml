@@ -51,7 +51,7 @@
             android:checked="false"
             android:icon="@drawable/ic_menu"
             android:textColor="#1f5aa6"
-            android:title="@string/internal_news" />
+            android:title="Internal News" />
 
         <item
             android:id="@+id/international"
