@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,11 +55,14 @@ public class Nav_bookmark extends Fragment{
     String urls;
     int search;
     int check;
+    DBHelper mydb;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.add_on, container, false);
 
         tl = (TableLayout) v.findViewById(R.id.tableLayout1);
+
+        mydb = new DBHelper(getActivity());
 
 
         ////////////////////SEARCH BY//////////////////////////////////////////////////////////////
@@ -405,13 +409,15 @@ public class Nav_bookmark extends Fragment{
                         ib.getLayoutParams().width = 100;
                         ib.getLayoutParams().height = 100;
                         row.addView(ib);
+                        final int finalU = g;
+                        final ImageButton ibj = ib;
                         ib.setOnClickListener(new View.OnClickListener() {
-
                             @Override
                             public void onClick(View arg0) {
-
+                                //boolean insert = mydb.insertBookmark(Integer.parseInt(id_file[finalU]));
+                                //Log.d("dletebookmark : ", String.valueOf(insert));
+                                ibj.setBackgroundResource(R.mipmap.btn_star);
                             }
-
                         });
                     }
                 }

@@ -116,7 +116,27 @@ public class DBHelper extends SQLiteOpenHelper {
         return memberku;
     }
 
+    public Boolean getBookmark(int file_id){
+        Cursor res = getReadableDatabase().
+                rawQuery("SELECT * FROM table_bookmark WHERE " + BOOKMARK_COLUMN_ID_FILE + "='" + file_id + "'", null);
+        if (res != null && res.moveToFirst() ) {
+            res.getString(res.getColumnIndex("id_file"));
+            return true;
+        }
+        else {
+            Log.d("member error : ", " = null");
+            return false;
+        }
+    }
 
+    public boolean deleteBookmark (Integer file_id)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("table_bookmark",
+                "id_file = ? ",
+                new String[] { Integer.toString(file_id) });
+        return true;
+    }
 
     /*public int numberOfRows(){
         SQLiteDatabase db = this.getReadableDatabase();
@@ -137,14 +157,6 @@ public class DBHelper extends SQLiteOpenHelper {
         return true;
     }
 
-    public Integer deleteContact (Integer id)
-    {
-        SQLiteDatabase db = this.getWritableDatabase();
-        return db.delete("contacts",
-                "id = ? ",
-                new String[] { Integer.toString(id) });
-    }
-    */
 
     public ArrayList<String> getAllMember()
     {
@@ -161,4 +173,5 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         return array_list;
     }
+    */
 }

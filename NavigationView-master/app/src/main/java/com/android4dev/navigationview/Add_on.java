@@ -408,18 +408,31 @@ public class Add_on extends Fragment {
                     } else if (j == 7) {
                         ib.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
-                        ib.setBackgroundResource(R.mipmap.btn_star);
+                        final int finalU = g;
+                        final ImageButton ibj = ib;
+                        final boolean getBook = mydb.getBookmark(Integer.parseInt(id_file[finalU]));
+                        if (getBook ==true){
+                            ibj.setBackgroundResource(R.mipmap.btn_star_full);
+                        }
+                        else {
+                            ibj.setBackgroundResource(R.mipmap.btn_star);
+                        }
                         ib.getLayoutParams().width = 100;
                         ib.getLayoutParams().height = 100;
                         row.addView(ib);
-                        final int finalU = g;
-                        final ImageButton ibj = ib;
                         ib.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View arg0) {
-                                boolean insert = mydb.insertBookmark(Integer.parseInt(id_file[finalU]));
-                                Log.d("insertbookmark : ", String.valueOf(insert));
-                                ibj.setBackgroundResource(R.mipmap.btn_star_full);
+                                if (getBook==true){
+                                    ibj.setBackgroundResource(R.mipmap.btn_star);
+                                    boolean delete = mydb.deleteBookmark(Integer.parseInt(id_file[finalU]));
+                                    Log.d("deletebookmark : ", String.valueOf(delete));
+                                }
+                                else{
+                                    ibj.setBackgroundResource(R.mipmap.btn_star_full);
+                                    boolean insert = mydb.insertBookmark(Integer.parseInt(id_file[finalU]));
+                                    Log.d("insertbookmark : ", String.valueOf(insert));
+                                }
                             }
                         });
                     }
