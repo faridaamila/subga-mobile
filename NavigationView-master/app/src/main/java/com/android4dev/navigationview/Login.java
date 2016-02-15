@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.text.util.Linkify;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -26,10 +27,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Console;
 import java.math.BigInteger;
 import java.nio.charset.Charset;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -48,11 +51,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
     public static String username;
     private String password;
+    DBHelper mydb;
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+
+        mydb = new DBHelper(this);
 
         editTextUsername = (EditText) findViewById(R.id.editTextUsername);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
@@ -67,6 +73,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
         TextView register_here = (TextView) findViewById(R.id.register_here);
         register_here.setMovementMethod(LinkMovementMethod.getInstance());
+
+
 
     }
 
@@ -85,6 +93,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                         if(response.equals("success")){
                             if(ch.isChecked()){
                                 rememberMe(username,password);}
+                            getDatatoDB();
                             openProfile();
                         }else{
                             Toast.makeText(Login.this,"Username dan Password Salah", Toast.LENGTH_LONG).show();
@@ -132,6 +141,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
         if (username != null || password != null) {
             //directly show logout form
+            getDatatoDB();
             openProfile();
         }
     }
@@ -179,7 +189,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         String usernamejson="";
         String jenis_memberjson="";
 
-
         try {
             JSONObject jsonObject = new JSONObject(response);
             JSONArray result = jsonObject.getJSONArray("result");
@@ -187,18 +196,18 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
             nama_perusahaanjson=collegeData.getString("nama_perusahaan");
             usernamejson=collegeData.getString("username");
             jenis_memberjson=collegeData.getString("jenis_member");
+            boolean test = mydb.insertMember(usernamejson,jenis_memberjson,nama_perusahaanjson);
+            Log.d("status insert", String.valueOf(test));
         }
         catch (JSONException e) {
             e.printStackTrace();
         }
-
 
     }
 
     @Override
     public void onClick(View v) {
         userLogin();
-        getDatatoDB();
     }
 
     public static String md5(String s)
