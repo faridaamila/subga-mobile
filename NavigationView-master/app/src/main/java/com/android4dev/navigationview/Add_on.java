@@ -89,7 +89,7 @@ public class Add_on extends Fragment {
                         search = 1;
                         break;
                     case 2:
-                       search = 2;
+                        search = 2;
                         break;
                 }
                 if (search != 0) {

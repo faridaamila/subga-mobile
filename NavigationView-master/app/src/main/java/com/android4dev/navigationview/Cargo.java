@@ -54,9 +54,16 @@ public class Cargo extends Fragment {
     String urls;
     int search;
     int check;
+    DBHelper mydb;
+    String internalawas;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.add_on, container, false);
+
+        mydb = new DBHelper(getActivity());
+        Login loginku = new Login();
+        Member memberku = mydb.getMember(loginku.username);
+        internalawas = memberku.getJenis_member();
 
         tl = (TableLayout) v.findViewById(R.id.tableLayout1);
 
@@ -163,12 +170,15 @@ public class Cargo extends Fragment {
     }
 
     private void getSearch() {
-
         loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
-        if (search == 1) {
+        if (search == 1&& internalawas.equals("E")) {
             urls = "http://subga.info/Assets/get_data/search_gainfo.php?kategori=13&internal=%27E%27&urut=" + urutposisi + "&gainfo=%27" + isisearch + "%27";
-        }  else {
+        }  else if (search != 1 && internalawas.equals("E")){
             urls = "http://subga.info/Assets/get_data/search_subject.php?kategori=13&internal=%27E%27&urut=" + urutposisi + "&subject=%27" + isisearch + "%27";
+        } else if (search == 1 && internalawas.equals("I")){
+            urls = "http://subga.info/Assets/get_data/search_gainfo_internal.php?kategori=13&urut=" + urutposisi + "&gainfo=%27" + isisearch + "%27";
+        } else if (search != 1 && internalawas.equals("I")) {
+            urls = "http://subga.info/Assets/get_data/search_subject_internal.php?kategori=13&urut=" + urutposisi + "&subject=%27" + isisearch + "%27";
         }
 
 
@@ -195,9 +205,12 @@ public class Cargo extends Fragment {
 
     private void getData() {
         loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
+        String url;
 
-
-        String url = "http://subga.info/Assets/get_data/data_file.php?kategori=13&internal=%27E%27&urut="+urutposisi;
+        if (internalawas.equals("E")) {
+            url = "http://subga.info/Assets/get_data/data_file.php?kategori=13&internal=%27E%27&urut=" + urutposisi;
+        }
+        else url = "http://subga.info/Assets/get_data/data_file_internal.php?kategori=13&urut=" + urutposisi;
 
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
