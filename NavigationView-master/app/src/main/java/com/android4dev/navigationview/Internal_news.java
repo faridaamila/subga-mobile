@@ -314,15 +314,15 @@ public class Internal_news extends Fragment {
                         lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
                         lala.setPadding(25, 25, 0, 25);
-                        lala.setText("Action");
+                        lala.setText("Download");
                         row.addView(lala);
                         row.setBackgroundResource(R.color.Grey);
                     }
                     else if (j == 7) {
                         lala.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
-                        lala.setPadding(25, 25, 50, 25);
-                        lala.setText(" ");
+                        lala.setPadding(25, 25, 0, 25);
+                        lala.setText("Bookmark");
                         row.addView(lala);
                         row.setBackgroundResource(R.color.Grey);
                     }
