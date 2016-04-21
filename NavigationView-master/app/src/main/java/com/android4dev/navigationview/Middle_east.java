@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +49,7 @@ public class Middle_east extends Fragment {
     String[] periode_awal_muncul;
     String[] tgl_release;
     String[] jenis_dokumen;
+    String[] id_file;
     int urutposisi;
     TableRow row;
     String isisearch;
@@ -59,7 +61,6 @@ public class Middle_east extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.add_on, container, false);
-
         mydb = new DBHelper(getActivity());
         Login loginku = new Login();
         Member memberku = mydb.getMember(loginku.username);
@@ -71,7 +72,6 @@ public class Middle_east extends Fragment {
         ////////////////////SEARCH BY//////////////////////////////////////////////////////////////
         String [] values = {"All", "GA Info","Subject"};
         Spinner spinner = (Spinner) v.findViewById(R.id.spinner);
-
 
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
@@ -181,8 +181,6 @@ public class Middle_east extends Fragment {
             urls = "http://subga.info/Assets/get_data/search_subject_internal.php?kategori=3&urut=" + urutposisi + "&subject=%27" + isisearch + "%27";
         }
 
-
-
         StringRequest stringRequest = new StringRequest(urls, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -212,6 +210,7 @@ public class Middle_east extends Fragment {
             url = "http://subga.info/Assets/get_data/data_file.php?kategori=3&internal=%27E%27&urut=" + urutposisi;
         }
         else url = "http://subga.info/Assets/get_data/data_file_internal.php?kategori=3&urut=" + urutposisi;
+
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
@@ -247,9 +246,11 @@ public class Middle_east extends Fragment {
             jenis_dokumen = new String[result.length()];
             direktori_file = new String[result.length()];
             jml_download = new String[result.length()];
+            id_file = new String[result.length()];
 
             for (int i = 0; i < result.length(); i++) {
                 JSONObject file = result.getJSONObject(i);
+                id_file[i]=file.getString("id_file");
                 jenis_dokumen[i]=file.getString("jenis_dokumen");
                 tgl_release[i] = file.getString("tgl_release");
                 periode_awal_muncul[i] = file.getString("periode_awal_muncul");
@@ -407,17 +408,32 @@ public class Middle_east extends Fragment {
                     } else if (j == 7) {
                         ib.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
-                        ib.setBackgroundResource(R.mipmap.btn_star_full);
+                        final int finalU = g;
+                        final ImageButton ibj = ib;
+                        final boolean getBook = mydb.getBookmark(Integer.parseInt(id_file[finalU]));
+                        if (getBook ==true){
+                            ibj.setBackgroundResource(R.mipmap.btn_star_full);
+                        }
+                        else {
+                            ibj.setBackgroundResource(R.mipmap.btn_star);
+                        }
                         ib.getLayoutParams().width = 100;
                         ib.getLayoutParams().height = 100;
                         row.addView(ib);
                         ib.setOnClickListener(new View.OnClickListener() {
-
                             @Override
                             public void onClick(View arg0) {
-
+                                if (getBook==true){
+                                    ibj.setBackgroundResource(R.mipmap.btn_star);
+                                    boolean delete = mydb.deleteBookmark(Integer.parseInt(id_file[finalU]));
+                                    Log.d("deletebookmark : ", String.valueOf(delete));
+                                }
+                                else{
+                                    ibj.setBackgroundResource(R.mipmap.btn_star_full);
+                                    boolean insert = mydb.insertBookmark(Integer.parseInt(id_file[finalU]));
+                                    Log.d("insertbookmark : ", String.valueOf(insert));
+                                }
                             }
-
                         });
                     }
                 }

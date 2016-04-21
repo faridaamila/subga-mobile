@@ -8,7 +8,6 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -62,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
         TextView company_header = (TextView) findViewById(R.id.company_header);
         Login loginku = new Login();
         Member memberku = mydb.getMember(loginku.username);
-        //header_username.setText(memberku.getUsername());
-        //company_header.setText(memberku.getNama_company());
+      //  header_username.setText(memberku.getUsername());
+     //   company_header.setText(memberku.getNama_company());
 
 
         // Initializing Toolbar and setting it as the actionbar

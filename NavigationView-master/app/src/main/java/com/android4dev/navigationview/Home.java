@@ -51,12 +51,6 @@ public class Home extends Fragment {
 
 
 
-        // tv2.setText("Mulai tanggal 12 Januari 2015 Garuda Indonesia membuka rute Surabaya ke Shanghai via Denpasar.");
-        // tv2.setEllipsize(TextUtils.TruncateAt.MARQUEE);
-        // tv2.setSingleLine(true);
-        // tv2.setMarqueeRepeatLimit(5);
-
-
         ImageButton btn_new = (ImageButton)v.findViewById(R.id.btn_new);
         ImageButton btn_bookmark = (ImageButton)v.findViewById(R.id.btn_bookmark);
         ImageButton btn_download = (ImageButton)v.findViewById(R.id.btn_download);
@@ -114,13 +108,6 @@ public class Home extends Fragment {
         tv.setFocusableInTouchMode(true);
         getData();
 
-
-
-
-       // tv.setEllipsize(TextUtils.TruncateAt.MARQUEE);
-       // tv.setSingleLine(true);
-       // tv.setMarqueeRepeatLimit(5);
-        //tv.setSelected(true);
 
         return v;
 

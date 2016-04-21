@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +49,7 @@ public class Other extends Fragment {
     String[] periode_awal_muncul;
     String[] tgl_release;
     String[] jenis_dokumen;
+    String[] id_file;
     int urutposisi;
     TableRow row;
     String isisearch;
@@ -59,7 +61,6 @@ public class Other extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.add_on, container, false);
-
         mydb = new DBHelper(getActivity());
         Login loginku = new Login();
         Member memberku = mydb.getMember(loginku.username);
@@ -73,7 +74,6 @@ public class Other extends Fragment {
         Spinner spinner = (Spinner) v.findViewById(R.id.spinner);
 
 
-
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner.setAdapter(adapter);
@@ -85,16 +85,16 @@ public class Other extends Fragment {
 
                 switch (position) {
                     case 0:
-                        search = 1;
+                        search = 0;
                         break;
                     case 1:
+                        search = 1;
+                        break;
+                    case 2:
                         search = 2;
                         break;
-                    case 3:
-                        search = 3;
-                        break;
                 }
-                if (isisearch != null) {
+                if (search != 0) {
                     getSearch();
                 } else {
                     getData();
@@ -246,9 +246,11 @@ public class Other extends Fragment {
             jenis_dokumen = new String[result.length()];
             direktori_file = new String[result.length()];
             jml_download = new String[result.length()];
+            id_file = new String[result.length()];
 
             for (int i = 0; i < result.length(); i++) {
                 JSONObject file = result.getJSONObject(i);
+                id_file[i]=file.getString("id_file");
                 jenis_dokumen[i]=file.getString("jenis_dokumen");
                 tgl_release[i] = file.getString("tgl_release");
                 periode_awal_muncul[i] = file.getString("periode_awal_muncul");
@@ -406,17 +408,32 @@ public class Other extends Fragment {
                     } else if (j == 7) {
                         ib.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
-                        ib.setBackgroundResource(R.mipmap.btn_star_full);
+                        final int finalU = g;
+                        final ImageButton ibj = ib;
+                        final boolean getBook = mydb.getBookmark(Integer.parseInt(id_file[finalU]));
+                        if (getBook ==true){
+                            ibj.setBackgroundResource(R.mipmap.btn_star_full);
+                        }
+                        else {
+                            ibj.setBackgroundResource(R.mipmap.btn_star);
+                        }
                         ib.getLayoutParams().width = 100;
                         ib.getLayoutParams().height = 100;
                         row.addView(ib);
                         ib.setOnClickListener(new View.OnClickListener() {
-
                             @Override
                             public void onClick(View arg0) {
-
+                                if (getBook==true){
+                                    ibj.setBackgroundResource(R.mipmap.btn_star);
+                                    boolean delete = mydb.deleteBookmark(Integer.parseInt(id_file[finalU]));
+                                    Log.d("deletebookmark : ", String.valueOf(delete));
+                                }
+                                else{
+                                    ibj.setBackgroundResource(R.mipmap.btn_star_full);
+                                    boolean insert = mydb.insertBookmark(Integer.parseInt(id_file[finalU]));
+                                    Log.d("insertbookmark : ", String.valueOf(insert));
+                                }
                             }
-
                         });
                     }
                 }

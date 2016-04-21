@@ -1,7 +1,12 @@
 package com.android4dev.navigationview;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
@@ -74,18 +79,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         TextView register_here = (TextView) findViewById(R.id.register_here);
         register_here.setMovementMethod(LinkMovementMethod.getInstance());
 
-
-
     }
 
     private void userLogin() {
         username = editTextUsername.getText().toString().trim();
         password = editTextPassword.getText().toString().trim();
         password = md5(password).trim();
-
-        loading = ProgressDialog.show(this, "Please wait...", "Fetching...", false, false);
-
-        //Creating a string request
+            //Creating a string request
+        loading = ProgressDialog.show(Login.this, "Please wait...", "Fetching...", false, false);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL,
                 new Response.Listener<String>() {
                     @Override
@@ -96,14 +97,16 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                             getDatatoDB();
                             openProfile();
                         }else{
-                            Toast.makeText(Login.this,"Username dan Password Salah", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Login.this,"Username dan Password Salah", Toast.LENGTH_SHORT).show();
                         }
+                        loading.dismiss();
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(Login.this,error.toString(),Toast.LENGTH_LONG ).show();
+                        Toast.makeText(Login.this,"Connection Lost, please try again",Toast.LENGTH_SHORT ).show();
+                        loading.dismiss();
                     }
                 }){
             @Override
@@ -128,12 +131,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                 .commit();
     }
 
+    //tahap login 1
     public void onStart(){
         super.onStart();
         //read username and password from SharedPreferences
         getUser();
     }
 
+    //tahap login 2
     public void getUser(){
         SharedPreferences pref = getSharedPreferences(PREFS_NAME,MODE_PRIVATE);
         String username = pref.getString(PREF_USERNAME, null);
@@ -151,6 +156,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         startActivity(intent);
     }
 
+
     private void getDatatoDB() {
         //spasi convert
         int i;
@@ -160,29 +166,30 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                 username=username.replace(" ","%20");
             }
         }
+        loading = ProgressDialog.show(Login.this, "Please wait...", "Fetching...", false, false);
+            String url = "http://subga.info/Assets/get_data/data_member.php?username=" + username;
 
-        loading = ProgressDialog.show(this, "Please wait...", "Fetching...", false, false);
+            StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    loading.dismiss();
+                    showJSONdb(response);
+                    loading.dismiss();
+                }
+            },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            loading.dismiss();
+                            Toast.makeText(Login.this, "Connection Lost, please try again", Toast.LENGTH_SHORT).show();
+                        }
+                    });
 
-        String url = "http://subga.info/Assets/get_data/data_member.php?username="+username;
-        //Toast.makeText( getActivity(),url,Toast.LENGTH_LONG).show();
-
-        StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                loading.dismiss();
-                showJSONdb(response);
-            }
-        },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(Login.this,error.toString(),Toast.LENGTH_LONG).show();
-                    }
-                });
-
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+            RequestQueue requestQueue = Volley.newRequestQueue(this);
+            requestQueue.add(stringRequest);
     }
+
+
 
     private void showJSONdb(String response){
         String nama_perusahaanjson="";

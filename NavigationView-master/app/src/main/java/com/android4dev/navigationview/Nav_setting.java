@@ -39,6 +39,7 @@ public class Nav_setting extends Fragment {
                 ft1.commit();
             }
         });
+
         btn_notificatios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -192,8 +192,8 @@ public class Add_on extends Fragment {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        //Toast.makeText(getActivity(), urls, Toast.LENGTH_LONG).show();
-                        Toast.makeText(getActivity(), error.toString(), Toast.LENGTH_LONG).show();
+                        loading.dismiss();
+                        Toast.makeText(getActivity(), "Connection lost, please try again", Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -208,6 +208,8 @@ public class Add_on extends Fragment {
 
         if (internalawas.equals("E")) {
             url = "http://subga.info/Assets/get_data/data_file.php?kategori=10&internal=%27E%27&urut=" + urutposisi;
+            //setRetryPolicy(new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
         }
         else url = "http://subga.info/Assets/get_data/data_file_internal.php?kategori=10&urut=" + urutposisi;
 
@@ -223,7 +225,8 @@ public class Add_on extends Fragment {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getActivity(), error.toString(), Toast.LENGTH_LONG).show();
+                        loading.dismiss();
+                        Toast.makeText(getActivity(), "Connection lost, please try again", Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -406,33 +409,19 @@ public class Add_on extends Fragment {
                         });
 
                     } else if (j == 7) {
-                        ib.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                TableRow.LayoutParams.WRAP_CONTENT));
-                        final int finalU = g;
-                        final ImageButton ibj = ib;
-                        final boolean getBook = mydb.getBookmark(Integer.parseInt(id_file[finalU]));
-                        if (getBook ==true){
-                            ibj.setBackgroundResource(R.mipmap.btn_star_full);
-                        }
-                        else {
-                            ibj.setBackgroundResource(R.mipmap.btn_star);
-                        }
+                        ib.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
+                        ib.setBackgroundResource(R.mipmap.btn_star);
                         ib.getLayoutParams().width = 100;
                         ib.getLayoutParams().height = 100;
                         row.addView(ib);
+                        final int finalU = g;
+                        final ImageButton ibj = ib;
                         ib.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View arg0) {
-                                if (getBook==true){
-                                    ibj.setBackgroundResource(R.mipmap.btn_star);
-                                    boolean delete = mydb.deleteBookmark(Integer.parseInt(id_file[finalU]));
-                                    Log.d("deletebookmark : ", String.valueOf(delete));
-                                }
-                                else{
-                                    ibj.setBackgroundResource(R.mipmap.btn_star_full);
-                                    boolean insert = mydb.insertBookmark(Integer.parseInt(id_file[finalU]));
-                                    Log.d("insertbookmark : ", String.valueOf(insert));
-                                }
+                                boolean insert = mydb.insertBookmark(Integer.parseInt(id_file[finalU]));
+                                Log.d("insertbookmark : ", String.valueOf(insert));
+                                ibj.setBackgroundResource(R.mipmap.btn_star_full);
                             }
                         });
                     }
