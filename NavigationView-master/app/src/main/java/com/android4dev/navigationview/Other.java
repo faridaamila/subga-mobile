@@ -192,8 +192,8 @@ public class Other extends Fragment {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        //Toast.makeText(getActivity(), urls, Toast.LENGTH_LONG).show();
-                        Toast.makeText(getActivity(), error.toString(), Toast.LENGTH_LONG).show();
+                        loading.dismiss();
+                        Toast.makeText(getActivity(), "Connection lost, please try again", Toast.LENGTH_SHORT).show();
                     }
                 });
 

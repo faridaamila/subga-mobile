@@ -377,7 +377,8 @@ public class MainActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_LONG).show();
+                        loading.dismiss();
+                        Toast.makeText(MainActivity.this,"Connection lost, please try again", Toast.LENGTH_LONG).show();
                     }
                 });
 

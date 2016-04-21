@@ -110,18 +110,20 @@ public class Edit_profile extends Fragment{
         final String npwp =  eT_npwp.getText().toString().trim();
         //if (npwp == null) {npwp.replace(null, " ");}
 
-
+        loading = ProgressDialog.show(getActivity(), "Please wait...", "Fetching...", false, false);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://subga.info/Assets/get_data/update_profile.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        loading.dismiss();
                         Toast.makeText(getActivity(),response,Toast.LENGTH_LONG).show();
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getActivity(),error.toString(),Toast.LENGTH_LONG).show();
+                        loading.dismiss();
+                        Toast.makeText(getActivity(), "Connection lost, please try again", Toast.LENGTH_SHORT).show();
                     }
                 }){
             @Override
